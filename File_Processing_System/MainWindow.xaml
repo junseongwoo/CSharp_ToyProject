@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:File_Processing_System"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="File Processing" Height="513.01" Width="991.2">
     <Grid>
-        
+
     </Grid>
 </Window>
