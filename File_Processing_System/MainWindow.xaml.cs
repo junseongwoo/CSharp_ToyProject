@@ -24,5 +24,21 @@ namespace File_Processing_System
         {
             InitializeComponent();
         }
+
+        private void Btn_OpenFilePath_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void btn_BeforePath_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_AfterPath_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+ 
     }
 }
