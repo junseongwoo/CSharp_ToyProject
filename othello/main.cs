@@ -8,6 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * 오델로 = 리버시
+ * 8x8 정중앙에 흑백 2개의 돌을 교차로 놓고 게임 시작
+ * 돌을 놓을 곳이 없다면 Pass 발생 -> 상대에게 턴이 넘어간다.
+ * 흑 백 모두 돌을 놓을 곳이 없으면 게임 종료 
+ * 돌의 수가 많으면 승리, 같으면 무승부 
+ */
 namespace othello
 {
     public partial class frm_main : Form
@@ -19,22 +26,6 @@ namespace othello
 
         private void frm_main_Load(object sender, EventArgs e)
         {
-            picBox_othello.Paint += picBox_othello_default;
-        }
-
-        private void picBox_othello_default(object sender, PaintEventArgs e)
-        {
-            // 오셀로 판 그리기
-            PictureBox pb = (PictureBox)sender;
-            Graphics g = e.Graphics;
-            Pen pen = Pens.Black;
-            int othelloSize = 8; // 8x8 크기 
-
-            for (int i = 1; i < 8; i++)
-            {
-                g.DrawLine(pen, (pb.Width/ othelloSize) *i, 0, (pb.Width/ othelloSize) *i, pb.Height);
-                g.DrawLine(pen, 0, (pb.Height/ othelloSize) * i, pb.Width, (pb.Height/ othelloSize) * i);
-            }
         }
 
         private void picBox_othello_Paint(object sender, PaintEventArgs e)

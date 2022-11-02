@@ -29,37 +29,45 @@ namespace othello
         /// </summary>
         private void InitializeComponent()
         {
-            this.picBox_othello = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_othello)).BeginInit();
+            this.btn_Start = new System.Windows.Forms.Button();
+            this.btn_ReStart = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // picBox_othello
+            // btn_Start
             // 
-            this.picBox_othello.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.picBox_othello.Location = new System.Drawing.Point(28, 81);
-            this.picBox_othello.Name = "picBox_othello";
-            this.picBox_othello.Size = new System.Drawing.Size(652, 494);
-            this.picBox_othello.TabIndex = 0;
-            this.picBox_othello.TabStop = false;
-            this.picBox_othello.Paint += new System.Windows.Forms.PaintEventHandler(this.picBox_othello_Paint);
+            this.btn_Start.Location = new System.Drawing.Point(341, 61);
+            this.btn_Start.Name = "btn_Start";
+            this.btn_Start.Size = new System.Drawing.Size(83, 29);
+            this.btn_Start.TabIndex = 1;
+            this.btn_Start.Text = "시작";
+            this.btn_Start.UseVisualStyleBackColor = true;
+            // 
+            // btn_ReStart
+            // 
+            this.btn_ReStart.Location = new System.Drawing.Point(430, 61);
+            this.btn_ReStart.Name = "btn_ReStart";
+            this.btn_ReStart.Size = new System.Drawing.Size(83, 29);
+            this.btn_ReStart.TabIndex = 2;
+            this.btn_ReStart.Text = "재시작";
+            this.btn_ReStart.UseVisualStyleBackColor = true;
             // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 587);
-            this.Controls.Add(this.picBox_othello);
+            this.ClientSize = new System.Drawing.Size(525, 608);
+            this.Controls.Add(this.btn_ReStart);
+            this.Controls.Add(this.btn_Start);
             this.Name = "frm_main";
             this.Text = "Othello";
             this.Load += new System.EventHandler(this.frm_main_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picBox_othello)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picBox_othello;
+        private System.Windows.Forms.Button btn_Start;
+        private System.Windows.Forms.Button btn_ReStart;
     }
 }
 
