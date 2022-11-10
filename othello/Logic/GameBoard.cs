@@ -16,32 +16,32 @@ namespace othello.Logic
         private int NumOfCell;
         private int CellSize;
 
-        //public GameBoard()
-        //{
-        //    NumOfCell = 8;
-        //    CellSize = 40;
-        //}
+        private readonly Image BlackStone = Properties.Resources.BlackStone;
+        private readonly Image WhiteStone = Properties.Resources.WhiteStone;
 
-        public void GameBoard_Info(int Cells, int CellSize)
+        public GameBoard()
+        {
+            NumOfCell = 8;
+            CellSize = 80;
+        }
+
+        public void Init_GameBoard(int Cells, int CellSize)
         {
             this.NumOfCell = Cells;
             this.CellSize = CellSize;
+
+
         }
 
-        //private PicBox_Board createPictureBox(int Row, int Col, int Left, int Top)
-        //{
-        //    PicBox_Board GameBoard = new PicBox_Board();
-        //    //GameBoard.Height = Board_Size;
-
-        public void GameBoard_Create(object sender, PaintEventArgs e)
+        public void Create_GameBorad(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
             Pen p = new Pen(Color.Black);
 
-            for (int i = 0; i < NumOfCell; i++)
+            for (int i = 0; i < NumOfCell + 1; i++)
             {
                 g.DrawLine(p, i * CellSize, 0, i * CellSize, NumOfCell * CellSize);
-                g.DrawLine(p,  0, i * CellSize, NumOfCell * CellSize, i * CellSize);
+                g.DrawLine(p, 0, i * CellSize, NumOfCell * CellSize, i * CellSize);
             }
         }
     }

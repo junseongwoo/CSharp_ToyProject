@@ -20,6 +20,8 @@ namespace othello
     public partial class frm_main : Form
     {
         GameBoard Board = new GameBoard();
+        Game Game = new Game();
+        Player Player = new Player();
 
         public frm_main()
         {
@@ -32,8 +34,7 @@ namespace othello
 
         private void picBox_GameBoard_Paint(object sender, PaintEventArgs e)
         {
-            Board.GameBoard_Info(8, 50);
-            Board.GameBoard_Create(sender, e);
+            Board.Create_GameBorad(sender, e);
         }
     }
 }
