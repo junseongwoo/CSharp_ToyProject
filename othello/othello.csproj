@@ -47,19 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logic\Game.cs" />
-    <Compile Include="Logic\PicBox.cs" />
+    <Compile Include="Logic\GameBoard.cs" />
     <Compile Include="Logic\Player.cs" />
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PicBox_Board.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PicBox_Board.Designer.cs">
-      <DependentUpon>PicBox_Board.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

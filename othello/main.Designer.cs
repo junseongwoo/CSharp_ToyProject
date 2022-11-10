@@ -32,16 +32,16 @@ namespace othello
             this.btn_Start = new System.Windows.Forms.Button();
             this.btn_ReStart = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picBox_GameBoard = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_GameBoard)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Start
             // 
-            this.btn_Start.Location = new System.Drawing.Point(15, 3);
+            this.btn_Start.Location = new System.Drawing.Point(9, 3);
             this.btn_Start.Name = "btn_Start";
             this.btn_Start.Size = new System.Drawing.Size(83, 29);
             this.btn_Start.TabIndex = 1;
@@ -50,7 +50,7 @@ namespace othello
             // 
             // btn_ReStart
             // 
-            this.btn_ReStart.Location = new System.Drawing.Point(15, 38);
+            this.btn_ReStart.Location = new System.Drawing.Point(9, 38);
             this.btn_ReStart.Name = "btn_ReStart";
             this.btn_ReStart.Size = new System.Drawing.Size(83, 29);
             this.btn_ReStart.TabIndex = 2;
@@ -63,7 +63,7 @@ namespace othello
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.1103F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.88969F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.picBox_GameBoard, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -73,13 +73,14 @@ namespace othello
             this.tableLayoutPanel1.Size = new System.Drawing.Size(757, 608);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
-            // pictureBox1
+            // picBox_GameBoard
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(108, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(545, 511);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picBox_GameBoard.Location = new System.Drawing.Point(108, 3);
+            this.picBox_GameBoard.Name = "picBox_GameBoard";
+            this.picBox_GameBoard.Size = new System.Drawing.Size(530, 393);
+            this.picBox_GameBoard.TabIndex = 0;
+            this.picBox_GameBoard.TabStop = false;
+            this.picBox_GameBoard.Paint += new System.Windows.Forms.PaintEventHandler(this.picBox_GameBoard_Paint);
             // 
             // panel1
             // 
@@ -100,7 +101,7 @@ namespace othello
             this.Text = "Othello";
             this.Load += new System.EventHandler(this.frm_main_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_GameBoard)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -110,7 +111,7 @@ namespace othello
         private System.Windows.Forms.Button btn_Start;
         private System.Windows.Forms.Button btn_ReStart;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picBox_GameBoard;
         private System.Windows.Forms.Panel panel1;
     }
 }

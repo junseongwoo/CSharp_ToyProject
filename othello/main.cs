@@ -1,4 +1,5 @@
-﻿using System;
+﻿using othello.Logic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 /*
  * 오델로 = 리버시
  * 8x8 정중앙에 흑백 2개의 돌을 교차로 놓고 게임 시작
@@ -19,6 +19,8 @@ namespace othello
 {
     public partial class frm_main : Form
     {
+        GameBoard Board = new GameBoard();
+
         public frm_main()
         {
             InitializeComponent();
@@ -28,9 +30,10 @@ namespace othello
         {
         }
 
-        private void picBox_othello_Paint(object sender, PaintEventArgs e)
+        private void picBox_GameBoard_Paint(object sender, PaintEventArgs e)
         {
-
+            Board.GameBoard_Info(8, 50);
+            Board.GameBoard_Create(sender, e);
         }
     }
 }
