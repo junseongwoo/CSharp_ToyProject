@@ -10,6 +10,10 @@ namespace othello.Logic
 {
     // How to separate cells in One picturebox
     // https://stackoverflow.com/questions/12711843/picturebox-grid-and-selecting-individual-cells-when-clicked-on
+    //
+    // How to divide grid of picturebox
+    // https://stackoverflow.com/questions/22093731/trying-to-create-a-grid-of-pictureboxes-in-an-array-for-a-board-in-c-sharp
+    // https://stackoverflow.com/questions/12737103/picturebox-grids-and-filling-in-squares-game-of-life
     // 
     class GameBoard
     {
