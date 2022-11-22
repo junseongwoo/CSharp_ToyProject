@@ -33,7 +33,8 @@ namespace Omok
             this.mspMain = new System.Windows.Forms.MenuStrip();
             this.파일ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.보기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.수순ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.그리기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.이미지ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMain.SuspendLayout();
             this.mspMain.SuspendLayout();
             this.SuspendLayout();
@@ -46,6 +47,8 @@ namespace Omok
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(800, 450);
             this.pnlMain.TabIndex = 0;
+            this.pnlMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMain_Paint);
+            this.pnlMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMain_MouseDown);
             // 
             // mspMain
             // 
@@ -53,8 +56,7 @@ namespace Omok
             this.mspMain.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.mspMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.파일ToolStripMenuItem,
-            this.보기ToolStripMenuItem,
-            this.수순ToolStripMenuItem});
+            this.보기ToolStripMenuItem});
             this.mspMain.Location = new System.Drawing.Point(0, 0);
             this.mspMain.Name = "mspMain";
             this.mspMain.Size = new System.Drawing.Size(800, 33);
@@ -69,15 +71,26 @@ namespace Omok
             // 
             // 보기ToolStripMenuItem
             // 
+            this.보기ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.그리기ToolStripMenuItem,
+            this.이미지ToolStripMenuItem});
             this.보기ToolStripMenuItem.Name = "보기ToolStripMenuItem";
             this.보기ToolStripMenuItem.Size = new System.Drawing.Size(64, 29);
             this.보기ToolStripMenuItem.Text = "보기";
             // 
-            // 수순ToolStripMenuItem
+            // 그리기ToolStripMenuItem
             // 
-            this.수순ToolStripMenuItem.Name = "수순ToolStripMenuItem";
-            this.수순ToolStripMenuItem.Size = new System.Drawing.Size(64, 29);
-            this.수순ToolStripMenuItem.Text = "수순";
+            this.그리기ToolStripMenuItem.Name = "그리기ToolStripMenuItem";
+            this.그리기ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.그리기ToolStripMenuItem.Text = "그리기";
+            this.그리기ToolStripMenuItem.Click += new System.EventHandler(this.그리기ToolStripMenuItem_Click);
+            // 
+            // 이미지ToolStripMenuItem
+            // 
+            this.이미지ToolStripMenuItem.Name = "이미지ToolStripMenuItem";
+            this.이미지ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.이미지ToolStripMenuItem.Text = "이미지";
+            this.이미지ToolStripMenuItem.Click += new System.EventHandler(this.이미지ToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -102,7 +115,8 @@ namespace Omok
         private System.Windows.Forms.MenuStrip mspMain;
         private System.Windows.Forms.ToolStripMenuItem 파일ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 보기ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 수순ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 그리기ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 이미지ToolStripMenuItem;
     }
 }
 
