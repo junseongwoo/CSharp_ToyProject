@@ -223,7 +223,46 @@ namespace Omok
                     else
                         break;
                 }
-                
+
+            for (int i = 1; i <= 5; i++)
+                if (x == 0 || y == 0)
+                    break;
+                else
+                {
+                    if (Board[x - i, y - i] == Board[x, y])
+                    {
+                        cnt++;
+                    }
+                    else
+                        break;
+                }
+
+            for (int i = 1; i <= 5; i++)
+                if (x == 0 || y == 0)
+                    break;
+                else
+                {
+                    if (Board[x + i, y - i] == Board[x, y])
+                    {
+                        cnt++;
+                    }
+                    else
+                        break;
+                }
+
+            for (int i = 1; i <= 5; i++)
+                if (x == 0 || y == 0)
+                    break;
+                else
+                {
+                    if (Board[x - i, y + i] == Board[x, y])
+                    {
+                        cnt++;
+                    }
+                    else
+                        break;
+                }
+
 
             if (cnt == 5)
             {
