@@ -184,6 +184,7 @@ namespace Omok
         {
             int cnt = 1;
 
+            // x 축 
             for (int i = x + 1; i <= 18; i++)
                 if (Board[i, y] == Board[x, y])
                     cnt++;
@@ -196,6 +197,7 @@ namespace Omok
                 else
                     break;
 
+            // y 축
             for (int i = y + 1; i <= 18; i++)
                 if (Board[x, i] == Board[x, y])
                     cnt++;
@@ -207,6 +209,60 @@ namespace Omok
                     cnt++;
                 else
                     break;
+
+            // 대각선
+            for (int i = 1; i <= 5; i++)
+                if (x == 0 || y == 0)
+                    break;
+                else
+                {
+                    if (Board[x + i, y + i] == Board[x, y])
+                    {
+                        cnt++;
+                    }
+                    else
+                        break;
+                }
+
+            for (int i = 1; i <= 5; i++)
+                if (x == 0 || y == 0)
+                    break;
+                else
+                {
+                    if (Board[x - i, y - i] == Board[x, y])
+                    {
+                        cnt++;
+                    }
+                    else
+                        break;
+                }
+
+            for (int i = 1; i <= 5; i++)
+                if (x == 0 || y == 0)
+                    break;
+                else
+                {
+                    if (Board[x + i, y - i] == Board[x, y])
+                    {
+                        cnt++;
+                    }
+                    else
+                        break;
+                }
+
+            for (int i = 1; i <= 5; i++)
+                if (x == 0 || y == 0)
+                    break;
+                else
+                {
+                    if (Board[x - i, y + i] == Board[x, y])
+                    {
+                        cnt++;
+                    }
+                    else
+                        break;
+                }
+
 
             if (cnt == 5)
             {
