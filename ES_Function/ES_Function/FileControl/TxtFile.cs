@@ -44,6 +44,13 @@ namespace ES_Function.FileControl
         }
         #endregion
 
+        #region string[]에서 string[index] 제거 기능 
+        public string[] deleteStringArrayLine(string[] stringArray, int index)
+        {
+            return stringArray.Where(i => i != stringArray[index]).ToArray();
+        }
+        #endregion
+
         #region Log 내용 중 S6F1 포함된 부분만 지움 
         public string[] deleteS6F1Contents(string[] logContents)
         {
@@ -60,13 +67,14 @@ namespace ES_Function.FileControl
                 {
                     for (int j = 0; j < logContents.Length; j++)
                     {
+                        
                         if (logContents[cnt] == "\"")
                         {
                             logContents[cnt] = "delete";
-                            logContents = logContents.Where(c => c != logContents[cnt]).ToArray();
+                            logContents = deleteStringArrayLine(logContents, cnt);
                             break;
                         }
-                        logContents = logContents.Where(c => c != logContents[cnt]).ToArray();
+                        logContents = deleteStringArrayLine(logContents, cnt);
                     }
                 }
                 else
@@ -87,7 +95,57 @@ namespace ES_Function.FileControl
                             }
                         }
                         cnt++;
+                    }
+                }
+            }
+            return logContents;
+        }
+        #endregion
 
+        #region Log 내용 중 message 포함된 부분만 지움 
+        public string[] deleteMessageContents(string[] logContents, string message)
+        {
+            int cnt = 0;
+            for (int i = 0; i < logContents.Length + cnt; i++)
+            {
+                if (logContents.Length == cnt)
+                {
+                    break;
+                }
+                string[] logSplit = logContents[cnt].Split('\t');
+
+                if (logSplit[4] == message)
+                {
+                    for (int j = 0; j < logContents.Length; j++)
+                    {
+
+                        if (logContents[cnt] == "\"")
+                        {
+                            logContents[cnt] = "delete";
+                            logContents = deleteStringArrayLine(logContents, cnt);
+                            break;
+                        }
+                        logContents = deleteStringArrayLine(logContents, cnt);
+                    }
+                }
+                else
+                {
+                    for (int j = 0; j < logContents.Length; j++)
+                    {
+                        if (logContents[cnt] == "\"")
+                        {
+                            cnt++;
+                            break;
+                        }
+                        logSplit = logContents[cnt].Split('\t');
+                        if (logSplit.Count() >= 5)
+                        {
+                            if (logSplit[4] == message)
+                            {
+                                break;
+                            }
+                        }
+                        cnt++;
                     }
                 }
             }

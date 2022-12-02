@@ -49,6 +49,8 @@ namespace ES_Function
                     //File명만 가지고 온다
                     fileName = Path.GetFileNameWithoutExtension(fileFullPath);
 
+                    string[] viewFilePath = fileFullPath.Split('\\');
+                    lblLogFilePath.Text = "..\\" + viewFilePath[viewFilePath.Length - 2] + '\\' + viewFilePath[viewFilePath.Length - 1];
                     //openFileDialog.InitialDirectory = filePath;
                 }
             }

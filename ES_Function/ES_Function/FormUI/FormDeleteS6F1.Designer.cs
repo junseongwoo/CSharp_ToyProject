@@ -31,6 +31,7 @@ namespace ES_Function
         {
             this.btnOpenFile = new System.Windows.Forms.Button();
             this.btnChangeContents = new System.Windows.Forms.Button();
+            this.lblLogFilePath = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnOpenFile
@@ -46,7 +47,7 @@ namespace ES_Function
             // 
             // btnChangeContents
             // 
-            this.btnChangeContents.Location = new System.Drawing.Point(447, 8);
+            this.btnChangeContents.Location = new System.Drawing.Point(444, 11);
             this.btnChangeContents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChangeContents.Name = "btnChangeContents";
             this.btnChangeContents.Size = new System.Drawing.Size(105, 41);
@@ -55,11 +56,21 @@ namespace ES_Function
             this.btnChangeContents.UseVisualStyleBackColor = true;
             this.btnChangeContents.Click += new System.EventHandler(this.btnChangeContents_Click);
             // 
+            // lblLogFilePath
+            // 
+            this.lblLogFilePath.AutoSize = true;
+            this.lblLogFilePath.Location = new System.Drawing.Point(118, 22);
+            this.lblLogFilePath.Name = "lblLogFilePath";
+            this.lblLogFilePath.Size = new System.Drawing.Size(29, 12);
+            this.lblLogFilePath.TabIndex = 2;
+            this.lblLogFilePath.Text = "C:\\";
+            // 
             // FormDeleteS6F1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 163);
+            this.Controls.Add(this.lblLogFilePath);
             this.Controls.Add(this.btnChangeContents);
             this.Controls.Add(this.btnOpenFile);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -67,6 +78,7 @@ namespace ES_Function
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete S6F1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -74,5 +86,6 @@ namespace ES_Function
 
         private System.Windows.Forms.Button btnOpenFile;
         private System.Windows.Forms.Button btnChangeContents;
+        private System.Windows.Forms.Label lblLogFilePath;
     }
 }
