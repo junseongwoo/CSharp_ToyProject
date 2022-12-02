@@ -14,11 +14,12 @@ namespace ES_Function
 {
     public partial class FormDeleteS6F1 : Form
     {
+        #region 지역변수
         string filePath = string.Empty;
         string fileFullPath = string.Empty;
-
         string fileFullName = string.Empty;
         string fileName = string.Empty;
+        #endregion
 
         #region 생성자
         TxtFile txtFile = new TxtFile();
@@ -56,54 +57,11 @@ namespace ES_Function
 
         private void btnChangeContents_Click(object sender, EventArgs e)
         {
-            string[] test = txtFile.readTxtAllLines(fileFullPath);
-            int cnt = 0;
-            for (int i = 0; i < test.Length + cnt ; i++)
-            {
-                if (test.Length == cnt)
-                {
-                    break;
-                }
-                string[] test1 = test[cnt].Split('\t');
-
-                if (test1[4] == "S6F1")
-                {
-                    for (int j = 0; j < test.Length; j++)
-                    {
-                        if (test[cnt] == "\"")
-                        {
-                            test[cnt] = "delete";
-                            test = test.Where(c => c != test[cnt]).ToArray();
-                            break;
-                        }
-                        test = test.Where(c => c != test[cnt]).ToArray();
-                    }
-                }
-                else
-                {
-                    for (int j = 0; j < test.Length; j++)
-                    {
-                        if (test[cnt] == "\"")
-                        {
-                            cnt++;
-                            break;
-                        }
-                        test1 = test[cnt].Split('\t');
-                        if (test1.Count() >= 6)
-                        {
-                            if (test1[4] == "S6F1")
-                            {
-                                break;
-                            }
-                        }
-                        cnt++;
-
-                    }
-                }
-            }
+            string[] logContents = txtFile.readTxtAllLines(fileFullPath);
+            logContents = txtFile.deleteS6F1Contents(logContents);
 
             string FileFullPath = filePath + fileName + "_Replace.log";
-            txtFile.saveTxtFile(FileFullPath, test);
+            txtFile.saveTxtFile(FileFullPath, logContents);
         }
     }
 }

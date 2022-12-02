@@ -34,9 +34,10 @@ namespace ES_Function
             // 
             // btnDeleteS6F1
             // 
-            this.btnDeleteS6F1.Location = new System.Drawing.Point(589, 12);
+            this.btnDeleteS6F1.Location = new System.Drawing.Point(412, 8);
+            this.btnDeleteS6F1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteS6F1.Name = "btnDeleteS6F1";
-            this.btnDeleteS6F1.Size = new System.Drawing.Size(199, 49);
+            this.btnDeleteS6F1.Size = new System.Drawing.Size(139, 33);
             this.btnDeleteS6F1.TabIndex = 0;
             this.btnDeleteS6F1.Text = "Delete S6F1 Log Contents";
             this.btnDeleteS6F1.UseVisualStyleBackColor = true;
@@ -44,11 +45,13 @@ namespace ES_Function
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(560, 300);
             this.Controls.Add(this.btnDeleteS6F1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.ResumeLayout(false);
 

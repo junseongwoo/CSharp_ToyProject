@@ -35,9 +35,10 @@ namespace ES_Function
             // 
             // btnOpenFile
             // 
-            this.btnOpenFile.Location = new System.Drawing.Point(12, 12);
+            this.btnOpenFile.Location = new System.Drawing.Point(8, 8);
+            this.btnOpenFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOpenFile.Name = "btnOpenFile";
-            this.btnOpenFile.Size = new System.Drawing.Size(150, 61);
+            this.btnOpenFile.Size = new System.Drawing.Size(105, 41);
             this.btnOpenFile.TabIndex = 0;
             this.btnOpenFile.Text = "Open File";
             this.btnOpenFile.UseVisualStyleBackColor = true;
@@ -45,9 +46,10 @@ namespace ES_Function
             // 
             // btnChangeContents
             // 
-            this.btnChangeContents.Location = new System.Drawing.Point(638, 12);
+            this.btnChangeContents.Location = new System.Drawing.Point(447, 8);
+            this.btnChangeContents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChangeContents.Name = "btnChangeContents";
-            this.btnChangeContents.Size = new System.Drawing.Size(150, 61);
+            this.btnChangeContents.Size = new System.Drawing.Size(105, 41);
             this.btnChangeContents.TabIndex = 1;
             this.btnChangeContents.Text = "Delete S6F1";
             this.btnChangeContents.UseVisualStyleBackColor = true;
@@ -55,12 +57,14 @@ namespace ES_Function
             // 
             // FormDeleteS6F1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 244);
+            this.ClientSize = new System.Drawing.Size(560, 163);
             this.Controls.Add(this.btnChangeContents);
             this.Controls.Add(this.btnOpenFile);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormDeleteS6F1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete S6F1";
             this.ResumeLayout(false);
 

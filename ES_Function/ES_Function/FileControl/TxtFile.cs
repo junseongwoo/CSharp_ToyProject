@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ES_Function.FileControl
 {
@@ -36,9 +37,61 @@ namespace ES_Function.FileControl
         #endregion
 
         #region txt 파일 저장 
-        public void saveTxtFile(string FileFullPath, string[] contents)
+        public void saveTxtFile(string fileFullPath, string[] contents)
         {
-            File.WriteAllLines(FileFullPath, contents);
+            File.WriteAllLines(fileFullPath, contents);
+            MessageBox.Show("저장 완료");
+        }
+        #endregion
+
+        #region Log 내용 중 S6F1 포함된 부분만 지움 
+        public string[] deleteS6F1Contents(string[] logContents)
+        {
+            int cnt = 0;
+            for (int i = 0; i < logContents.Length + cnt; i++)
+            {
+                if (logContents.Length == cnt)
+                {
+                    break;
+                }
+                string[] logSplit = logContents[cnt].Split('\t');
+
+                if (logSplit[4] == "S6F1")
+                {
+                    for (int j = 0; j < logContents.Length; j++)
+                    {
+                        if (logContents[cnt] == "\"")
+                        {
+                            logContents[cnt] = "delete";
+                            logContents = logContents.Where(c => c != logContents[cnt]).ToArray();
+                            break;
+                        }
+                        logContents = logContents.Where(c => c != logContents[cnt]).ToArray();
+                    }
+                }
+                else
+                {
+                    for (int j = 0; j < logContents.Length; j++)
+                    {
+                        if (logContents[cnt] == "\"")
+                        {
+                            cnt++;
+                            break;
+                        }
+                        logSplit = logContents[cnt].Split('\t');
+                        if (logSplit.Count() >= 5)
+                        {
+                            if (logSplit[4] == "S6F1")
+                            {
+                                break;
+                            }
+                        }
+                        cnt++;
+
+                    }
+                }
+            }
+            return logContents;
         }
         #endregion
     }
