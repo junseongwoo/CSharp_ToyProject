@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ES_Function.FormUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,12 @@ namespace ES_Function
         {
             FormDeleteS6F1 frmDeleteS6F1 = new FormDeleteS6F1();
             frmDeleteS6F1.Show();
+        }
+
+        private void btnRS232_Click(object sender, EventArgs e)
+        {
+            FormRS232 frmRS232 = new FormRS232();
+            frmRS232.Show();
         }
     }
 }

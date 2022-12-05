@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Com\RS232.cs" />
     <Compile Include="FileControl\FileDirectory.cs" />
     <Compile Include="FileControl\TxtFile.cs" />
     <Compile Include="FormUI\FormDeleteS6F1.cs">
@@ -53,6 +54,12 @@
     </Compile>
     <Compile Include="FormUI\FormDeleteS6F1.Designer.cs">
       <DependentUpon>FormDeleteS6F1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUI\FormRS232.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\FormRS232.Designer.cs">
+      <DependentUpon>FormRS232.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -64,6 +71,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormUI\FormDeleteS6F1.resx">
       <DependentUpon>FormDeleteS6F1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\FormRS232.resx">
+      <DependentUpon>FormRS232.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -90,5 +100,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

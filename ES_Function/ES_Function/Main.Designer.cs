@@ -30,12 +30,13 @@ namespace ES_Function
         private void InitializeComponent()
         {
             this.btnDeleteS6F1 = new System.Windows.Forms.Button();
+            this.btnRS232 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDeleteS6F1
             // 
             this.btnDeleteS6F1.Location = new System.Drawing.Point(412, 8);
-            this.btnDeleteS6F1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteS6F1.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteS6F1.Name = "btnDeleteS6F1";
             this.btnDeleteS6F1.Size = new System.Drawing.Size(139, 33);
             this.btnDeleteS6F1.TabIndex = 0;
@@ -43,13 +44,24 @@ namespace ES_Function
             this.btnDeleteS6F1.UseVisualStyleBackColor = true;
             this.btnDeleteS6F1.Click += new System.EventHandler(this.btnDeleteS6F1_Click);
             // 
+            // btnRS232
+            // 
+            this.btnRS232.Location = new System.Drawing.Point(412, 74);
+            this.btnRS232.Name = "btnRS232";
+            this.btnRS232.Size = new System.Drawing.Size(139, 33);
+            this.btnRS232.TabIndex = 1;
+            this.btnRS232.Text = "RS232 ";
+            this.btnRS232.UseVisualStyleBackColor = true;
+            this.btnRS232.Click += new System.EventHandler(this.btnRS232_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 167);
+            this.ClientSize = new System.Drawing.Size(570, 363);
+            this.Controls.Add(this.btnRS232);
             this.Controls.Add(this.btnDeleteS6F1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
@@ -60,6 +72,7 @@ namespace ES_Function
         #endregion
 
         private System.Windows.Forms.Button btnDeleteS6F1;
+        private System.Windows.Forms.Button btnRS232;
     }
 }
 
