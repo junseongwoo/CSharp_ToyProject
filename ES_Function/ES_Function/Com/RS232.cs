@@ -27,7 +27,11 @@ namespace ES_Function.Com
             Serial.BaudRate = baudrate; // 데이터 전송 속도
             Serial.DataBits = 8; // 데이터 비트
             Serial.StopBits = StopBits.One; // 스탑비트
-            Serial.Parity = Parity.None; // 패리티
+            Serial.Parity = Parity.Even; // 패리티
+            Serial.NewLine = Environment.NewLine;
+            Serial.ReadTimeout = 1000;
+            Serial.WriteTimeout = 1000;
+
             //Serial.DataReceived += new SerialDataReceivedEventHandler(ev) //데이터 받을때의 실행되는 부분
 
             Serial.Open(); // 위에 기입한 Serial의 데이터를 기반으로 연결 시도
@@ -54,6 +58,11 @@ namespace ES_Function.Com
         public void SendData(string Msg)
         {
             Serial.Write(Msg);
+        }
+
+        public string ReadData()
+        {
+            return Serial.ReadLine();
         }
     }
 }
