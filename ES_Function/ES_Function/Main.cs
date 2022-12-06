@@ -29,5 +29,11 @@ namespace ES_Function
             FormRS232 frmRS232 = new FormRS232();
             frmRS232.Show();
         }
+
+        private void btnReceiveRS232_Click(object sender, EventArgs e)
+        {
+            FormReceiveRS232 frmReceiveRS232 = new FormReceiveRS232();
+            frmReceiveRS232.Show();
+        }
     }
 }

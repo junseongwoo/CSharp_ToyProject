@@ -1,7 +1,7 @@
 ﻿
 namespace ES_Function.FormUI
 {
-    partial class FormRS232
+    partial class FormReceiveRS232
     {
         /// <summary>
         /// Required designer variable.
@@ -36,13 +36,17 @@ namespace ES_Function.FormUI
             this.btnCheckRS232 = new System.Windows.Forms.Button();
             this.cboPortNumRS232 = new System.Windows.Forms.ComboBox();
             this.cboBaudrateRS232 = new System.Windows.Forms.ComboBox();
-            this.btnSendRS232 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.bwRS232 = new System.ComponentModel.BackgroundWorker();
+            this.bwReceiveRS232 = new System.ComponentModel.BackgroundWorker();
+            this.label7 = new System.Windows.Forms.Label();
             this.lblLogFilePath = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblSendCheck = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -140,89 +144,116 @@ namespace ES_Function.FormUI
             this.cboBaudrateRS232.Size = new System.Drawing.Size(104, 20);
             this.cboBaudrateRS232.TabIndex = 8;
             // 
-            // btnSendRS232
-            // 
-            this.btnSendRS232.Location = new System.Drawing.Point(347, 124);
-            this.btnSendRS232.Name = "btnSendRS232";
-            this.btnSendRS232.Size = new System.Drawing.Size(74, 32);
-            this.btnSendRS232.TabIndex = 9;
-            this.btnSendRS232.Text = "Send Start";
-            this.btnSendRS232.UseVisualStyleBackColor = true;
-            this.btnSendRS232.Click += new System.EventHandler(this.btnSendRS232_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("굴림", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label4.Location = new System.Drawing.Point(253, 22);
+            this.label4.Location = new System.Drawing.Point(232, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 20);
+            this.label4.Size = new System.Drawing.Size(197, 20);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Send              ";
+            this.label4.Text = "Receive              ";
             // 
-            // bwRS232
+            // bwReceiveRS232
             // 
-            this.bwRS232.WorkerReportsProgress = true;
-            this.bwRS232.WorkerSupportsCancellation = true;
-            this.bwRS232.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwRS232_DoWork);
+            this.bwReceiveRS232.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwReceiveRS232_DoWork);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.Desktop;
+            this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label7.Location = new System.Drawing.Point(144, 189);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(36, 12);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "False";
+            this.label7.Visible = false;
             // 
             // lblLogFilePath
             // 
             this.lblLogFilePath.AutoSize = true;
             this.lblLogFilePath.BackColor = System.Drawing.SystemColors.Desktop;
             this.lblLogFilePath.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblLogFilePath.Location = new System.Drawing.Point(308, 89);
+            this.lblLogFilePath.Location = new System.Drawing.Point(62, 214);
             this.lblLogFilePath.Name = "lblLogFilePath";
-            this.lblLogFilePath.Size = new System.Drawing.Size(109, 12);
+            this.lblLogFilePath.Size = new System.Drawing.Size(29, 12);
             this.lblLogFilePath.TabIndex = 11;
-            this.lblLogFilePath.Text = "C:\\                    ";
+            this.lblLogFilePath.Text = "C:\\";
+            this.lblLogFilePath.Visible = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.Desktop;
             this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label5.Location = new System.Drawing.Point(255, 89);
+            this.label5.Location = new System.Drawing.Point(14, 214);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 12);
             this.label5.TabIndex = 12;
             this.label5.Text = "Data : ";
+            this.label5.Visible = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.Desktop;
             this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label6.Location = new System.Drawing.Point(255, 64);
+            this.label6.Location = new System.Drawing.Point(14, 189);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 12);
             this.label6.TabIndex = 13;
             this.label6.Text = "Start Check : ";
+            this.label6.Visible = false;
             // 
-            // lblSendCheck
+            // dataGridView1
             // 
-            this.lblSendCheck.AutoSize = true;
-            this.lblSendCheck.BackColor = System.Drawing.SystemColors.Desktop;
-            this.lblSendCheck.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblSendCheck.Location = new System.Drawing.Point(385, 64);
-            this.lblSendCheck.Name = "lblSendCheck";
-            this.lblSendCheck.Size = new System.Drawing.Size(32, 12);
-            this.lblSendCheck.TabIndex = 14;
-            this.lblSendCheck.Text = "false";
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridView1.Location = new System.Drawing.Point(236, 61);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(303, 338);
+            this.dataGridView1.TabIndex = 15;
             // 
-            // FormRS232
+            // Column1
+            // 
+            this.Column1.HeaderText = "SVID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 60;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "SVNAME";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Value";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // FormReceiveRS232
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.ClientSize = new System.Drawing.Size(497, 211);
-            this.Controls.Add(this.lblSendCheck);
+            this.ClientSize = new System.Drawing.Size(560, 411);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblLogFilePath);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnSendRS232);
             this.Controls.Add(this.cboBaudrateRS232);
             this.Controls.Add(this.cboPortNumRS232);
             this.Controls.Add(this.btnCheckRS232);
@@ -230,10 +261,11 @@ namespace ES_Function.FormUI
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "FormRS232";
+            this.Name = "FormReceiveRS232";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormRS232";
-            this.Load += new System.EventHandler(this.FormRS232_Load);
+            this.Text = "FormReceiveRS232";
+            this.Load += new System.EventHandler(this.FormReceiveRS232_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,12 +280,15 @@ namespace ES_Function.FormUI
         private System.Windows.Forms.Button btnCheckRS232;
         private System.Windows.Forms.ComboBox cboPortNumRS232;
         private System.Windows.Forms.ComboBox cboBaudrateRS232;
-        private System.Windows.Forms.Button btnSendRS232;
         private System.Windows.Forms.Label label4;
-        private System.ComponentModel.BackgroundWorker bwRS232;
+        private System.ComponentModel.BackgroundWorker bwReceiveRS232;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblLogFilePath;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblSendCheck;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

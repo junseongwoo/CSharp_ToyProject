@@ -55,6 +55,12 @@
     <Compile Include="FormUI\FormDeleteS6F1.Designer.cs">
       <DependentUpon>FormDeleteS6F1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUI\FormReceiveRS232.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\FormReceiveRS232.Designer.cs">
+      <DependentUpon>FormReceiveRS232.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\FormRS232.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormUI\FormDeleteS6F1.resx">
       <DependentUpon>FormDeleteS6F1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\FormReceiveRS232.resx">
+      <DependentUpon>FormReceiveRS232.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\FormRS232.resx">
       <DependentUpon>FormRS232.cs</DependentUpon>

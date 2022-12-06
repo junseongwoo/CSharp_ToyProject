@@ -64,5 +64,10 @@ namespace ES_Function.Com
         {
             return Serial.ReadLine();
         }
+
+        public int ReadToBytes()
+        {
+            return Serial.BytesToRead;
+        }
     }
 }
