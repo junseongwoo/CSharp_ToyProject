@@ -55,10 +55,18 @@ namespace ES_Function.Com
         }
         #endregion
 
+        #region Serial 통신 메세지 보내기
         public void SendData(string Msg)
         {
             Serial.Write(Msg);
         }
+
+        public void SendDataLine(string Msg)
+        {
+            Serial.WriteLine(Msg);
+        }
+
+        #endregion
 
         public string ReadData()
         {

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -183,7 +184,7 @@ namespace ES_Function.FormUI
                 {
                     bwRS232.CancelAsync();
                     serial.Close();
-                    serial.SendData("$ACK");
+                    serial.SendDataLine("$ACK");
                 }
             }
             catch (Exception ex)
@@ -202,12 +203,20 @@ namespace ES_Function.FormUI
             {
                 while (true)
                 {
+                    Thread.Sleep(10);
+                    if (bwRS232.CancellationPending)
+                    {
+                        e.Cancel = true;
+                        return;
+                    }
                     if (serial.ReadToBytes() > 0)
                     {
                         startMsg = serial.ReadData();
                     }
                     if (startMsg == "$START")
                     {
+                        Stopwatch watch = new Stopwatch();
+                        watch.Start();
                         for (int i = 0; i < logMsg.Length; i++)
                         {
                             Thread.Sleep(10);
@@ -218,7 +227,7 @@ namespace ES_Function.FormUI
                             }
                             if (serial.IsOpened() == true)
                             {
-                                serial.SendData(logMsg[i]);
+                                serial.SendDataLine(logMsg[i]);
                             }
                             else
                             {
@@ -226,12 +235,16 @@ namespace ES_Function.FormUI
                                 return;
                             }
                         }
+                        watch.Stop();
+                        //MessageBox.Show($"Log 메세지 보내는 시간 {watch.Elapsed} ");
+                        //MessageBox.Show($"Log 메세지 보내는 시간 {watch.ElapsedMilliseconds} ms");
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+                bwRS232_Cancel();
             }
         }
         #endregion

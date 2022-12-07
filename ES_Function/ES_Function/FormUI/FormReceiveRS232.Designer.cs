@@ -46,6 +46,7 @@ namespace ES_Function.FormUI
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnReceiveStart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,6 +158,8 @@ namespace ES_Function.FormUI
             // 
             // bwReceiveRS232
             // 
+            this.bwReceiveRS232.WorkerReportsProgress = true;
+            this.bwReceiveRS232.WorkerSupportsCancellation = true;
             this.bwReceiveRS232.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwReceiveRS232_DoWork);
             // 
             // label7
@@ -242,12 +245,23 @@ namespace ES_Function.FormUI
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
+            // btnReceiveStart
+            // 
+            this.btnReceiveStart.Location = new System.Drawing.Point(435, 11);
+            this.btnReceiveStart.Name = "btnReceiveStart";
+            this.btnReceiveStart.Size = new System.Drawing.Size(103, 33);
+            this.btnReceiveStart.TabIndex = 16;
+            this.btnReceiveStart.Text = "Receive Start";
+            this.btnReceiveStart.UseVisualStyleBackColor = true;
+            this.btnReceiveStart.Click += new System.EventHandler(this.btnReceiveStart_Click);
+            // 
             // FormReceiveRS232
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(560, 411);
+            this.Controls.Add(this.btnReceiveStart);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -290,5 +304,6 @@ namespace ES_Function.FormUI
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Button btnReceiveStart;
     }
 }
