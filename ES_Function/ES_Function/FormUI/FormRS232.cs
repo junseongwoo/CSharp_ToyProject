@@ -70,7 +70,6 @@ namespace ES_Function.FormUI
             {
                 MessageBox.Show(ex.ToString());
             }
-
         }
         #endregion
 
@@ -128,10 +127,7 @@ namespace ES_Function.FormUI
                 bwRS232_Cancel();
                 MessageBox.Show(ex.ToString());
             }
-            
-            
             #endregion
-
         }
         #endregion
 
