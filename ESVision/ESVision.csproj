@@ -46,33 +46,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="formMain.cs">
+    <Compile Include="UI\VisionUtil\formSubstarction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formMain.Designer.cs">
+    <Compile Include="UI\VisionUtil\formSubstarction.Designer.cs">
+      <DependentUpon>formSubstarction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainView\formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainView\formMain.Designer.cs">
       <DependentUpon>formMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\BottomView.cs">
+    <Compile Include="UI\Frame\BottomView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\BottomView.Designer.cs">
+    <Compile Include="UI\Frame\BottomView.Designer.cs">
       <DependentUpon>BottomView.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\MainFrame.cs">
+    <Compile Include="UI\Frame\TopView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\MainFrame.Designer.cs">
-      <DependentUpon>MainFrame.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\TopView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\TopView.Designer.cs">
+    <Compile Include="UI\Frame\TopView.Designer.cs">
       <DependentUpon>TopView.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="formMain.resx">
+    <EmbeddedResource Include="UI\MainView\formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -84,8 +84,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\MainFrame.resx">
-      <DependentUpon>MainFrame.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Frame\BottomView.resx">
+      <DependentUpon>BottomView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Frame\TopView.resx">
+      <DependentUpon>TopView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\VisionUtil\formSubstarction.resx">
+      <DependentUpon>formSubstarction.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

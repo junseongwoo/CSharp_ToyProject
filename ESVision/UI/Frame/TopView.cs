@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ESVision.UI
+namespace ESVision
 {
-    public partial class BottomView : Form
+    public partial class TopView : Form
     {
-        public BottomView()
+        public TopView()
         {
             InitializeComponent();
+        }
+
+        private void imageSubstractionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ESVision.UI
+namespace ESVision
 {
-    public partial class MainFrame : Form
+    public partial class BottomView : Form
     {
-        public MainFrame()
+        public BottomView()
         {
             InitializeComponent();
         }
