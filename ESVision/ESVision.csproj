@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI\VisionUtil\formOpenImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\VisionUtil\formOpenImage.Designer.cs">
+      <DependentUpon>formOpenImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\VisionUtil\formSubstarction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <EmbeddedResource Include="UI\Frame\TopView.resx">
       <DependentUpon>TopView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\VisionUtil\formOpenImage.resx">
+      <DependentUpon>formOpenImage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\VisionUtil\formSubstarction.resx">
       <DependentUpon>formSubstarction.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +115,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="System\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
