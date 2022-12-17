@@ -1,7 +1,7 @@
 ﻿
 namespace ESVision
 {
-    partial class formSubstarction
+    partial class formBaseImage
     {
         /// <summary>
         /// Required designer variable.
@@ -29,18 +29,10 @@ namespace ESVision
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // formSubstarction
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 914);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "formSubstarction";
-            this.Text = "s";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "formBaseImage";
         }
 
         #endregion
