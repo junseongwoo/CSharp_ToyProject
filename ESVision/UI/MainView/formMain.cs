@@ -39,6 +39,8 @@ namespace ESVision
             botView.Show();
             pnlBottom.Controls.Add(botView);
 
+
+
         }
         #endregion
     }
