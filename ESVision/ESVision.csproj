@@ -46,17 +46,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="System\Image\SetImage.cs" />
+    <Compile Include="UI\Define\InitializeUi.cs" />
+    <Compile Include="UI\Define\UiDefine.cs" />
+    <Compile Include="UI\VisionUtil\formBaseImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\VisionUtil\formBaseImage.Designer.cs">
+      <DependentUpon>formBaseImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\VisionUtil\formNewImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\VisionUtil\formNewImage.Designer.cs">
+      <DependentUpon>formNewImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\VisionUtil\Substraction\formSubImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\VisionUtil\Substraction\formSubImage.Designer.cs">
+      <DependentUpon>formSubImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\VisionUtil\formOpenImage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\VisionUtil\formOpenImage.Designer.cs">
       <DependentUpon>formOpenImage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\VisionUtil\formSubstarction.cs">
+    <Compile Include="UI\VisionUtil\Substraction\formSubResultImage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\VisionUtil\formSubstarction.Designer.cs">
-      <DependentUpon>formSubstarction.cs</DependentUpon>
+    <Compile Include="UI\VisionUtil\Substraction\formSubResultImage.Designer.cs">
+      <DependentUpon>formSubResultImage.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\MainView\formMain.cs">
       <SubType>Form</SubType>
@@ -89,6 +110,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\Frame\BottomView.resx">
       <DependentUpon>BottomView.cs</DependentUpon>
@@ -96,11 +118,17 @@
     <EmbeddedResource Include="UI\Frame\TopView.resx">
       <DependentUpon>TopView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\VisionUtil\formNewImage.resx">
+      <DependentUpon>formNewImage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\VisionUtil\formOpenImage.resx">
       <DependentUpon>formOpenImage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\VisionUtil\formSubstarction.resx">
-      <DependentUpon>formSubstarction.cs</DependentUpon>
+    <EmbeddedResource Include="UI\VisionUtil\Substraction\formSubImage.resx">
+      <DependentUpon>formSubImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\VisionUtil\Substraction\formSubResultImage.resx">
+      <DependentUpon>formSubResultImage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -116,7 +144,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="System\" />
+    <Content Include="Resources\newDocument.png" />
+    <Content Include="Resources\openFolder.png" />
+    <Content Include="Resources\saveFile.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
