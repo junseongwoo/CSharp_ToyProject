@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ESVision
 {
-    public partial class formSubstarction : Form
+    public partial class formSubResultImage : Form
     {
-        public formSubstarction()
+        public formSubResultImage()
         {
             InitializeComponent();
         }
