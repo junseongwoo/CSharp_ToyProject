@@ -32,11 +32,11 @@ namespace ESVision
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TopView));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.imageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imageSubstractionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageSubtractionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSaveBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripNewOpenBtn = new System.Windows.Forms.ToolStripButton();
@@ -61,45 +61,46 @@ namespace ESVision
             // imageToolStripMenuItem
             // 
             this.imageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem,
-            this.saveToolStripMenuItem,
+            this.newImageToolStripMenuItem,
+            this.openImageToolStripMenuItem,
             this.saveImageToolStripMenuItem});
             this.imageToolStripMenuItem.Name = "imageToolStripMenuItem";
             this.imageToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.imageToolStripMenuItem.Text = "Image";
             // 
-            // openToolStripMenuItem
+            // newImageToolStripMenuItem
             // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.openToolStripMenuItem.Text = "New Image";
+            this.newImageToolStripMenuItem.Name = "newImageToolStripMenuItem";
+            this.newImageToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.newImageToolStripMenuItem.Text = "New Image";
+            this.newImageToolStripMenuItem.Click += new System.EventHandler(this.newImageToolStripMenuItem_Click);
             // 
-            // saveToolStripMenuItem
+            // openImageToolStripMenuItem
             // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.saveToolStripMenuItem.Text = "Open Image";
+            this.openImageToolStripMenuItem.Name = "openImageToolStripMenuItem";
+            this.openImageToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.openImageToolStripMenuItem.Text = "Open Image";
             // 
             // saveImageToolStripMenuItem
             // 
             this.saveImageToolStripMenuItem.Name = "saveImageToolStripMenuItem";
-            this.saveImageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveImageToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.saveImageToolStripMenuItem.Text = "Save Image";
             // 
             // imageToolsToolStripMenuItem
             // 
             this.imageToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.imageSubstractionToolStripMenuItem});
+            this.imageSubtractionToolStripMenuItem});
             this.imageToolsToolStripMenuItem.Name = "imageToolsToolStripMenuItem";
             this.imageToolsToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.imageToolsToolStripMenuItem.Text = "Image Tools";
             // 
-            // imageSubstractionToolStripMenuItem
+            // imageSubtractionToolStripMenuItem
             // 
-            this.imageSubstractionToolStripMenuItem.Name = "imageSubstractionToolStripMenuItem";
-            this.imageSubstractionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.imageSubstractionToolStripMenuItem.Text = "Image Substraction";
-            this.imageSubstractionToolStripMenuItem.Click += new System.EventHandler(this.imageSubstractionToolStripMenuItem_Click);
+            this.imageSubtractionToolStripMenuItem.Name = "imageSubtractionToolStripMenuItem";
+            this.imageSubtractionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imageSubtractionToolStripMenuItem.Text = "Image Substraction";
+            this.imageSubtractionToolStripMenuItem.Click += new System.EventHandler(this.imageSubtractionToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -167,11 +168,11 @@ namespace ESVision
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem imageToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newImageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openImageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveImageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imageToolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem imageSubstractionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem imageSubtractionToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripSaveBtn;
         private System.Windows.Forms.ToolStripButton toolStripNewOpenBtn;
