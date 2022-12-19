@@ -14,6 +14,7 @@ namespace ESVision
     {
         #region [필드]
         SetImage setImage = null;
+        SortedList<string, string> ImagePath = null;
         #endregion
 
         #region [생성자]
@@ -35,14 +36,18 @@ namespace ESVision
         #region [이벤트 함수 : Open Background Image 버튼 클릭]
         private void btnOpenBackgroundImg_Click(object sender, EventArgs e)
         {
-            setImage.OpenImage();
+            ImagePath = setImage.GetImagePath();
+            txtBackgroundImgPath.Text = ImagePath.Values[0].ToString();
+            picBackgroundImg.Image = setImage.ShowImagePicturebox(ImagePath.Values[1].ToString());
         }
         #endregion
 
         #region [이벤트 함수 : Open Source Image 버튼 클릭]
         private void btnOpenSourceImg_Click(object sender, EventArgs e)
         {
-
+            ImagePath = setImage.GetImagePath();
+            txtSourceImgPath.Text = ImagePath.Values[0].ToString();
+            picSourceImg.Image = setImage.ShowImagePicturebox(ImagePath.Values[1].ToString());
         }
         #endregion
 

@@ -31,14 +31,13 @@ namespace ESVision
         {
             this.SuspendLayout();
             // 
-            // formSubtarction
+            // formSubResultImage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 914);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "formSubtarction";
-            this.Text = "s";
+            this.ClientSize = new System.Drawing.Size(713, 527);
+            this.Name = "formSubResultImage";
+            this.Text = "Subtraction Result";
             this.ResumeLayout(false);
 
         }
