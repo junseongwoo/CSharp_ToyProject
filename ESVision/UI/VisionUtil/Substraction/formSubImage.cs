@@ -13,7 +13,7 @@ namespace ESVision
     public partial class formSubImage : Form
     {
         #region [필드]
-        SetImage setImage = null;
+        ImgLib ILib = null;
         SortedList<string, string> ImagePath = null;
         #endregion
 
@@ -29,25 +29,25 @@ namespace ESVision
         #region [초기화]
         private void Initalize()
         {
-            setImage = new SetImage();
+            ILib = new ImgLib();
         }
         #endregion
 
         #region [이벤트 함수 : Open Background Image 버튼 클릭]
         private void btnOpenBackgroundImg_Click(object sender, EventArgs e)
         {
-            ImagePath = setImage.GetImagePath();
+            ImagePath = ILib.GetImagePath();
             txtBackgroundImgPath.Text = ImagePath.Values[0].ToString();
-            picBackgroundImg.Image = setImage.ShowImagePicturebox(ImagePath.Values[1].ToString());
+            picBackgroundImg.Image = ILib.ShowImagePicturebox(ImagePath.Values[1].ToString());
         }
         #endregion
 
         #region [이벤트 함수 : Open Source Image 버튼 클릭]
         private void btnOpenSourceImg_Click(object sender, EventArgs e)
         {
-            ImagePath = setImage.GetImagePath();
+            ImagePath = ILib.GetImagePath();
             txtSourceImgPath.Text = ImagePath.Values[0].ToString();
-            picSourceImg.Image = setImage.ShowImagePicturebox(ImagePath.Values[1].ToString());
+            picSourceImg.Image = ILib.ShowImagePicturebox(ImagePath.Values[1].ToString());
         }
         #endregion
 

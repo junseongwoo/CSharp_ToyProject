@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="System\Image\SetImage.cs" />
+    <Compile Include="System\Image\ImgLib.cs" />
     <Compile Include="UI\Define\InitializeUi.cs" />
     <Compile Include="UI\Define\UiDefine.cs" />
     <Compile Include="UI\VisionUtil\formBaseImage.cs">
