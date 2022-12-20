@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ES_Function.FileControl
+namespace ES_Function
 {
     public class TxtFile
     {
