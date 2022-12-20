@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Com\RS232.cs" />
+    <Compile Include="Com\TCP_IP.cs" />
     <Compile Include="FileControl\FileDirectory.cs" />
     <Compile Include="FileControl\TxtFile.cs" />
     <Compile Include="FormUI\FormDeleteS6F1.cs">

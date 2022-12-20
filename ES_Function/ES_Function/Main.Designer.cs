@@ -32,6 +32,7 @@ namespace ES_Function
             this.btnDeleteS6F1 = new System.Windows.Forms.Button();
             this.btnRS232 = new System.Windows.Forms.Button();
             this.btnReceiveRS232 = new System.Windows.Forms.Button();
+            this.btnTCP_IP = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDeleteS6F1
@@ -57,7 +58,7 @@ namespace ES_Function
             // 
             // btnReceiveRS232
             // 
-            this.btnReceiveRS232.Location = new System.Drawing.Point(412, 124);
+            this.btnReceiveRS232.Location = new System.Drawing.Point(412, 120);
             this.btnReceiveRS232.Name = "btnReceiveRS232";
             this.btnReceiveRS232.Size = new System.Drawing.Size(139, 33);
             this.btnReceiveRS232.TabIndex = 2;
@@ -65,11 +66,22 @@ namespace ES_Function
             this.btnReceiveRS232.UseVisualStyleBackColor = true;
             this.btnReceiveRS232.Click += new System.EventHandler(this.btnReceiveRS232_Click);
             // 
+            // btnTCP_IP
+            // 
+            this.btnTCP_IP.Location = new System.Drawing.Point(412, 176);
+            this.btnTCP_IP.Name = "btnTCP_IP";
+            this.btnTCP_IP.Size = new System.Drawing.Size(139, 33);
+            this.btnTCP_IP.TabIndex = 3;
+            this.btnTCP_IP.Text = "TCP/IP";
+            this.btnTCP_IP.UseVisualStyleBackColor = true;
+            this.btnTCP_IP.Click += new System.EventHandler(this.btnTCP_IP_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 363);
+            this.Controls.Add(this.btnTCP_IP);
             this.Controls.Add(this.btnReceiveRS232);
             this.Controls.Add(this.btnRS232);
             this.Controls.Add(this.btnDeleteS6F1);
@@ -86,6 +98,7 @@ namespace ES_Function
         private System.Windows.Forms.Button btnDeleteS6F1;
         private System.Windows.Forms.Button btnRS232;
         private System.Windows.Forms.Button btnReceiveRS232;
+        private System.Windows.Forms.Button btnTCP_IP;
     }
 }
 
