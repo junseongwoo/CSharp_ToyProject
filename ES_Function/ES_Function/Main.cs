@@ -38,8 +38,19 @@ namespace ES_Function
 
         private void btnTCP_IP_Click(object sender, EventArgs e)
         {
-            FormTCP_IP frmTCP_IP = new FormTCP_IP();
+            FormTCP_IP_Server frmTCP_IP = new FormTCP_IP_Server();
             frmTCP_IP.Show();
+        }
+        private void btnTCP_IPClient_Click(object sender, EventArgs e)
+        {
+            FormTCP_IP_Client frmTCP_IP_Client = new FormTCP_IP_Client();
+            frmTCP_IP_Client.Show();
+        }
+
+        private void btnTCP_IPTestServer_Click(object sender, EventArgs e)
+        {
+            FormTCP_IP_Test_Server frmTCP_IP_Test_Server = new FormTCP_IP_Test_Server();
+            frmTCP_IP_Test_Server.Show();
         }
     }
 }

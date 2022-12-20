@@ -50,6 +50,24 @@
     <Compile Include="Com\TCP_IP.cs" />
     <Compile Include="FileControl\FileDirectory.cs" />
     <Compile Include="FileControl\TxtFile.cs" />
+    <Compile Include="FormUI\FormCreateMCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\FormCreateMCC.Designer.cs">
+      <DependentUpon>FormCreateMCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUI\FormTCP_IP_Test_Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\FormTCP_IP_Test_Server.Designer.cs">
+      <DependentUpon>FormTCP_IP_Test_Server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUI\FormTCP_IP_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\FormTCP_IP_Client.Designer.cs">
+      <DependentUpon>FormTCP_IP_Client.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\FormDeleteS6F1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +86,12 @@
     <Compile Include="FormUI\FormRS232.Designer.cs">
       <DependentUpon>FormRS232.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUI\FormTCP_IP_Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\FormTCP_IP_Server.Designer.cs">
+      <DependentUpon>FormTCP_IP_Server.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +100,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormUI\FormCreateMCC.resx">
+      <DependentUpon>FormCreateMCC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\FormDeleteS6F1.resx">
       <DependentUpon>FormDeleteS6F1.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +111,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\FormRS232.resx">
       <DependentUpon>FormRS232.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\FormTCP_IP_Test_Server.resx">
+      <DependentUpon>FormTCP_IP_Test_Server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\FormTCP_IP_Client.resx">
+      <DependentUpon>FormTCP_IP_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\FormTCP_IP_Server.resx">
+      <DependentUpon>FormTCP_IP_Server.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

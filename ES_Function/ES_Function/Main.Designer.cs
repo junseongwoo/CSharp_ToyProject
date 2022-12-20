@@ -32,7 +32,14 @@ namespace ES_Function
             this.btnDeleteS6F1 = new System.Windows.Forms.Button();
             this.btnRS232 = new System.Windows.Forms.Button();
             this.btnReceiveRS232 = new System.Windows.Forms.Button();
-            this.btnTCP_IP = new System.Windows.Forms.Button();
+            this.btnTCP_IPServer = new System.Windows.Forms.Button();
+            this.btnTCP_IPClient = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnTCP_IPTestServer = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCreateMCC = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnDeleteS6F1
@@ -48,7 +55,7 @@ namespace ES_Function
             // 
             // btnRS232
             // 
-            this.btnRS232.Location = new System.Drawing.Point(412, 64);
+            this.btnRS232.Location = new System.Drawing.Point(15, 18);
             this.btnRS232.Name = "btnRS232";
             this.btnRS232.Size = new System.Drawing.Size(139, 33);
             this.btnRS232.TabIndex = 1;
@@ -58,7 +65,7 @@ namespace ES_Function
             // 
             // btnReceiveRS232
             // 
-            this.btnReceiveRS232.Location = new System.Drawing.Point(412, 120);
+            this.btnReceiveRS232.Location = new System.Drawing.Point(15, 57);
             this.btnReceiveRS232.Name = "btnReceiveRS232";
             this.btnReceiveRS232.Size = new System.Drawing.Size(139, 33);
             this.btnReceiveRS232.TabIndex = 2;
@@ -66,29 +73,82 @@ namespace ES_Function
             this.btnReceiveRS232.UseVisualStyleBackColor = true;
             this.btnReceiveRS232.Click += new System.EventHandler(this.btnReceiveRS232_Click);
             // 
-            // btnTCP_IP
+            // btnTCP_IPServer
             // 
-            this.btnTCP_IP.Location = new System.Drawing.Point(412, 176);
-            this.btnTCP_IP.Name = "btnTCP_IP";
-            this.btnTCP_IP.Size = new System.Drawing.Size(139, 33);
-            this.btnTCP_IP.TabIndex = 3;
-            this.btnTCP_IP.Text = "TCP/IP";
-            this.btnTCP_IP.UseVisualStyleBackColor = true;
-            this.btnTCP_IP.Click += new System.EventHandler(this.btnTCP_IP_Click);
+            this.btnTCP_IPServer.Location = new System.Drawing.Point(12, 318);
+            this.btnTCP_IPServer.Name = "btnTCP_IPServer";
+            this.btnTCP_IPServer.Size = new System.Drawing.Size(139, 33);
+            this.btnTCP_IPServer.TabIndex = 3;
+            this.btnTCP_IPServer.Text = "TCP/IP Server";
+            this.btnTCP_IPServer.UseVisualStyleBackColor = true;
+            this.btnTCP_IPServer.Visible = false;
+            this.btnTCP_IPServer.Click += new System.EventHandler(this.btnTCP_IP_Click);
+            // 
+            // btnTCP_IPClient
+            // 
+            this.btnTCP_IPClient.Location = new System.Drawing.Point(11, 56);
+            this.btnTCP_IPClient.Name = "btnTCP_IPClient";
+            this.btnTCP_IPClient.Size = new System.Drawing.Size(139, 33);
+            this.btnTCP_IPClient.TabIndex = 4;
+            this.btnTCP_IPClient.Text = "TCP/IP Client";
+            this.btnTCP_IPClient.UseVisualStyleBackColor = true;
+            this.btnTCP_IPClient.Click += new System.EventHandler(this.btnTCP_IPClient_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnTCP_IPClient);
+            this.groupBox1.Controls.Add(this.btnTCP_IPTestServer);
+            this.groupBox1.Location = new System.Drawing.Point(398, 245);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(160, 106);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            // 
+            // btnTCP_IPTestServer
+            // 
+            this.btnTCP_IPTestServer.Location = new System.Drawing.Point(11, 17);
+            this.btnTCP_IPTestServer.Name = "btnTCP_IPTestServer";
+            this.btnTCP_IPTestServer.Size = new System.Drawing.Size(139, 33);
+            this.btnTCP_IPTestServer.TabIndex = 3;
+            this.btnTCP_IPTestServer.Text = "TCP/IP Server";
+            this.btnTCP_IPTestServer.UseVisualStyleBackColor = true;
+            this.btnTCP_IPTestServer.Click += new System.EventHandler(this.btnTCP_IPTestServer_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnReceiveRS232);
+            this.groupBox2.Controls.Add(this.btnRS232);
+            this.groupBox2.Location = new System.Drawing.Point(398, 140);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(160, 99);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            // 
+            // btnCreateMCC
+            // 
+            this.btnCreateMCC.Location = new System.Drawing.Point(413, 46);
+            this.btnCreateMCC.Name = "btnCreateMCC";
+            this.btnCreateMCC.Size = new System.Drawing.Size(139, 33);
+            this.btnCreateMCC.TabIndex = 7;
+            this.btnCreateMCC.Text = "Create MCC Log";
+            this.btnCreateMCC.UseVisualStyleBackColor = true;
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 363);
-            this.Controls.Add(this.btnTCP_IP);
-            this.Controls.Add(this.btnReceiveRS232);
-            this.Controls.Add(this.btnRS232);
+            this.Controls.Add(this.btnCreateMCC);
+            this.Controls.Add(this.btnTCP_IPServer);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnDeleteS6F1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -98,7 +158,12 @@ namespace ES_Function
         private System.Windows.Forms.Button btnDeleteS6F1;
         private System.Windows.Forms.Button btnRS232;
         private System.Windows.Forms.Button btnReceiveRS232;
-        private System.Windows.Forms.Button btnTCP_IP;
+        private System.Windows.Forms.Button btnTCP_IPServer;
+        private System.Windows.Forms.Button btnTCP_IPClient;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnCreateMCC;
+        private System.Windows.Forms.Button btnTCP_IPTestServer;
     }
 }
 

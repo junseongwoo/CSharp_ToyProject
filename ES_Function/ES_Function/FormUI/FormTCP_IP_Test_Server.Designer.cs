@@ -1,7 +1,7 @@
 ﻿
 namespace ES_Function
 {
-    partial class FormTCP_IP_Client
+    partial class FormTCP_IP_Test_Server
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,7 @@ namespace ES_Function
             this.rtxReceiveMsg = new System.Windows.Forms.RichTextBox();
             this.txtSendMsg = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
-            this.bwClient = new System.ComponentModel.BackgroundWorker();
+            this.bwTestServer = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // label1
@@ -103,17 +103,17 @@ namespace ES_Function
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(95, 32);
             this.btnSend.TabIndex = 7;
-            this.btnSend.Text = "Receive Start";
+            this.btnSend.Text = "Send Start";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
-            // bwClient
+            // bwTestServer
             // 
-            this.bwClient.WorkerReportsProgress = true;
-            this.bwClient.WorkerSupportsCancellation = true;
-            this.bwClient.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwClient_DoWork);
+            this.bwTestServer.WorkerReportsProgress = true;
+            this.bwTestServer.WorkerSupportsCancellation = true;
+            this.bwTestServer.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwTestServer_DoWork);
             // 
-            // FormTCP_IP_Client
+            // FormTCP_IP_Test_Server
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -126,8 +126,8 @@ namespace ES_Function
             this.Controls.Add(this.txtIPAddress);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "FormTCP_IP_Client";
-            this.Text = "TCP/IP Client";
+            this.Name = "FormTCP_IP_Test_Server";
+            this.Text = "TCP/IP Test Server";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,6 +143,6 @@ namespace ES_Function
         private System.Windows.Forms.RichTextBox rtxReceiveMsg;
         private System.Windows.Forms.TextBox txtSendMsg;
         private System.Windows.Forms.Button btnSend;
-        private System.ComponentModel.BackgroundWorker bwClient;
+        private System.ComponentModel.BackgroundWorker bwTestServer;
     }
 }

@@ -6,10 +6,30 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ES_Function.Com
+namespace ES_Function
 {
     class TCP_IP
     {
+        private Socket mainSock;
+        private bool isOpened;
+
+        public TCP_IP()
+        {
+            mainSock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            isOpened = false;
+        }
+        public bool Open()
+        {
+            isOpened = true;
+
+            return isOpened;
+        }
+
+        public void Close()
+        {
+
+        }
+
         #region [Server]
         public class Server
         {
@@ -212,6 +232,7 @@ namespace ES_Function.Com
 
         }
         #endregion
+
 
     }
 
