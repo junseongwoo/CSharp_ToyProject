@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ESVision
 {
-    class SetImage
+    class ImgLib
     {
         #region [필드]
         OpenFileDialog openFileDialog = null;
