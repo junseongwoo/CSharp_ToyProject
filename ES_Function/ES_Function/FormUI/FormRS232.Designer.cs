@@ -50,7 +50,7 @@ namespace ES_Function.FormUI
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(12, 22);
+            this.label1.Location = new System.Drawing.Point(30, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 20);
             this.label1.TabIndex = 0;
@@ -61,7 +61,7 @@ namespace ES_Function.FormUI
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.Desktop;
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label2.Location = new System.Drawing.Point(12, 65);
+            this.label2.Location = new System.Drawing.Point(30, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 12);
             this.label2.TabIndex = 1;
@@ -72,15 +72,15 @@ namespace ES_Function.FormUI
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Desktop;
             this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label3.Location = new System.Drawing.Point(12, 89);
+            this.label3.Location = new System.Drawing.Point(30, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 12);
+            this.label3.Size = new System.Drawing.Size(55, 12);
             this.label3.TabIndex = 2;
-            this.label3.Text = "baudrate";
+            this.label3.Text = "Baudrate";
             // 
             // btnOpenRS232
             // 
-            this.btnOpenRS232.Location = new System.Drawing.Point(113, 124);
+            this.btnOpenRS232.Location = new System.Drawing.Point(131, 137);
             this.btnOpenRS232.Name = "btnOpenRS232";
             this.btnOpenRS232.Size = new System.Drawing.Size(74, 32);
             this.btnOpenRS232.TabIndex = 5;
@@ -91,7 +91,7 @@ namespace ES_Function.FormUI
             // btnCheckRS232
             // 
             this.btnCheckRS232.BackColor = System.Drawing.Color.Red;
-            this.btnCheckRS232.Location = new System.Drawing.Point(168, 15);
+            this.btnCheckRS232.Location = new System.Drawing.Point(186, 28);
             this.btnCheckRS232.Name = "btnCheckRS232";
             this.btnCheckRS232.Size = new System.Drawing.Size(23, 24);
             this.btnCheckRS232.TabIndex = 6;
@@ -121,7 +121,7 @@ namespace ES_Function.FormUI
             "COM18",
             "COM19",
             "COM20"});
-            this.cboPortNumRS232.Location = new System.Drawing.Point(83, 61);
+            this.cboPortNumRS232.Location = new System.Drawing.Point(101, 74);
             this.cboPortNumRS232.Name = "cboPortNumRS232";
             this.cboPortNumRS232.Size = new System.Drawing.Size(104, 20);
             this.cboPortNumRS232.TabIndex = 7;
@@ -135,14 +135,14 @@ namespace ES_Function.FormUI
             "19200",
             "115200",
             "128000"});
-            this.cboBaudrateRS232.Location = new System.Drawing.Point(83, 86);
+            this.cboBaudrateRS232.Location = new System.Drawing.Point(101, 99);
             this.cboBaudrateRS232.Name = "cboBaudrateRS232";
             this.cboBaudrateRS232.Size = new System.Drawing.Size(104, 20);
             this.cboBaudrateRS232.TabIndex = 8;
             // 
             // btnSendRS232
             // 
-            this.btnSendRS232.Location = new System.Drawing.Point(347, 124);
+            this.btnSendRS232.Location = new System.Drawing.Point(365, 137);
             this.btnSendRS232.Name = "btnSendRS232";
             this.btnSendRS232.Size = new System.Drawing.Size(74, 32);
             this.btnSendRS232.TabIndex = 9;
@@ -155,7 +155,7 @@ namespace ES_Function.FormUI
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("굴림", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label4.Location = new System.Drawing.Point(253, 22);
+            this.label4.Location = new System.Drawing.Point(271, 35);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(169, 20);
             this.label4.TabIndex = 10;
@@ -172,7 +172,7 @@ namespace ES_Function.FormUI
             this.lblLogFilePath.AutoSize = true;
             this.lblLogFilePath.BackColor = System.Drawing.SystemColors.Desktop;
             this.lblLogFilePath.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblLogFilePath.Location = new System.Drawing.Point(308, 89);
+            this.lblLogFilePath.Location = new System.Drawing.Point(326, 102);
             this.lblLogFilePath.Name = "lblLogFilePath";
             this.lblLogFilePath.Size = new System.Drawing.Size(109, 12);
             this.lblLogFilePath.TabIndex = 11;
@@ -183,7 +183,7 @@ namespace ES_Function.FormUI
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.Desktop;
             this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label5.Location = new System.Drawing.Point(255, 89);
+            this.label5.Location = new System.Drawing.Point(273, 102);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 12);
             this.label5.TabIndex = 12;
@@ -194,7 +194,7 @@ namespace ES_Function.FormUI
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.Desktop;
             this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label6.Location = new System.Drawing.Point(255, 64);
+            this.label6.Location = new System.Drawing.Point(273, 77);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 12);
             this.label6.TabIndex = 13;
@@ -205,7 +205,7 @@ namespace ES_Function.FormUI
             this.lblSendCheck.AutoSize = true;
             this.lblSendCheck.BackColor = System.Drawing.SystemColors.Desktop;
             this.lblSendCheck.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblSendCheck.Location = new System.Drawing.Point(385, 64);
+            this.lblSendCheck.Location = new System.Drawing.Point(403, 77);
             this.lblSendCheck.Name = "lblSendCheck";
             this.lblSendCheck.Size = new System.Drawing.Size(32, 12);
             this.lblSendCheck.TabIndex = 14;
