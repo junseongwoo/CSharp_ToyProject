@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ES_Function.FormUI
+namespace ES_Function
 {
-    public partial class FormTCP_IP : Form
+    public partial class FormTCP_IP_Client : Form
     {
-        public FormTCP_IP()
+        public FormTCP_IP_Client()
         {
             InitializeComponent();
         }
