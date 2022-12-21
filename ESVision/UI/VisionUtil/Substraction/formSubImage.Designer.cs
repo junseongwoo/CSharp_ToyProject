@@ -55,9 +55,9 @@ namespace ESVision
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Location = new System.Drawing.Point(7, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 12);
+            this.label1.Size = new System.Drawing.Size(128, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Background Image";
             // 
@@ -68,18 +68,21 @@ namespace ESVision
             this.groupBox1.Controls.Add(this.btnOpenBackgroundImg);
             this.groupBox1.Controls.Add(this.picBackgroundImg);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(14, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(374, 529);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(427, 661);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
             // txtBackgroundImgPath
             // 
-            this.txtBackgroundImgPath.Location = new System.Drawing.Point(6, 38);
+            this.txtBackgroundImgPath.Location = new System.Drawing.Point(7, 48);
+            this.txtBackgroundImgPath.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBackgroundImgPath.Name = "txtBackgroundImgPath";
             this.txtBackgroundImgPath.ReadOnly = true;
-            this.txtBackgroundImgPath.Size = new System.Drawing.Size(296, 21);
+            this.txtBackgroundImgPath.Size = new System.Drawing.Size(338, 25);
             this.txtBackgroundImgPath.TabIndex = 6;
             // 
             // btnNewBackgroundImg
@@ -87,9 +90,10 @@ namespace ESVision
             this.btnNewBackgroundImg.BackColor = System.Drawing.SystemColors.Control;
             this.btnNewBackgroundImg.ImageIndex = 0;
             this.btnNewBackgroundImg.ImageList = this.imageList1;
-            this.btnNewBackgroundImg.Location = new System.Drawing.Point(308, 34);
+            this.btnNewBackgroundImg.Location = new System.Drawing.Point(352, 42);
+            this.btnNewBackgroundImg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnNewBackgroundImg.Name = "btnNewBackgroundImg";
-            this.btnNewBackgroundImg.Size = new System.Drawing.Size(27, 26);
+            this.btnNewBackgroundImg.Size = new System.Drawing.Size(31, 32);
             this.btnNewBackgroundImg.TabIndex = 5;
             this.btnNewBackgroundImg.UseVisualStyleBackColor = false;
             this.btnNewBackgroundImg.Click += new System.EventHandler(this.btnNewBackgroundImg_Click);
@@ -107,9 +111,10 @@ namespace ESVision
             this.btnOpenBackgroundImg.BackColor = System.Drawing.SystemColors.Control;
             this.btnOpenBackgroundImg.ImageIndex = 1;
             this.btnOpenBackgroundImg.ImageList = this.imageList1;
-            this.btnOpenBackgroundImg.Location = new System.Drawing.Point(341, 34);
+            this.btnOpenBackgroundImg.Location = new System.Drawing.Point(390, 42);
+            this.btnOpenBackgroundImg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOpenBackgroundImg.Name = "btnOpenBackgroundImg";
-            this.btnOpenBackgroundImg.Size = new System.Drawing.Size(27, 26);
+            this.btnOpenBackgroundImg.Size = new System.Drawing.Size(31, 32);
             this.btnOpenBackgroundImg.TabIndex = 4;
             this.btnOpenBackgroundImg.UseVisualStyleBackColor = false;
             this.btnOpenBackgroundImg.Click += new System.EventHandler(this.btnOpenBackgroundImg_Click);
@@ -118,9 +123,11 @@ namespace ESVision
             // 
             this.picBackgroundImg.BackColor = System.Drawing.SystemColors.Control;
             this.picBackgroundImg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBackgroundImg.Location = new System.Drawing.Point(6, 65);
+            this.picBackgroundImg.Location = new System.Drawing.Point(7, 81);
+            this.picBackgroundImg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBackgroundImg.Name = "picBackgroundImg";
-            this.picBackgroundImg.Size = new System.Drawing.Size(362, 458);
+            this.picBackgroundImg.Size = new System.Drawing.Size(413, 572);
+            this.picBackgroundImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBackgroundImg.TabIndex = 2;
             this.picBackgroundImg.TabStop = false;
             // 
@@ -131,27 +138,31 @@ namespace ESVision
             this.groupBox2.Controls.Add(this.btnNewSourceImg);
             this.groupBox2.Controls.Add(this.picSourceImg);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(392, 12);
+            this.groupBox2.Location = new System.Drawing.Point(448, 15);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(374, 529);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(427, 661);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
             // txtSourceImgPath
             // 
-            this.txtSourceImgPath.Location = new System.Drawing.Point(6, 39);
+            this.txtSourceImgPath.Location = new System.Drawing.Point(7, 49);
+            this.txtSourceImgPath.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSourceImgPath.Name = "txtSourceImgPath";
             this.txtSourceImgPath.ReadOnly = true;
-            this.txtSourceImgPath.Size = new System.Drawing.Size(296, 21);
+            this.txtSourceImgPath.Size = new System.Drawing.Size(338, 25);
             this.txtSourceImgPath.TabIndex = 7;
             // 
             // btnOpenSourceImg
             // 
             this.btnOpenSourceImg.ImageIndex = 1;
             this.btnOpenSourceImg.ImageList = this.imageList1;
-            this.btnOpenSourceImg.Location = new System.Drawing.Point(341, 35);
+            this.btnOpenSourceImg.Location = new System.Drawing.Point(390, 44);
+            this.btnOpenSourceImg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOpenSourceImg.Name = "btnOpenSourceImg";
-            this.btnOpenSourceImg.Size = new System.Drawing.Size(27, 26);
+            this.btnOpenSourceImg.Size = new System.Drawing.Size(31, 32);
             this.btnOpenSourceImg.TabIndex = 7;
             this.btnOpenSourceImg.UseVisualStyleBackColor = true;
             this.btnOpenSourceImg.Click += new System.EventHandler(this.btnOpenSourceImg_Click);
@@ -160,9 +171,10 @@ namespace ESVision
             // 
             this.btnNewSourceImg.ImageIndex = 0;
             this.btnNewSourceImg.ImageList = this.imageList1;
-            this.btnNewSourceImg.Location = new System.Drawing.Point(308, 35);
+            this.btnNewSourceImg.Location = new System.Drawing.Point(352, 44);
+            this.btnNewSourceImg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnNewSourceImg.Name = "btnNewSourceImg";
-            this.btnNewSourceImg.Size = new System.Drawing.Size(27, 26);
+            this.btnNewSourceImg.Size = new System.Drawing.Size(31, 32);
             this.btnNewSourceImg.TabIndex = 6;
             this.btnNewSourceImg.UseVisualStyleBackColor = true;
             this.btnNewSourceImg.Click += new System.EventHandler(this.btnNewSourceImg_Click);
@@ -171,26 +183,29 @@ namespace ESVision
             // 
             this.picSourceImg.BackColor = System.Drawing.SystemColors.Control;
             this.picSourceImg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picSourceImg.Location = new System.Drawing.Point(6, 65);
+            this.picSourceImg.Location = new System.Drawing.Point(7, 81);
+            this.picSourceImg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picSourceImg.Name = "picSourceImg";
-            this.picSourceImg.Size = new System.Drawing.Size(362, 458);
+            this.picSourceImg.Size = new System.Drawing.Size(413, 572);
+            this.picSourceImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSourceImg.TabIndex = 5;
             this.picSourceImg.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 16);
+            this.label2.Location = new System.Drawing.Point(7, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 12);
+            this.label2.Size = new System.Drawing.Size(97, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "Source Image";
             // 
             // btnExecuteSubImg
             // 
-            this.btnExecuteSubImg.Location = new System.Drawing.Point(772, 465);
+            this.btnExecuteSubImg.Location = new System.Drawing.Point(882, 581);
+            this.btnExecuteSubImg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExecuteSubImg.Name = "btnExecuteSubImg";
-            this.btnExecuteSubImg.Size = new System.Drawing.Size(97, 32);
+            this.btnExecuteSubImg.Size = new System.Drawing.Size(111, 40);
             this.btnExecuteSubImg.TabIndex = 5;
             this.btnExecuteSubImg.Text = "Execute";
             this.btnExecuteSubImg.UseVisualStyleBackColor = true;
@@ -198,9 +213,10 @@ namespace ESVision
             // 
             // btnCloseFormSub
             // 
-            this.btnCloseFormSub.Location = new System.Drawing.Point(772, 503);
+            this.btnCloseFormSub.Location = new System.Drawing.Point(882, 629);
+            this.btnCloseFormSub.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCloseFormSub.Name = "btnCloseFormSub";
-            this.btnCloseFormSub.Size = new System.Drawing.Size(97, 32);
+            this.btnCloseFormSub.Size = new System.Drawing.Size(111, 40);
             this.btnCloseFormSub.TabIndex = 1;
             this.btnCloseFormSub.Text = "Close";
             this.btnCloseFormSub.UseVisualStyleBackColor = true;
@@ -208,13 +224,14 @@ namespace ESVision
             // 
             // formSubImage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 553);
+            this.ClientSize = new System.Drawing.Size(1007, 691);
             this.Controls.Add(this.btnCloseFormSub);
             this.Controls.Add(this.btnExecuteSubImg);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "formSubImage";
             this.Text = "Subtraction ";
             this.groupBox1.ResumeLayout(false);
