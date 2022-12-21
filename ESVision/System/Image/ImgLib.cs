@@ -12,7 +12,6 @@ namespace ESVision
     class ImgLib
     {
         #region [필드]
-        OpenFileDialog openFileDialog = null;
         #endregion
 
         #region [생성자]
@@ -22,6 +21,8 @@ namespace ESVision
         #region [멤버 함수 : Get Image Path]
         public SortedList<string, string> GetImagePath()
         {
+            OpenFileDialog openFileDialog = null;
+
             using (openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.RestoreDirectory = true;
@@ -44,6 +45,30 @@ namespace ESVision
             Bitmap bitmapImg = Bitmap.FromFile(imgPath) as Bitmap;
 
             return bitmapImg;
+        }
+        #endregion
+
+        #region [멤버 함수 : Image Subtraction] 
+        public Bitmap Sub(Bitmap baseImg, Bitmap srcImg)
+        {
+            int WbaseImg = baseImg.Width;
+            int HbaseImg = baseImg.Height;
+
+            Bitmap resultImg = new Bitmap(WbaseImg, HbaseImg);
+
+            for (int x = 0; x < WbaseImg; x++)
+            {
+                for (int y = 0; y < HbaseImg; y++)
+                {
+                    Color baseColor = baseImg.GetPixel(x, y);
+                    Color srcColor = srcImg.GetPixel(x, y);
+                    Color resultColor = Color.FromArgb((baseColor.A - srcColor.A) | (baseColor.R - srcColor.R) | (baseColor.G - srcColor.G) | (baseColor.B - srcColor.B));
+
+                    resultImg.SetPixel(x, y, resultColor);
+                }
+            }
+
+            return resultImg;
         }
         #endregion
     }
