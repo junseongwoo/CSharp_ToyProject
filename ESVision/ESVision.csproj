@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="System\Control\Keyboard.cs" />
+    <Compile Include="System\Control\Mouse.cs" />
     <Compile Include="System\Image\ImgLib.cs" />
     <Compile Include="UI\Define\InitializeUi.cs" />
     <Compile Include="UI\Define\UiDefine.cs" />
@@ -148,6 +150,8 @@
     <Content Include="Resources\openFolder.png" />
     <Content Include="Resources\saveFile.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="System\FileManager\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
