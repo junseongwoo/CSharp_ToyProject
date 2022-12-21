@@ -12,9 +12,19 @@ namespace ESVision
 {
     public partial class formSubResultImage : Form
     {
-        public formSubResultImage()
+        #region [필드]
+        Bitmap resultImg = null;
+        #endregion
+
+        #region [초기화]
+        public formSubResultImage(Bitmap subImg)
         {
             InitializeComponent();
+
+            resultImg = subImg;
+
+            picResultImg.Image = resultImg;
         }
+        #endregion
     }
 }

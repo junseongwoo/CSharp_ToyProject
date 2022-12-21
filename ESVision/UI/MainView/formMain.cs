@@ -65,8 +65,6 @@ namespace ESVision
             formOpenImageView = new formOpenImage();
 
             formSubImageView = new formSubImage();
-
-            formSubResultImageView = new formSubResultImage();
         }
 
         private void ImageToolsMenuOpen(EIMAGE_TOOL_MENU_LIST menuList)
