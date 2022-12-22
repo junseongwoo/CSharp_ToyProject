@@ -149,5 +149,13 @@ namespace ESVision
             }
         }
         #endregion
+
+        #region [멤버 함수 : Image Threshold]
+        public Bitmap threashold(Bitmap img, int thresholdValue, int valu)
+        {
+
+            return img;
+        }
+        #endregion
     }
 }

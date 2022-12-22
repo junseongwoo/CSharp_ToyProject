@@ -41,6 +41,7 @@ namespace ESVision
             this.toolStripSaveBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripNewOpenBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.thresholdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -90,7 +91,8 @@ namespace ESVision
             // imageToolsToolStripMenuItem
             // 
             this.imageToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.imageSubtractionToolStripMenuItem});
+            this.imageSubtractionToolStripMenuItem,
+            this.thresholdToolStripMenuItem});
             this.imageToolsToolStripMenuItem.Name = "imageToolsToolStripMenuItem";
             this.imageToolsToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.imageToolsToolStripMenuItem.Text = "Image Tools";
@@ -142,6 +144,12 @@ namespace ESVision
             this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton3.Text = "toolStripButton3";
             // 
+            // thresholdToolStripMenuItem
+            // 
+            this.thresholdToolStripMenuItem.Name = "thresholdToolStripMenuItem";
+            this.thresholdToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thresholdToolStripMenuItem.Text = "Threshold";
+            // 
             // TopView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -177,5 +185,6 @@ namespace ESVision
         private System.Windows.Forms.ToolStripButton toolStripSaveBtn;
         private System.Windows.Forms.ToolStripButton toolStripNewOpenBtn;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripMenuItem thresholdToolStripMenuItem;
     }
 }
