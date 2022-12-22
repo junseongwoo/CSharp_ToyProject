@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -45,9 +46,19 @@ namespace ESVision
         {
             Bitmap bitmapImg = Bitmap.FromFile(imgPath) as Bitmap;
 
-            bitmapImg = RGB2Gray(bitmapImg);
-
             return bitmapImg;
+        }
+        #endregion
+
+        #region [멤버 함수 : Convert Image to Byte Array]
+        public byte[]Image2ByteArray(Bitmap img)
+        {
+            using (var ms = new MemoryStream())
+            {
+                img.Save(ms, ImageFormat.Bmp);
+                
+                return ms.ToArray();
+            }
         }
         #endregion
 
@@ -102,8 +113,9 @@ namespace ESVision
                 {
                     Color baseColor = baseImg.GetPixel(x, y);
                     Color srcColor = srcImg.GetPixel(x, y);
-                    // RGB 값이 -가 나온다. 절대 값으로 해보자 
-                    Color resultColor = Color.FromArgb(255 , (baseColor.R - srcColor.R) , (baseColor.G - srcColor.G) , (baseColor.B - srcColor.B));
+
+                    int subAvg = (Math.Abs(baseColor.R - srcColor.R) + Math.Abs(baseColor.G - srcColor.G) + Math.Abs(baseColor.B - srcColor.B)) / 3;
+                    Color resultColor = Color.FromArgb(255 , subAvg, subAvg, subAvg);
 
                     resultImg.SetPixel(x, y, resultColor);
                 }
@@ -112,6 +124,29 @@ namespace ESVision
             TimeSpan time = watch.Elapsed;
             MessageBox.Show(time.ToString());
             return resultImg;
+        }
+
+        public Bitmap Sub(byte[] baseImg, byte[] srcImg)
+        {
+            byte[] subImg = baseImg;
+
+            for (int i = 1079; i < baseImg.Length; i++)
+            {
+                int subValue = baseImg[i] - srcImg[i];
+
+                if (subValue < 0)
+                {
+                    subValue = 0;
+                }
+
+                subImg[i] = Convert.ToByte(subValue);
+            }
+
+            using (var resultByte = new MemoryStream(subImg))
+            {
+                Bitmap resultImg = Image.FromStream(resultByte) as Bitmap;
+                return resultImg;
+            }
         }
         #endregion
     }
