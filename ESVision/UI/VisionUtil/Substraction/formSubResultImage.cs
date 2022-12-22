@@ -14,14 +14,15 @@ namespace ESVision
     {
         #region [필드]
         Bitmap resultImg = null;
+        ImgLib ILib = new ImgLib();
         #endregion
 
         #region [초기화]
-        public formSubResultImage(Bitmap subImg)
+        public formSubResultImage(byte[] baseImgByte, byte[] srcImgByte)
         {
             InitializeComponent();
 
-            resultImg = subImg;
+            resultImg = ILib.Sub(baseImgByte, srcImgByte);
 
             picResultImg.Image = resultImg;
         }

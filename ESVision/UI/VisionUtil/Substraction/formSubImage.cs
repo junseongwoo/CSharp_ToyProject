@@ -68,7 +68,10 @@ namespace ESVision
         #region [이벤트 함수 : Subtraction Execute 버튼 클릭]
         private void btnExecuteSubImg_Click(object sender, EventArgs e)
         {
-            formSubResultImage formSubResultImage = new formSubResultImage(ILib.Sub(picBackgroundImg.Image as Bitmap, picSourceImg.Image as Bitmap));
+            byte[] baseImgByte = ILib.Image2ByteArray(picBackgroundImg.Image as Bitmap);
+            byte[] srcImgByte = ILib.Image2ByteArray(picSourceImg.Image as Bitmap);
+            formSubResultImage formSubResultImage = new formSubResultImage(baseImgByte, srcImgByte);
+            //formSubResultImage formSubResultImage = new formSubResultImage(ILib.Sub(picBackgroundImg.Image as Bitmap, picSourceImg.Image as Bitmap));
             formSubResultImage.Show();
         }
         #endregion
