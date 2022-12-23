@@ -65,9 +65,6 @@ namespace ESVision
         #region [멤버 함수 : Image to Grayscale]
         public Bitmap RGB2Gray(Bitmap img)
         {
-            // 속도를 어떻게 늘릴 수 있을까? 
-            Stopwatch watch = new Stopwatch();
-            watch.Start();
             Bitmap grayImg = new Bitmap(img.Width, img.Height);
 
             int width = img.Width;
@@ -90,9 +87,6 @@ namespace ESVision
                     grayImg.SetPixel(x, y, gray);
                 }
             }
-            watch.Stop();
-            TimeSpan time = watch.Elapsed;
-            MessageBox.Show(time.ToString());
             return grayImg;
         }
         #endregion
@@ -100,8 +94,6 @@ namespace ESVision
         #region [멤버 함수 : Image Subtraction] 
         public Bitmap Sub(Bitmap baseImg, Bitmap srcImg)
         {
-            Stopwatch watch = new Stopwatch();
-            watch.Start();
             int WbaseImg = baseImg.Width;
             int HbaseImg = baseImg.Height;
 
@@ -120,9 +112,6 @@ namespace ESVision
                     resultImg.SetPixel(x, y, resultColor);
                 }
             }
-            watch.Stop();
-            TimeSpan time = watch.Elapsed;
-            MessageBox.Show(time.ToString());
             return resultImg;
         }
 
