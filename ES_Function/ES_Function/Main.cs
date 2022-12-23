@@ -52,5 +52,17 @@ namespace ES_Function
             FormTCP_IP_Test_Server frmTCP_IP_Test_Server = new FormTCP_IP_Test_Server();
             frmTCP_IP_Test_Server.Show();
         }
+
+        private void btnCreateMCC_Click(object sender, EventArgs e)
+        {
+            FormCreateMCC frmCreateMCC = new FormCreateMCC();
+            frmCreateMCC.Show();
+        }
+
+        private void btnFunction_Click(object sender, EventArgs e)
+        {
+            FormCSFuncMain frmCSFuncMain = new FormCSFuncMain();
+            frmCSFuncMain.Show();
+        }
     }
 }

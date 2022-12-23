@@ -14,8 +14,17 @@ namespace ES_Function
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            try
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+
+                Vars var = new Vars();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
             Application.Run(new FrmMain());
         }
     }

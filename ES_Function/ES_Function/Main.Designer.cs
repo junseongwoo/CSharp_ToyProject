@@ -38,6 +38,7 @@ namespace ES_Function
             this.btnTCP_IPTestServer = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCreateMCC = new System.Windows.Forms.Button();
+            this.btnFunction = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -132,12 +133,24 @@ namespace ES_Function
             this.btnCreateMCC.TabIndex = 7;
             this.btnCreateMCC.Text = "Create MCC Log";
             this.btnCreateMCC.UseVisualStyleBackColor = true;
+            this.btnCreateMCC.Click += new System.EventHandler(this.btnCreateMCC_Click);
+            // 
+            // btnFunction
+            // 
+            this.btnFunction.Location = new System.Drawing.Point(12, 12);
+            this.btnFunction.Name = "btnFunction";
+            this.btnFunction.Size = new System.Drawing.Size(94, 36);
+            this.btnFunction.TabIndex = 8;
+            this.btnFunction.Text = "C# 기능 구현";
+            this.btnFunction.UseVisualStyleBackColor = true;
+            this.btnFunction.Click += new System.EventHandler(this.btnFunction_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 363);
+            this.Controls.Add(this.btnFunction);
             this.Controls.Add(this.btnCreateMCC);
             this.Controls.Add(this.btnTCP_IPServer);
             this.Controls.Add(this.groupBox2);
@@ -164,6 +177,7 @@ namespace ES_Function
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnCreateMCC;
         private System.Windows.Forms.Button btnTCP_IPTestServer;
+        private System.Windows.Forms.Button btnFunction;
     }
 }
 

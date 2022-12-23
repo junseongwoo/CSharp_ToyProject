@@ -11,7 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ES_Function.FormUI
+namespace ES_Function
 {
     public partial class FormReceiveRS232 : Form
     {

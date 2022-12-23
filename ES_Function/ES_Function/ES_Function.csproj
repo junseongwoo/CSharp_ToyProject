@@ -48,48 +48,67 @@
   <ItemGroup>
     <Compile Include="Com\RS232.cs" />
     <Compile Include="Com\TCP_IP.cs" />
-    <Compile Include="FileControl\FileDirectory.cs" />
+    <Compile Include="Control\UseControl.cs" />
     <Compile Include="FileControl\TxtFile.cs" />
-    <Compile Include="FormUI\FormCreateMCC.cs">
+    <Compile Include="FileControl\FileLib.cs" />
+    <Compile Include="FormUI\Csharp_Function\FormControlValueChange.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\FormCreateMCC.Designer.cs">
+    <Compile Include="FormUI\Csharp_Function\FormControlValueChange.Designer.cs">
+      <DependentUpon>FormControlValueChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUI\Csharp_Function\FormCSFuncMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\Csharp_Function\FormCSFuncMain.Designer.cs">
+      <DependentUpon>FormCSFuncMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUI\Csharp_Function\FormDataGridView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\Csharp_Function\FormDataGridView.Designer.cs">
+      <DependentUpon>FormDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUI\ES_Function\FormCreateMCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\ES_Function\FormCreateMCC.Designer.cs">
       <DependentUpon>FormCreateMCC.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\FormTCP_IP_Test_Server.cs">
+    <Compile Include="FormUI\ES_Function\FormTCP_IP_Test_Server.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\FormTCP_IP_Test_Server.Designer.cs">
+    <Compile Include="FormUI\ES_Function\FormTCP_IP_Test_Server.Designer.cs">
       <DependentUpon>FormTCP_IP_Test_Server.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\FormTCP_IP_Client.cs">
+    <Compile Include="FormUI\ES_Function\FormTCP_IP_Client.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\FormTCP_IP_Client.Designer.cs">
+    <Compile Include="FormUI\ES_Function\FormTCP_IP_Client.Designer.cs">
       <DependentUpon>FormTCP_IP_Client.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\FormDeleteS6F1.cs">
+    <Compile Include="FormUI\ES_Function\FormDeleteS6F1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\FormDeleteS6F1.Designer.cs">
+    <Compile Include="FormUI\ES_Function\FormDeleteS6F1.Designer.cs">
       <DependentUpon>FormDeleteS6F1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\FormReceiveRS232.cs">
+    <Compile Include="FormUI\ES_Function\FormReceiveRS232.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\FormReceiveRS232.Designer.cs">
+    <Compile Include="FormUI\ES_Function\FormReceiveRS232.Designer.cs">
       <DependentUpon>FormReceiveRS232.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\FormRS232.cs">
+    <Compile Include="FormUI\ES_Function\FormRS232.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\FormRS232.Designer.cs">
+    <Compile Include="FormUI\ES_Function\FormRS232.Designer.cs">
       <DependentUpon>FormRS232.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\FormTCP_IP_Server.cs">
+    <Compile Include="FormUI\ES_Function\FormTCP_IP_Server.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUI\FormTCP_IP_Server.Designer.cs">
+    <Compile Include="FormUI\ES_Function\FormTCP_IP_Server.Designer.cs">
       <DependentUpon>FormTCP_IP_Server.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
@@ -98,27 +117,38 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\MCCSetup.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormUI\FormCreateMCC.resx">
+    <Compile Include="Vars.cs" />
+    <EmbeddedResource Include="FormUI\Csharp_Function\FormControlValueChange.resx">
+      <DependentUpon>FormControlValueChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\Csharp_Function\FormCSFuncMain.resx">
+      <DependentUpon>FormCSFuncMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\Csharp_Function\FormDataGridView.resx">
+      <DependentUpon>FormDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\ES_Function\FormCreateMCC.resx">
       <DependentUpon>FormCreateMCC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\FormDeleteS6F1.resx">
+    <EmbeddedResource Include="FormUI\ES_Function\FormDeleteS6F1.resx">
       <DependentUpon>FormDeleteS6F1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\FormReceiveRS232.resx">
+    <EmbeddedResource Include="FormUI\ES_Function\FormReceiveRS232.resx">
       <DependentUpon>FormReceiveRS232.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\FormRS232.resx">
+    <EmbeddedResource Include="FormUI\ES_Function\FormRS232.resx">
       <DependentUpon>FormRS232.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\FormTCP_IP_Test_Server.resx">
+    <EmbeddedResource Include="FormUI\ES_Function\FormTCP_IP_Test_Server.resx">
       <DependentUpon>FormTCP_IP_Test_Server.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\FormTCP_IP_Client.resx">
+    <EmbeddedResource Include="FormUI\ES_Function\FormTCP_IP_Client.resx">
       <DependentUpon>FormTCP_IP_Client.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\FormTCP_IP_Server.resx">
+    <EmbeddedResource Include="FormUI\ES_Function\FormTCP_IP_Server.resx">
       <DependentUpon>FormTCP_IP_Server.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
@@ -133,6 +163,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\dgvTest.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

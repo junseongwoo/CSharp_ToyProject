@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,7 @@ namespace ES_Function
     public partial class FormTCP_IP_Client : Form
     {
         #region [필드]
-        Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        Socket clientSock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         byte[] receiveBytes = null;
         string pathLogFile = string.Empty;
         #endregion
@@ -25,6 +26,12 @@ namespace ES_Function
             InitializeComponent();
 
             Initialize();
+        }
+
+        public class AsyncStateDataClient
+        {
+            public byte[] Buffer;
+            public Socket Socket;
         }
 
         private void Initialize()
@@ -40,15 +47,15 @@ namespace ES_Function
             {
                 if (btnOpen.Text == "Open")
                 {
-                    if (sock.Connected == false)
+                    if (clientSock.Connected == false)
                     {
-                        sock.Connect(new IPEndPoint(IPAddress.Parse(txtIPAddress.Text), 9000));
+                        clientSock.Connect(new IPEndPoint(IPAddress.Parse(txtIPAddress.Text), 9000));
                         btnOpen.Text = "Close";
                     }
                 }
                 else
                 {
-                    sock.Close();
+                    clientSock.Close();
                     btnOpen.Text = "Close";
                 }
 
@@ -57,15 +64,13 @@ namespace ES_Function
             {
                 MessageBox.Show("Client 연결 실패" + ex.ToString());
             }
-            
-            
         }
 
         private void btnSend_Click(object sender, EventArgs e)
         {
             try
             {
-                if (sock.Connected == true)
+                if (clientSock.Connected == true)
                 {
                     if (bwClient.IsBusy == false)
                     {
@@ -91,17 +96,53 @@ namespace ES_Function
 
         private void bwClient_DoWork(object sender, DoWorkEventArgs e)
         {
-            receiveBytes = new byte[1<<10];
+            int readIndex = 0, handleIndex = 0;
+            Regex regSV = new Regex("([A-Z0-9_]+)\\(([0-9]+)\\)=([-+0-9\\.]+)");
+
             try
             {
                 while (true)
                 {
                     Thread.Sleep(100);
 
-                    if (sock.Connected == true)
+                    if (clientSock.Connected == true)
                     {
-                        sock.BeginReceive(receiveBytes, 0, receiveBytes.Length, SocketFlags.None,
-                            new AsyncCallback(receiveStr), sock);
+                        if (bwClient.CancellationPending)
+                        {
+                            e.Cancel = true;
+                            return;
+                        }
+                        AsyncStateDataClient data = new AsyncStateDataClient();
+                        data.Buffer = new byte[1 << 20];
+                        data.Socket = clientSock;
+                        //clientSock.BeginReceive(data.Buffer, readIndex, data.Buffer.Length - readIndex, SocketFlags.None, receiveStr, data);
+                        int read = clientSock.Receive(data.Buffer, 0, data.Buffer.Length, SocketFlags.None);
+
+                        string test = Encoding.Default.GetString(data.Buffer);
+
+                        // 크로스 스레드 방지 하려면 Invoke 써야함 
+                        rtxReceiveMsg.Invoke(new MethodInvoker(delegate ()
+                        {
+                            rtxReceiveMsg.Text = test;
+                        }));
+
+
+                        //readIndex += read;
+
+                        //int idx = Array.IndexOf(data.Buffer, (byte)'\r', handleIndex, readIndex - handleIndex);
+                        //if (idx < 0) break;
+
+                        //string line = Encoding.UTF8.GetString(data.Buffer, handleIndex, idx - handleIndex);
+                        //handleIndex = Math.Min(idx + 2, readIndex);
+
+                        //string[] arr = line.Substring(0).Split(',');
+                        //foreach (string str in arr)
+                        //{
+                        //    if (str == "")
+                        //        continue;
+                        //    var match = regSV.Match(str);
+                        //}
+
                     }
                 }
             }
@@ -113,9 +154,8 @@ namespace ES_Function
 
         private void receiveStr(IAsyncResult ar)
         {
-            Socket transferSock = (Socket)ar.AsyncState;
-            int strLength = transferSock.EndReceive(ar);
-            rtxReceiveMsg.Text = Encoding.Default.GetString(receiveBytes);
+            AsyncStateDataClient data = ar.AsyncState as AsyncStateDataClient;
+            int strLength = data.Socket.EndReceive(ar);
         }
 
         #region BackgroundWorker Run 

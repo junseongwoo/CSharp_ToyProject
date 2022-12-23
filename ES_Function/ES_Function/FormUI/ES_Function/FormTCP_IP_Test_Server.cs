@@ -13,6 +13,7 @@ using System.Threading;
 
 namespace ES_Function
 {
+    
     public partial class FormTCP_IP_Test_Server : Form
     {
         #region [필드]
@@ -20,7 +21,6 @@ namespace ES_Function
         Socket clientSock = null;
         IPEndPoint ep = null;
         TxtFile txtFile = new TxtFile();
-        byte[] buff = null;
         string pathLogFile = string.Empty;
         string startMsg = string.Empty;
         #endregion
@@ -29,6 +29,11 @@ namespace ES_Function
             InitializeComponent();
 
             Initialize();
+        }
+        public class AsyncStateDataServer
+        {
+            public byte[] Buffer;
+            public Socket Socket;
         }
 
         private void Initialize()
@@ -87,8 +92,12 @@ namespace ES_Function
         {
             try
             {
+                if (btnOpen.Text == "Open")
+                {
+                    return;
+                }
                 // 왜 Connected 가 false 인지?
-                if (sock.Connected == false)
+                if (clientSock.Connected == true)
                 {
                     if (bwTestServer.IsBusy == false)
                     {
@@ -115,22 +124,33 @@ namespace ES_Function
         private void bwTestServer_DoWork(object sender, DoWorkEventArgs e)
         {
             string[] logMsg = txtFile.readTxtAllLines(pathLogFile);
-            byte[] transferStr = Encoding.Default.GetBytes("GOOOOOOD");
 
             try
             {
                 while (true) // 키 누르면 종료
                 {
-                    Thread.Sleep(10);
-
-                    if (bwTestServer.CancellationPending)
+                    for (int i = 0; i < logMsg.Length; i++)
                     {
-                        e.Cancel = true;
-                        return;
-                    }
-                    sock.BeginSend(transferStr, 0, transferStr.Length, SocketFlags.None,
-                        new AsyncCallback(sendStr), clientSock);
+                        Thread.Sleep(10);
+                        byte[] transferStr = Encoding.Default.GetBytes(logMsg[i]+"\r");
 
+                        if (transferStr.Length < 2)
+                        {
+                            continue;
+                        }
+
+                        if (bwTestServer.CancellationPending)
+                        {
+                            e.Cancel = true;
+                            return;
+                        }
+
+                        if (clientSock.Connected == true)
+                        {
+                            clientSock.BeginSend(transferStr, 0, transferStr.Length, SocketFlags.None,
+                                new AsyncCallback(sendStr), clientSock);
+                        }
+                    }
                 }
             }
             catch (Exception ex)

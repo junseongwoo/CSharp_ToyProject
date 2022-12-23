@@ -1,5 +1,5 @@
 ﻿
-namespace ES_Function.FormUI
+namespace ES_Function
 {
     partial class FormReceiveRS232
     {
