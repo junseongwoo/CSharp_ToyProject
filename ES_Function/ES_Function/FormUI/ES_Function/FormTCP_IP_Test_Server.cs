@@ -40,7 +40,11 @@ namespace ES_Function
         {
             pathLogFile = $"D:\\업무\\CIM\\Log\\SEM\\Log_20221109.log";
 
-            txtIPAddress.Text = "192.168.0.155";
+            // Wifi
+            //txtIPAddress.Text = "192.168.0.155";
+
+            // LAN 선 
+            txtIPAddress.Text = "192.168.0.184";
             txtPortNum.Text = "9000";
         }
         /*
@@ -67,6 +71,8 @@ namespace ES_Function
                         clientSock = sock.Accept();
 
                         btnOpen.Text = "Close";
+
+                        bwTestServer_Run();
                     }
                     else if (sock.Connected == true)
                     {
@@ -75,6 +81,10 @@ namespace ES_Function
                 }
                 else
                 {
+                    if (sock.Connected == true)
+                    {
+
+                    }
                     // (7) 소켓 닫기
                     clientSock.Close();
                     sock.Close();
@@ -85,7 +95,6 @@ namespace ES_Function
             {
                 MessageBox.Show("Open 실패" + ex.ToString());
             }
-            
         }
 
         private void btnSend_Click(object sender, EventArgs e)

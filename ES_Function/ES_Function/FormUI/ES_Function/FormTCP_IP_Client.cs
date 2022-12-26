@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -37,7 +38,12 @@ namespace ES_Function
         private void Initialize()
         {
             pathLogFile = $"D:\\업무\\CIM\\Log\\SEM\\Log_20221109.log";
-            txtIPAddress.Text = "192.168.0.155";
+
+            // Wifi
+            //txtIPAddress.Text = "192.168.0.155";
+
+            // LAN 선 
+            txtIPAddress.Text = "192.168.0.184";
             txtPortNum.Text = "9000";
         }
 
@@ -119,6 +125,10 @@ namespace ES_Function
                         int read = clientSock.Receive(data.Buffer, 0, data.Buffer.Length, SocketFlags.None);
 
                         string test = Encoding.Default.GetString(data.Buffer);
+                        char[] splitChar = { '$', '(', ')', '=', ',', '\r' };
+                        string[] items = test.Split(splitChar);
+
+
 
                         // 크로스 스레드 방지 하려면 Invoke 써야함 
                         rtxReceiveMsg.Invoke(new MethodInvoker(delegate ()

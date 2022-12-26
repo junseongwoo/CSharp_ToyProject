@@ -34,7 +34,6 @@ namespace ES_Function
             this.txtIPAddress = new System.Windows.Forms.TextBox();
             this.txtPortNum = new System.Windows.Forms.TextBox();
             this.btnOpen = new System.Windows.Forms.Button();
-            this.rtxReceiveMsg = new System.Windows.Forms.RichTextBox();
             this.txtSendMsg = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.bwTestServer = new System.ComponentModel.BackgroundWorker();
@@ -82,24 +81,16 @@ namespace ES_Function
             this.btnOpen.UseVisualStyleBackColor = true;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
-            // rtxReceiveMsg
-            // 
-            this.rtxReceiveMsg.Location = new System.Drawing.Point(12, 80);
-            this.rtxReceiveMsg.Name = "rtxReceiveMsg";
-            this.rtxReceiveMsg.Size = new System.Drawing.Size(444, 292);
-            this.rtxReceiveMsg.TabIndex = 5;
-            this.rtxReceiveMsg.Text = "";
-            // 
             // txtSendMsg
             // 
-            this.txtSendMsg.Location = new System.Drawing.Point(12, 389);
+            this.txtSendMsg.Location = new System.Drawing.Point(12, 106);
             this.txtSendMsg.Name = "txtSendMsg";
             this.txtSendMsg.Size = new System.Drawing.Size(325, 21);
             this.txtSendMsg.TabIndex = 6;
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(361, 378);
+            this.btnSend.Location = new System.Drawing.Point(361, 95);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(95, 32);
             this.btnSend.TabIndex = 7;
@@ -117,10 +108,9 @@ namespace ES_Function
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 426);
+            this.ClientSize = new System.Drawing.Size(478, 156);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtSendMsg);
-            this.Controls.Add(this.rtxReceiveMsg);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.txtPortNum);
             this.Controls.Add(this.txtIPAddress);
@@ -140,7 +130,6 @@ namespace ES_Function
         private System.Windows.Forms.TextBox txtIPAddress;
         private System.Windows.Forms.TextBox txtPortNum;
         private System.Windows.Forms.Button btnOpen;
-        private System.Windows.Forms.RichTextBox rtxReceiveMsg;
         private System.Windows.Forms.TextBox txtSendMsg;
         private System.Windows.Forms.Button btnSend;
         private System.ComponentModel.BackgroundWorker bwTestServer;
