@@ -17,6 +17,13 @@ namespace ESVision
             panel.Controls.Add(form);
         }
 
+        public void CreatUiInsidePanel(Form form, Control panel, int ImgNum)
+        {
+            form.TopLevel = false;
+            form.Location = new Point(0 + ImgNum * 50, 0 + ImgNum * 50);
+            panel.Controls.Add(form);
+        }
+
         public void ShowUi(Form form)
         {
             form.TopLevel = true;

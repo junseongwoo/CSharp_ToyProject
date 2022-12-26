@@ -44,11 +44,15 @@ namespace ESVision
             // 
             // pnlMain
             // 
+            this.pnlMain.AllowDrop = true;
+            this.pnlMain.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pnlMain.Location = new System.Drawing.Point(0, 51);
             this.pnlMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1900, 770);
             this.pnlMain.TabIndex = 1;
+            this.pnlMain.DragDrop += new System.Windows.Forms.DragEventHandler(this.pnlMain_DragDrop);
+            this.pnlMain.DragEnter += new System.Windows.Forms.DragEventHandler(this.pnlMain_DragEnter);
             // 
             // pnlBottom
             // 
@@ -61,6 +65,7 @@ namespace ESVision
             // 
             // formMain
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1884, 861);

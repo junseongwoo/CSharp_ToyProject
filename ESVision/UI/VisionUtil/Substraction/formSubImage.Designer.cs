@@ -34,22 +34,22 @@ namespace ESVision
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtBackgroundImgPath = new System.Windows.Forms.TextBox();
-            this.btnNewBackgroundImg = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.btnOpenBackgroundImg = new System.Windows.Forms.Button();
-            this.picBackgroundImg = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtSourceImgPath = new System.Windows.Forms.TextBox();
-            this.btnOpenSourceImg = new System.Windows.Forms.Button();
-            this.btnNewSourceImg = new System.Windows.Forms.Button();
-            this.picSourceImg = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnExecuteSubImg = new System.Windows.Forms.Button();
             this.btnCloseFormSub = new System.Windows.Forms.Button();
+            this.btnOpenSourceImg = new System.Windows.Forms.Button();
+            this.btnNewSourceImg = new System.Windows.Forms.Button();
+            this.picSourceImg = new System.Windows.Forms.PictureBox();
+            this.btnNewBackgroundImg = new System.Windows.Forms.Button();
+            this.btnOpenBackgroundImg = new System.Windows.Forms.Button();
+            this.picBackgroundImg = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBackgroundImg)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSourceImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBackgroundImg)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -82,18 +82,6 @@ namespace ESVision
             this.txtBackgroundImgPath.Size = new System.Drawing.Size(296, 21);
             this.txtBackgroundImgPath.TabIndex = 6;
             // 
-            // btnNewBackgroundImg
-            // 
-            this.btnNewBackgroundImg.BackColor = System.Drawing.SystemColors.Control;
-            this.btnNewBackgroundImg.ImageIndex = 0;
-            this.btnNewBackgroundImg.ImageList = this.imageList1;
-            this.btnNewBackgroundImg.Location = new System.Drawing.Point(308, 34);
-            this.btnNewBackgroundImg.Name = "btnNewBackgroundImg";
-            this.btnNewBackgroundImg.Size = new System.Drawing.Size(27, 26);
-            this.btnNewBackgroundImg.TabIndex = 5;
-            this.btnNewBackgroundImg.UseVisualStyleBackColor = false;
-            this.btnNewBackgroundImg.Click += new System.EventHandler(this.btnNewBackgroundImg_Click);
-            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -101,29 +89,6 @@ namespace ESVision
             this.imageList1.Images.SetKeyName(0, "newDocument.png");
             this.imageList1.Images.SetKeyName(1, "openFolder.png");
             this.imageList1.Images.SetKeyName(2, "saveFile.png");
-            // 
-            // btnOpenBackgroundImg
-            // 
-            this.btnOpenBackgroundImg.BackColor = System.Drawing.SystemColors.Control;
-            this.btnOpenBackgroundImg.ImageIndex = 1;
-            this.btnOpenBackgroundImg.ImageList = this.imageList1;
-            this.btnOpenBackgroundImg.Location = new System.Drawing.Point(341, 34);
-            this.btnOpenBackgroundImg.Name = "btnOpenBackgroundImg";
-            this.btnOpenBackgroundImg.Size = new System.Drawing.Size(27, 26);
-            this.btnOpenBackgroundImg.TabIndex = 4;
-            this.btnOpenBackgroundImg.UseVisualStyleBackColor = false;
-            this.btnOpenBackgroundImg.Click += new System.EventHandler(this.btnOpenBackgroundImg_Click);
-            // 
-            // picBackgroundImg
-            // 
-            this.picBackgroundImg.BackColor = System.Drawing.SystemColors.Control;
-            this.picBackgroundImg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBackgroundImg.Location = new System.Drawing.Point(6, 65);
-            this.picBackgroundImg.Name = "picBackgroundImg";
-            this.picBackgroundImg.Size = new System.Drawing.Size(362, 458);
-            this.picBackgroundImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBackgroundImg.TabIndex = 2;
-            this.picBackgroundImg.TabStop = false;
             // 
             // groupBox2
             // 
@@ -145,6 +110,35 @@ namespace ESVision
             this.txtSourceImgPath.ReadOnly = true;
             this.txtSourceImgPath.Size = new System.Drawing.Size(296, 21);
             this.txtSourceImgPath.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 12);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Source Image";
+            // 
+            // btnExecuteSubImg
+            // 
+            this.btnExecuteSubImg.Location = new System.Drawing.Point(772, 465);
+            this.btnExecuteSubImg.Name = "btnExecuteSubImg";
+            this.btnExecuteSubImg.Size = new System.Drawing.Size(97, 32);
+            this.btnExecuteSubImg.TabIndex = 5;
+            this.btnExecuteSubImg.Text = "Execute";
+            this.btnExecuteSubImg.UseVisualStyleBackColor = true;
+            this.btnExecuteSubImg.Click += new System.EventHandler(this.btnExecuteSubImg_Click);
+            // 
+            // btnCloseFormSub
+            // 
+            this.btnCloseFormSub.Location = new System.Drawing.Point(772, 503);
+            this.btnCloseFormSub.Name = "btnCloseFormSub";
+            this.btnCloseFormSub.Size = new System.Drawing.Size(97, 32);
+            this.btnCloseFormSub.TabIndex = 1;
+            this.btnCloseFormSub.Text = "Close";
+            this.btnCloseFormSub.UseVisualStyleBackColor = true;
+            this.btnCloseFormSub.Click += new System.EventHandler(this.btnCloseFormSub_Click);
             // 
             // btnOpenSourceImg
             // 
@@ -179,34 +173,40 @@ namespace ESVision
             this.picSourceImg.TabIndex = 5;
             this.picSourceImg.TabStop = false;
             // 
-            // label2
+            // btnNewBackgroundImg
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 12);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Source Image";
+            this.btnNewBackgroundImg.BackColor = System.Drawing.SystemColors.Control;
+            this.btnNewBackgroundImg.ImageIndex = 0;
+            this.btnNewBackgroundImg.ImageList = this.imageList1;
+            this.btnNewBackgroundImg.Location = new System.Drawing.Point(308, 34);
+            this.btnNewBackgroundImg.Name = "btnNewBackgroundImg";
+            this.btnNewBackgroundImg.Size = new System.Drawing.Size(27, 26);
+            this.btnNewBackgroundImg.TabIndex = 5;
+            this.btnNewBackgroundImg.UseVisualStyleBackColor = false;
+            this.btnNewBackgroundImg.Click += new System.EventHandler(this.btnNewBackgroundImg_Click);
             // 
-            // btnExecuteSubImg
+            // btnOpenBackgroundImg
             // 
-            this.btnExecuteSubImg.Location = new System.Drawing.Point(772, 465);
-            this.btnExecuteSubImg.Name = "btnExecuteSubImg";
-            this.btnExecuteSubImg.Size = new System.Drawing.Size(97, 32);
-            this.btnExecuteSubImg.TabIndex = 5;
-            this.btnExecuteSubImg.Text = "Execute";
-            this.btnExecuteSubImg.UseVisualStyleBackColor = true;
-            this.btnExecuteSubImg.Click += new System.EventHandler(this.btnExecuteSubImg_Click);
+            this.btnOpenBackgroundImg.BackColor = System.Drawing.SystemColors.Control;
+            this.btnOpenBackgroundImg.ImageIndex = 1;
+            this.btnOpenBackgroundImg.ImageList = this.imageList1;
+            this.btnOpenBackgroundImg.Location = new System.Drawing.Point(341, 34);
+            this.btnOpenBackgroundImg.Name = "btnOpenBackgroundImg";
+            this.btnOpenBackgroundImg.Size = new System.Drawing.Size(27, 26);
+            this.btnOpenBackgroundImg.TabIndex = 4;
+            this.btnOpenBackgroundImg.UseVisualStyleBackColor = false;
+            this.btnOpenBackgroundImg.Click += new System.EventHandler(this.btnOpenBackgroundImg_Click);
             // 
-            // btnCloseFormSub
+            // picBackgroundImg
             // 
-            this.btnCloseFormSub.Location = new System.Drawing.Point(772, 503);
-            this.btnCloseFormSub.Name = "btnCloseFormSub";
-            this.btnCloseFormSub.Size = new System.Drawing.Size(97, 32);
-            this.btnCloseFormSub.TabIndex = 1;
-            this.btnCloseFormSub.Text = "Close";
-            this.btnCloseFormSub.UseVisualStyleBackColor = true;
-            this.btnCloseFormSub.Click += new System.EventHandler(this.btnCloseFormSub_Click);
+            this.picBackgroundImg.BackColor = System.Drawing.SystemColors.Control;
+            this.picBackgroundImg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picBackgroundImg.Location = new System.Drawing.Point(6, 65);
+            this.picBackgroundImg.Name = "picBackgroundImg";
+            this.picBackgroundImg.Size = new System.Drawing.Size(362, 458);
+            this.picBackgroundImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBackgroundImg.TabIndex = 2;
+            this.picBackgroundImg.TabStop = false;
             // 
             // formSubImage
             // 
@@ -221,10 +221,10 @@ namespace ESVision
             this.Text = "Subtraction ";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBackgroundImg)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSourceImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBackgroundImg)).EndInit();
             this.ResumeLayout(false);
 
         }

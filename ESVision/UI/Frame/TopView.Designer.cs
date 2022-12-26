@@ -29,7 +29,6 @@ namespace ESVision
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TopView));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.imageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,11 +36,14 @@ namespace ESVision
             this.saveImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageSubtractionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thresholdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSaveBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripNewOpenBtn = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.thresholdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripBtnOpenImg = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBtnZoom = new System.Windows.Forms.ToolStripButton();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -72,20 +74,21 @@ namespace ESVision
             // newImageToolStripMenuItem
             // 
             this.newImageToolStripMenuItem.Name = "newImageToolStripMenuItem";
-            this.newImageToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.newImageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newImageToolStripMenuItem.Text = "New Image";
             this.newImageToolStripMenuItem.Click += new System.EventHandler(this.newImageToolStripMenuItem_Click);
             // 
             // openImageToolStripMenuItem
             // 
             this.openImageToolStripMenuItem.Name = "openImageToolStripMenuItem";
-            this.openImageToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.openImageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openImageToolStripMenuItem.Text = "Open Image";
+            this.openImageToolStripMenuItem.Click += new System.EventHandler(this.openImageToolStripMenuItem_Click);
             // 
             // saveImageToolStripMenuItem
             // 
             this.saveImageToolStripMenuItem.Name = "saveImageToolStripMenuItem";
-            this.saveImageToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.saveImageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveImageToolStripMenuItem.Text = "Save Image";
             // 
             // imageToolsToolStripMenuItem
@@ -104,13 +107,23 @@ namespace ESVision
             this.imageSubtractionToolStripMenuItem.Text = "Image Substraction";
             this.imageSubtractionToolStripMenuItem.Click += new System.EventHandler(this.imageSubtractionToolStripMenuItem_Click);
             // 
+            // thresholdToolStripMenuItem
+            // 
+            this.thresholdToolStripMenuItem.Name = "thresholdToolStripMenuItem";
+            this.thresholdToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thresholdToolStripMenuItem.Text = "Threshold";
+            this.thresholdToolStripMenuItem.Click += new System.EventHandler(this.thresholdToolStripMenuItem_Click);
+            // 
             // toolStrip1
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSaveBtn,
             this.toolStripNewOpenBtn,
-            this.toolStripButton3});
+            this.toolStripBtnOpenImg,
+            this.toolStripSeparator1,
+            this.toolStripBtnZoom,
+            this.toolStripTextBox1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1900, 27);
@@ -120,35 +133,50 @@ namespace ESVision
             // toolStripSaveBtn
             // 
             this.toolStripSaveBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripSaveBtn.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSaveBtn.Image")));
+            this.toolStripSaveBtn.Image = global::ESVision.Properties.Resources.saveFile;
             this.toolStripSaveBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSaveBtn.Name = "toolStripSaveBtn";
             this.toolStripSaveBtn.Size = new System.Drawing.Size(24, 24);
-            this.toolStripSaveBtn.Text = "toolStripButton1";
+            this.toolStripSaveBtn.Text = "Save";
             // 
             // toolStripNewOpenBtn
             // 
             this.toolStripNewOpenBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripNewOpenBtn.Image = ((System.Drawing.Image)(resources.GetObject("toolStripNewOpenBtn.Image")));
+            this.toolStripNewOpenBtn.Image = global::ESVision.Properties.Resources.newDocument;
             this.toolStripNewOpenBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripNewOpenBtn.Name = "toolStripNewOpenBtn";
             this.toolStripNewOpenBtn.Size = new System.Drawing.Size(24, 24);
-            this.toolStripNewOpenBtn.Text = "toolStripButton2";
+            this.toolStripNewOpenBtn.Text = "New Image";
             // 
-            // toolStripButton3
+            // toolStripBtnOpenImg
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripBtnOpenImg.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnOpenImg.Image = global::ESVision.Properties.Resources.openFolder;
+            this.toolStripBtnOpenImg.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnOpenImg.Name = "toolStripBtnOpenImg";
+            this.toolStripBtnOpenImg.Size = new System.Drawing.Size(24, 24);
+            this.toolStripBtnOpenImg.Text = "Open Image";
+            this.toolStripBtnOpenImg.Click += new System.EventHandler(this.toolStripBtnOpenImg_Click);
             // 
-            // thresholdToolStripMenuItem
+            // toolStripSeparator1
             // 
-            this.thresholdToolStripMenuItem.Name = "thresholdToolStripMenuItem";
-            this.thresholdToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.thresholdToolStripMenuItem.Text = "Threshold";
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripBtnZoom
+            // 
+            this.toolStripBtnZoom.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnZoom.Image = global::ESVision.Properties.Resources.zoom;
+            this.toolStripBtnZoom.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnZoom.Name = "toolStripBtnZoom";
+            this.toolStripBtnZoom.Size = new System.Drawing.Size(24, 24);
+            this.toolStripBtnZoom.Text = "Zoom";
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 27);
             // 
             // TopView
             // 
@@ -184,7 +212,10 @@ namespace ESVision
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripSaveBtn;
         private System.Windows.Forms.ToolStripButton toolStripNewOpenBtn;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripBtnOpenImg;
         private System.Windows.Forms.ToolStripMenuItem thresholdToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton toolStripBtnZoom;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
     }
 }

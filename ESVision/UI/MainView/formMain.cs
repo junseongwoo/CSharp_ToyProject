@@ -23,6 +23,10 @@ namespace ESVision
 
         #region [필드]
         InitializeUi UiFunction = new InitializeUi();
+        ImgLib ILib = new ImgLib();
+
+        SortedList<string, string> ImagePath;
+        int OpenImgNum = 0;
 
         public Form formCurrent = null;
 
@@ -39,11 +43,15 @@ namespace ESVision
         public formBaseImage formBaseImageView = null;
 
         public formSubResultImage formSubResultImageView = null;
+
+        public formThreshold formThresholdView = null;
         #endregion
 
         #region [초기화]
         public void Initialize()
         {
+            this.TopLevel = true;
+
             topView = new TopView();
             topView.TopLevel = false;
             topView.Location = new Point(0, 0);
@@ -62,11 +70,13 @@ namespace ESVision
 
             formBaseImageView = new formBaseImage();
 
-            formOpenImageView = new formOpenImage();
-
             formSubImageView = new formSubImage();
-        }
 
+            formThresholdView = new formThreshold();
+        }
+        #endregion
+
+        #region [이벤트 함수 : Image Tool Menu 전환 함수]
         private void ImageToolsMenuOpen(EIMAGE_TOOL_MENU_LIST menuList)
         {
             switch (menuList)
@@ -80,12 +90,23 @@ namespace ESVision
                         formCurrent = formSubImageView;
                     }
                     break;
+                case EIMAGE_TOOL_MENU_LIST.FORM_THREASHOLOD_IMAGE:
+                    {
+                        if (formThresholdView.IsDisposed == true)
+                        {
+                            formThresholdView = new formThreshold();
+                        }
+                        formCurrent = formThresholdView;
+                    }
+                    break;
             }
 
             formCurrent.Owner = this;
             UiFunction.ShowUi(formCurrent);
         }
+        #endregion
 
+        #region [이벤트 함수 : Image Menu 전환 함수]
         private void ImageMenuOpen(EIMAGE_MENU_LIST menuList)
         {
             switch (menuList)
@@ -99,10 +120,38 @@ namespace ESVision
                         formCurrent = formNewImageView;
                     }
                     break;
+                case EIMAGE_MENU_LIST.FORM_OPEN_IMAGE:
+                    {
+                        ImagePath = ILib.GetImagePath();
+                        formOpenImageView = new formOpenImage(ImagePath["FullPath"].ToString());
+                        UiFunction.CreatUiInsidePanel(formOpenImageView, pnlMain, OpenImgNum);
+                        formOpenImageView.Text = $"Image_{OpenImgNum + 1} ({ImagePath["FullPath"]})";
+                        OpenImgNum += 1;
+                        formCurrent = formOpenImageView;
+                    }
+                    break;
             }
+            formCurrent.Show();
+        }
+        #endregion
 
-            formCurrent.Owner = this;
-            UiFunction.ShowUi(formCurrent);
+        #region [이벤트 함수 : Main Panel Drag & Drop 함수] 
+        private void pnlMain_DragDrop(object sender, DragEventArgs e)
+        {
+            try
+            {
+                var directoryName = (string[])e.Data.GetData(DataFormats.FileDrop);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void pnlMain_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.All;
         }
         #endregion
     }

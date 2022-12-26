@@ -42,24 +42,38 @@ namespace ESVision
         }
         #endregion
 
-        #region [이벤트 함수 : Image Subtraction 툴 메뉴 클릭]
+        #region [이벤트 함수 : Image Tools 메뉴 중 Image Subtraction 클릭]
         private void imageSubtractionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OnEventImageToolsMenuOpen?.Invoke(EIMAGE_TOOL_MENU_LIST.FORM_SUBTRACTION_IMAGE);
         }
         #endregion
 
-        #region [이벤트 함수 : new Image 툴 메뉴 클릭]
+        #region [이벤트 함수 : Image 메뉴 중 New Image 클릭]
         private void newImageToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OnEventImageMenuOpen?.Invoke(EIMAGE_MENU_LIST.FORM_NEW_IMAGE);
         }
         #endregion
 
-        #region [이벤트 함수 : ]
+
+
+        #region [이벤트 함수 : Image Tools 메뉴 중 Threshold 클릭]
+        private void thresholdToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OnEventImageToolsMenuOpen?.Invoke(EIMAGE_TOOL_MENU_LIST.FORM_THREASHOLOD_IMAGE);
+        }
 
         #endregion
 
+        private void openImageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OnEventImageMenuOpen?.Invoke(EIMAGE_MENU_LIST.FORM_OPEN_IMAGE);
+        }
 
+        private void toolStripBtnOpenImg_Click(object sender, EventArgs e)
+        {
+            OnEventImageMenuOpen?.Invoke(EIMAGE_MENU_LIST.FORM_OPEN_IMAGE);
+        }
     }
 }
