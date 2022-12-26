@@ -12,28 +12,21 @@ namespace ES_Function
 {
     public partial class FormControlValueChange : Form
     {
-        public List<dgvTest> lstdvgTest = new List<dgvTest>();
-        public delegate void OnChangeDataGridview(dgvTest lstdvgTest);
-        public event OnChangeDataGridview EventHandler;
-        FormDataGridView formTest = new FormDataGridView();
+        public delegate void OnChangeDataGridview(List<dgvTest> lstdgvTest);
+        public event OnChangeDataGridview OnEventChageData;
 
         public FormControlValueChange()
         {
             InitializeComponent();
         }
-        List<dgvTest> test = new List<dgvTest>();
+
         private void btnChangeDgvValue_Click(object sender, EventArgs e)
         {
             for (int i = 40; i < 50; i++)
             {
-
-                test.Add(new dgvTest { Num = i, DateTime = DateTime.Now, Height = i.ToString(), Width = i.ToString(), Speed = i.ToString() });
-
+                Program.lstdvgTest.Add(new dgvTest() { Num = i + 1, DateTime = DateTime.Now, Speed = (i + 100).ToString(), Height = i.ToString(), Width = i.ToString() });
             }
-
-            formTest.ChangeDgvDataSource(test);
-            formTest.Refresh();
-            //EventHandler?.Invoke(test);
+            OnEventChageData?.Invoke(Program.lstdvgTest);
         }
     }
 }

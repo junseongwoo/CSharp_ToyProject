@@ -13,9 +13,6 @@ namespace ES_Function
     public partial class FormCSFuncMain : Form
     {
         #region [필드]
-        public FormDataGridView formDataGridView = null;
-
-        public FormControlValueChange formControlValueChange = null;
         #endregion
 
         #region [생성자]
@@ -25,40 +22,30 @@ namespace ES_Function
 
             Initialize();
 
-            ConnetEvent();
         }
 
         #region [멤버 함수 : 이벤트 연결]
 
         #endregion
-        private void ConnetEvent()
-        {
-
-        }
-        #endregion
-
         #region [초기화]
         private void Initialize()
         {
-            formDataGridView = new FormDataGridView();
-            formControlValueChange = new FormControlValueChange();
+            Vars.formDataGridView = new FormDataGridView();
+            Vars.formControlValueChange = new FormControlValueChange();
         }
         #endregion
 
         private void btnDgv_Click(object sender, EventArgs e)
         {
-            formDataGridView.Show();
+            Vars.formDataGridView = new FormDataGridView();
+
+            Vars.formDataGridView.Show();
         }
 
         private void btnChangeValue_Click(object sender, EventArgs e)
         {
-            formControlValueChange.EventHandler += OnEventTest;
-            formControlValueChange.Show();
+            Vars.formControlValueChange.Show();
         }
-
-        private void OnEventTest(dgvTest lstdvgTest)
-        {
-
-        }
+        #endregion
     }
 }

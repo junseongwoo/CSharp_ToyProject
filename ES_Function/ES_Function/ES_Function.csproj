@@ -49,6 +49,7 @@
     <Compile Include="Com\RS232.cs" />
     <Compile Include="Com\TCP_IP.cs" />
     <Compile Include="Control\UseControl.cs" />
+    <Compile Include="Data\DataDefine.cs" />
     <Compile Include="FileControl\TxtFile.cs" />
     <Compile Include="FileControl\FileLib.cs" />
     <Compile Include="FormUI\Csharp_Function\FormControlValueChange.cs">

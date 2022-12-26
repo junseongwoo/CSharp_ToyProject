@@ -16,36 +16,49 @@ namespace ES_Function
 {
     public partial class FormDataGridView : Form
     {
-        #region [필드] 
-        public delegate void OnDataGridview(dgvTest lstdvgTest);
-        public event OnDataGridview EventHandlerTest;
+        #region [필드]
 
         #endregion
 
         #region [생성자]
-        public static List<dgvTest> lstdvgTest = new List<dgvTest>();
+        List<dgvTest> lstdvgTest = new List<dgvTest>(); 
         #endregion
 
         public FormDataGridView()
         {
             InitializeComponent();
+
+            Initialize();
+        }
+
+        private void Initialize()
+        {
+            Vars.formControlValueChange = new FormControlValueChange();
+            Vars.formControlValueChange.OnEventChageData += ChangeDgvDataSource;
         }
 
         private void FormDataGridView_Load(object sender, EventArgs e)
         {
             AddDgvDataSource();
 
-            bindingSource1.DataSource = lstdvgTest;
+            bindingSource1.DataSource = Program.lstdvgTest;
             dgvClassTest.DataSource = bindingSource1;
-
-            //dgvClassTest.DataSource = lstdvgTest;
         }
         
         public void ChangeDgvDataSource(List<dgvTest> test)
         {
+            BindingSource bs = new BindingSource();
+            if (Vars.formControlValueChange?.InvokeRequired == true)
+            {
+                Vars.formControlValueChange.Invoke(new Action(delegate ()
+                {
+                    ChangeDgvDataSource(test);
+                }));
+            }
 
-            dgvTestBindingSource.DataSource = test;
-            dgvClassTest.DataSource = dgvTestBindingSource;
+            bs.DataSource = test;
+            dgvClassTest.DataSource = bs;
+            dgvClassTest.Update();
             dgvTestBindingSource.ResetBindings(false);
 
         }
@@ -54,7 +67,7 @@ namespace ES_Function
         {
             for (int i = 0; i < 30; i++)
             {
-                lstdvgTest.Add(new dgvTest() { Num = i + 1, DateTime = DateTime.Now, Speed = (i + 100).ToString(), Height = i.ToString(), Width = i.ToString() });
+                Program.lstdvgTest.Add(new dgvTest() { Num = i + 1, DateTime = DateTime.Now, Speed = (i + 100).ToString(), Height = i.ToString(), Width = i.ToString() });
             }
         }
 
@@ -62,15 +75,13 @@ namespace ES_Function
         {
             lstdvgTest.Add(test);
         }
+
+        private void btnChangeValue_Click(object sender, EventArgs e)
+        {
+            Vars.formControlValueChange.Show();
+        }
     }
-    public class dgvTest
-    {
-        public int Num { get; set; }
-        public DateTime DateTime { get; set; }
-        public string Speed { get; set; }
-        public string Height { get; set; }
-        public string Width { get; set; }
-    }
+
 
 
 

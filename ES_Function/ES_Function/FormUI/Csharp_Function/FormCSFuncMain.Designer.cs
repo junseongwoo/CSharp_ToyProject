@@ -45,11 +45,11 @@ namespace ES_Function
             // 
             // btnChangeValue
             // 
-            this.btnChangeValue.Location = new System.Drawing.Point(12, 291);
+            this.btnChangeValue.Location = new System.Drawing.Point(12, 287);
             this.btnChangeValue.Name = "btnChangeValue";
-            this.btnChangeValue.Size = new System.Drawing.Size(103, 38);
+            this.btnChangeValue.Size = new System.Drawing.Size(103, 42);
             this.btnChangeValue.TabIndex = 1;
-            this.btnChangeValue.Text = "Control 값 변경";
+            this.btnChangeValue.Text = "Control Value Change";
             this.btnChangeValue.UseVisualStyleBackColor = true;
             this.btnChangeValue.Click += new System.EventHandler(this.btnChangeValue_Click);
             // 

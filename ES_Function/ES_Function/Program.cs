@@ -27,5 +27,8 @@ namespace ES_Function
             }
             Application.Run(new FrmMain());
         }
+
+        public static List<dgvTest> lstdvgTest = new List<dgvTest>();
+
     }
 }
