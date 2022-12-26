@@ -140,11 +140,32 @@ namespace ESVision
         #endregion
 
         #region [멤버 함수 : Image Threshold]
-        public Bitmap threashold(Bitmap img, int thresholdValue, int valu)
+        public Bitmap Threashold(Bitmap baseImg, int thresholdValue)
         {
+            byte[] baseImgByte = Image2ByteArray(baseImg);
 
-            return img;
+            for (int i = 1079; i < baseImgByte.Length; i++)
+            {
+                if (baseImgByte[i] > thresholdValue)
+                {
+                    baseImgByte[i] = 255;
+                }
+                else
+                {
+                    baseImgByte[i] = 0;
+                }
+            }
+
+            using (var resultByte = new MemoryStream(baseImgByte))
+            {
+                Bitmap resultImg = Image.FromStream(resultByte) as Bitmap;
+                return resultImg;
+            }
         }
+        #endregion
+
+        #region 
+
         #endregion
     }
 }
