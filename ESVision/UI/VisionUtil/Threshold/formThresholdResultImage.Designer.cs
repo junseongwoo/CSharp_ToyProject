@@ -39,6 +39,7 @@ namespace ESVision
             this.picThresholdResultImg.Location = new System.Drawing.Point(0, 0);
             this.picThresholdResultImg.Name = "picThresholdResultImg";
             this.picThresholdResultImg.Size = new System.Drawing.Size(485, 475);
+            this.picThresholdResultImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picThresholdResultImg.TabIndex = 0;
             this.picThresholdResultImg.TabStop = false;
             // 

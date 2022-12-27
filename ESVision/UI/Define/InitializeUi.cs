@@ -10,6 +10,7 @@ namespace ESVision
 {
     class InitializeUi
     {
+        #region [멤버 함수 : Ui Form을 Panel 컨트롤 안에 생성]
         public void CreatUiInsidePanel(Form form, Control panel)
         {
             form.TopLevel = false;
@@ -23,12 +24,24 @@ namespace ESVision
             form.Location = new Point(0 + ImgNum * 50, 0 + ImgNum * 50);
             panel.Controls.Add(form);
         }
+        #endregion
 
+        #region [멤버 함수 : Image Open 시 Image Name과 Number 출력]
+        public void OpenImage(Form form)
+        {
+            form.Text = $"Image_{Vars.openImgNum + 1} ({Vars.ImagePath["FullPath"]})";
+            Vars.openImgNum += 1;
+        }
+        #endregion
+
+        #region [멤버 함수 : Ui Form 생성 후 Show]
         public void ShowUi(Form form)
         {
             form.TopLevel = true;
             form.StartPosition = FormStartPosition.CenterParent;
             form.Show();
         }
+        #endregion
+
     }
 }

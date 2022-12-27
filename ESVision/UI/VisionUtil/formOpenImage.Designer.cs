@@ -42,6 +42,7 @@ namespace ESVision
             this.picOpenImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picOpenImg.TabIndex = 0;
             this.picOpenImg.TabStop = false;
+            this.picOpenImg.Click += new System.EventHandler(this.picOpenImg_Click);
             // 
             // formOpenImage
             // 
@@ -53,7 +54,6 @@ namespace ESVision
             this.Name = "formOpenImage";
             this.Text = "Image";
             this.Click += new System.EventHandler(this.formOpenImage_Click);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.formOpenImage_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.picOpenImg)).EndInit();
             this.ResumeLayout(false);
 

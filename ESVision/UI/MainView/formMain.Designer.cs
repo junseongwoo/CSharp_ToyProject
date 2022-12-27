@@ -36,20 +36,22 @@ namespace ESVision
             // 
             // pnlTop
             // 
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1900, 51);
+            this.pnlTop.Size = new System.Drawing.Size(1884, 51);
             this.pnlTop.TabIndex = 0;
             // 
             // pnlMain
             // 
             this.pnlMain.AllowDrop = true;
             this.pnlMain.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 51);
             this.pnlMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1900, 770);
+            this.pnlMain.Size = new System.Drawing.Size(1884, 810);
             this.pnlMain.TabIndex = 1;
             this.pnlMain.DragDrop += new System.Windows.Forms.DragEventHandler(this.pnlMain_DragDrop);
             this.pnlMain.DragEnter += new System.Windows.Forms.DragEventHandler(this.pnlMain_DragEnter);

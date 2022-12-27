@@ -25,9 +25,6 @@ namespace ESVision
         InitializeUi UiFunction = new InitializeUi();
         ImgLib ILib = new ImgLib();
 
-        SortedList<string, string> ImagePath;
-        int OpenImgNum = 0;
-
         public Form formCurrent = null;
 
         public TopView topView = null;
@@ -122,15 +119,23 @@ namespace ESVision
                     break;
                 case EIMAGE_MENU_LIST.FORM_OPEN_IMAGE:
                     {
-                        ImagePath = ILib.GetImagePath();
-                        formOpenImageView = new formOpenImage(ImagePath["FullPath"].ToString());
-                        UiFunction.CreatUiInsidePanel(formOpenImageView, pnlMain, OpenImgNum);
-                        formOpenImageView.Text = $"Image_{OpenImgNum + 1} ({ImagePath["FullPath"]})";
-                        OpenImgNum += 1;
-                        formCurrent = formOpenImageView;
+                        ILib.GetImagePath();
+
+                        if (Vars.ImagePath.Count == 0)
+                        {
+                            return;
+                        }
+                        else
+                        {
+                            formOpenImageView = new formOpenImage(Vars.ImagePath["FullPath"].ToString());
+                            UiFunction.CreatUiInsidePanel(formOpenImageView, pnlMain, Vars.openImgNum);
+                            UiFunction.OpenImage(formOpenImageView);
+                            formCurrent = formOpenImageView;
+                        }
                     }
                     break;
             }
+            formCurrent.BringToFront();
             formCurrent.Show();
         }
         #endregion

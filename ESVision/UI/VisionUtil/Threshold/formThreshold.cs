@@ -38,9 +38,17 @@ namespace ESVision
         #region [이벤트 함수 : Base Image Open Button Click]
         private void btnOpenBaseImg_Click(object sender, EventArgs e)
         {
-            ImagePath = ILib.GetImagePath();
-            txtBaseImgPath.Text = ImagePath.Values[0].ToString();
-            picBaseImg.Image = ILib.ShowImagePicturebox(ImagePath.Values[1].ToString());
+            ILib.GetImagePath();
+
+            if (Vars.ImagePath.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                txtBaseImgPath.Text = Vars.ImagePath.Values[0].ToString();
+                picBaseImg.Image = ILib.ShowImagePicturebox(Vars.ImagePath.Values[1].ToString());
+            }
         }
         #endregion
 

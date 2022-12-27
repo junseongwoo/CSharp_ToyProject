@@ -38,12 +38,12 @@ namespace ESVision
 
         private void formOpenImage_Click(object sender, EventArgs e)
         {
-            this.TopMost = true;
+            this.BringToFront();
         }
 
-        private void formOpenImage_MouseClick(object sender, MouseEventArgs e)
+        private void picOpenImg_Click(object sender, EventArgs e)
         {
-            this.TopMost = true;
+            this.BringToFront();
         }
     }
 }
