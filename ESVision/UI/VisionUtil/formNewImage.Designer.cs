@@ -31,9 +31,9 @@ namespace ESVision
         {
             this.btnOpenImg = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtOpenImgName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -46,6 +46,7 @@ namespace ESVision
             this.btnOpenImg.TabIndex = 0;
             this.btnOpenImg.Text = "OK";
             this.btnOpenImg.UseVisualStyleBackColor = true;
+            this.btnOpenImg.Click += new System.EventHandler(this.btnOpenImg_Click);
             // 
             // groupBox1
             // 
@@ -58,14 +59,12 @@ namespace ESVision
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // label1
+            // txtOpenImgName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Variable";
+            this.txtOpenImgName.Location = new System.Drawing.Point(104, 28);
+            this.txtOpenImgName.Name = "txtOpenImgName";
+            this.txtOpenImgName.Size = new System.Drawing.Size(190, 21);
+            this.txtOpenImgName.TabIndex = 2;
             // 
             // label2
             // 
@@ -76,12 +75,14 @@ namespace ESVision
             this.label2.TabIndex = 1;
             this.label2.Text = "Name";
             // 
-            // txtOpenImgName
+            // label1
             // 
-            this.txtOpenImgName.Location = new System.Drawing.Point(104, 28);
-            this.txtOpenImgName.Name = "txtOpenImgName";
-            this.txtOpenImgName.Size = new System.Drawing.Size(190, 21);
-            this.txtOpenImgName.TabIndex = 2;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 12);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Variable";
             // 
             // btnCancel
             // 
@@ -102,7 +103,9 @@ namespace ESVision
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnOpenImg);
             this.Name = "formNewImage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Image";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.formNewImage_Paint);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

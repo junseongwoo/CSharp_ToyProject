@@ -10,7 +10,8 @@ namespace ESVision
     public enum EIMAGE_MENU_LIST
     {
         FORM_NEW_IMAGE,
-        FORM_OPEN_IMAGE
+        FORM_OPEN_IMAGE,
+        FORM_DRAG_OPEN_IMAGE
     }
     #endregion
 

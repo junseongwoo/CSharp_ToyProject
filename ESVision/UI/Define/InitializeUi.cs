@@ -27,7 +27,7 @@ namespace ESVision
         #endregion
 
         #region [멤버 함수 : Image Open 시 Image Name과 Number 출력]
-        public void OpenImage(Form form)
+        public void SetOpenImageInfo(Form form)
         {
             form.Text = $"Image_{Vars.openImgNum + 1} ({Vars.ImagePath["FullPath"]})";
             Vars.openImgNum += 1;
@@ -40,6 +40,12 @@ namespace ESVision
             form.TopLevel = true;
             form.StartPosition = FormStartPosition.CenterParent;
             form.Show();
+        }
+
+        public void ShowCenterForm(Form form, Point pt)
+        {
+            form.TopLevel = true;
+            form.Location = new Point(pt.X / 2, pt.Y / 2);
         }
         #endregion
 

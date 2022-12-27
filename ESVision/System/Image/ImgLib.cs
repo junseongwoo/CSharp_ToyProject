@@ -44,6 +44,32 @@ namespace ESVision
         }
         #endregion
 
+        public SortedList<string, string> GetDragImgPath(string[] DragimgPath)
+        {
+            Vars.ImagePath["FullPath"] = DragimgPath[0];
+            Vars.ImagePath["Extension"] = Path.GetExtension(DragimgPath[0]);
+
+            switch (Vars.ImagePath["Extension"])
+            {
+                case ".bmp":
+                    break;
+                case ".jpg":
+                    break;
+                case ".jpeg":
+                    break;
+                case ".png":
+                    break;
+                case ".tiff":
+                    break;
+                default:
+                    Vars.ImagePath = new SortedList<string, string>();
+                    MessageBox.Show("이미지 확장자가 아닙니다");
+                    break;
+            }
+
+            return Vars.ImagePath;
+        }
+
         #region [멤버 함수 : Show Image in Picturebox] 
         public Bitmap ShowImagePicturebox(string imgPath)
         {

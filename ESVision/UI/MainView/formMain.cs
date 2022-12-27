@@ -64,7 +64,7 @@ namespace ESVision
             pnlBottom.Controls.Add(botView);
 
             formNewImageView = new formNewImage();
-
+            formNewImageView.OnEventDragImageOpen += ImageMenuOpen;
             formBaseImageView = new formBaseImage();
 
             formSubImageView = new formSubImage();
@@ -120,23 +120,32 @@ namespace ESVision
                 case EIMAGE_MENU_LIST.FORM_OPEN_IMAGE:
                     {
                         ILib.GetImagePath();
-
-                        if (Vars.ImagePath.Count == 0)
-                        {
-                            return;
-                        }
-                        else
-                        {
-                            formOpenImageView = new formOpenImage(Vars.ImagePath["FullPath"].ToString());
-                            UiFunction.CreatUiInsidePanel(formOpenImageView, pnlMain, Vars.openImgNum);
-                            UiFunction.OpenImage(formOpenImageView);
-                            formCurrent = formOpenImageView;
-                        }
                     }
                     break;
+                case EIMAGE_MENU_LIST.FORM_DRAG_OPEN_IMAGE:
+                    break;
             }
-            formCurrent.BringToFront();
-            formCurrent.Show();
+
+            if (menuList == EIMAGE_MENU_LIST.FORM_NEW_IMAGE)
+            {
+                formCurrent.ShowDialog();
+            }
+            else
+            {
+                if (Vars.ImagePath.Count == 0)
+                {
+                    return;
+                }
+                else
+                {
+                    formOpenImageView = new formOpenImage(Vars.ImagePath["FullPath"].ToString());
+                    UiFunction.CreatUiInsidePanel(formOpenImageView, pnlMain, Vars.openImgNum);
+                    UiFunction.SetOpenImageInfo(formOpenImageView);
+                    formCurrent = formOpenImageView;
+                }
+                formCurrent.BringToFront();
+                formCurrent.Show();
+            }
         }
         #endregion
 
@@ -145,7 +154,8 @@ namespace ESVision
         {
             try
             {
-                var directoryName = (string[])e.Data.GetData(DataFormats.FileDrop);
+                ILib.GetDragImgPath((string[])e.Data.GetData(DataFormats.FileDrop));
+                ImageMenuOpen(EIMAGE_MENU_LIST.FORM_NEW_IMAGE);
             }
             catch (Exception)
             {
