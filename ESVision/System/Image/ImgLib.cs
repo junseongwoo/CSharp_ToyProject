@@ -17,7 +17,6 @@ namespace ESVision
         #endregion
 
         #region [생성자]
-        SortedList<string, string> ImagePath { get; set; } = new SortedList<string, string>();
         #endregion
 
         #region [멤버 함수 : Get Image Path]
@@ -31,12 +30,16 @@ namespace ESVision
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    ImagePath["FullName"] = openFileDialog.SafeFileName;
-                    ImagePath["FullPath"] = openFileDialog.FileName;
-                    ImagePath["path"] = openFileDialog.FileName.Replace(openFileDialog.SafeFileName, "");
-                    ImagePath["name"] = Path.GetFileNameWithoutExtension(openFileDialog.FileName);
+                    Vars.ImagePath["FullName"] = openFileDialog.SafeFileName;
+                    Vars.ImagePath["FullPath"] = openFileDialog.FileName;
+                    Vars.ImagePath["path"] = openFileDialog.FileName.Replace(openFileDialog.SafeFileName, "");
+                    Vars.ImagePath["name"] = Path.GetFileNameWithoutExtension(openFileDialog.FileName);
                 }
-                return ImagePath;
+                else
+                {
+                    Vars.ImagePath = new SortedList<string, string>();
+                }
+                return Vars.ImagePath;
             }
         }
         #endregion
