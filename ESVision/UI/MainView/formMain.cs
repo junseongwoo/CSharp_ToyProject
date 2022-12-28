@@ -25,6 +25,8 @@ namespace ESVision
         InitializeUi UiFunction = new InitializeUi();
         ImgLib ILib = new ImgLib();
 
+        public int pnlMainSize;
+
         public Form formCurrent = null;
 
         public TopView topView = null;
@@ -47,8 +49,7 @@ namespace ESVision
         #region [초기화]
         public void Initialize()
         {
-            this.TopLevel = true;
-
+            pnlMainSize = pnlMain.Width * pnlMain.Height;
             topView = new TopView();
             topView.TopLevel = false;
             topView.Location = new Point(0, 0);

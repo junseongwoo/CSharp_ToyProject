@@ -44,6 +44,7 @@ namespace ESVision
         }
         #endregion
 
+        #region [멤버 함수 : Drag & Drop 시 이미지 확장자 확인 해서 Image Path 얻음]
         public SortedList<string, string> GetDragImgPath(string[] DragimgPath)
         {
             Vars.ImagePath["FullPath"] = DragimgPath[0];
@@ -69,6 +70,7 @@ namespace ESVision
 
             return Vars.ImagePath;
         }
+        #endregion
 
         #region [멤버 함수 : Show Image in Picturebox] 
         public Bitmap ShowImagePicturebox(string imgPath)
@@ -193,8 +195,24 @@ namespace ESVision
         }
         #endregion
 
-        #region 
+        #region [멤버 함수 : Pnl Main Size와 Open Image의 Size 비교] 
+        public bool Compare2Size(int pnlMainSize, Bitmap img)
+        {
+            /*
+             * 이미지 Open 시 이미지 Size가 Panel Main 보다 크면 Form을 최대화 하고 스크롤 생성
+             * Zoom 기능 구현 -> 배율로 줄이기 -> 배율도 스크롤이 적용되게 
+             * 
+             * 이벤트 핸들러 사용
+             * Main Form 
+             * - Panel Size를 계속 받아야 함 -> Paint를 써야하나?
+             * - Panel Size를 계속 해서 받고 Open Image Size와 지속적으로 비교 -> 스크롤을 만들지 vs 안만들지 
+             */
+            bool Compare = false;
+            int imgSize = img.Width * img.Height;
 
+
+            return Compare;
+        }
         #endregion
     }
 }
