@@ -106,12 +106,6 @@
     <Compile Include="FormUI\ES_Function\FormRS232.Designer.cs">
       <DependentUpon>FormRS232.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\ES_Function\FormTCP_IP_Server.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUI\ES_Function\FormTCP_IP_Server.Designer.cs">
-      <DependentUpon>FormTCP_IP_Server.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,9 +142,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\ES_Function\FormTCP_IP_Client.resx">
       <DependentUpon>FormTCP_IP_Client.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\ES_Function\FormTCP_IP_Server.resx">
-      <DependentUpon>FormTCP_IP_Server.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
