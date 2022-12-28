@@ -32,7 +32,6 @@ namespace ES_Function
             this.btnDeleteS6F1 = new System.Windows.Forms.Button();
             this.btnRS232 = new System.Windows.Forms.Button();
             this.btnReceiveRS232 = new System.Windows.Forms.Button();
-            this.btnTCP_IPServer = new System.Windows.Forms.Button();
             this.btnTCP_IPClient = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnTCP_IPTestServer = new System.Windows.Forms.Button();
@@ -73,17 +72,6 @@ namespace ES_Function
             this.btnReceiveRS232.Text = "Receive RS232 ";
             this.btnReceiveRS232.UseVisualStyleBackColor = true;
             this.btnReceiveRS232.Click += new System.EventHandler(this.btnReceiveRS232_Click);
-            // 
-            // btnTCP_IPServer
-            // 
-            this.btnTCP_IPServer.Location = new System.Drawing.Point(12, 318);
-            this.btnTCP_IPServer.Name = "btnTCP_IPServer";
-            this.btnTCP_IPServer.Size = new System.Drawing.Size(139, 33);
-            this.btnTCP_IPServer.TabIndex = 3;
-            this.btnTCP_IPServer.Text = "TCP/IP Server";
-            this.btnTCP_IPServer.UseVisualStyleBackColor = true;
-            this.btnTCP_IPServer.Visible = false;
-            this.btnTCP_IPServer.Click += new System.EventHandler(this.btnTCP_IP_Click);
             // 
             // btnTCP_IPClient
             // 
@@ -152,7 +140,6 @@ namespace ES_Function
             this.ClientSize = new System.Drawing.Size(570, 363);
             this.Controls.Add(this.btnFunction);
             this.Controls.Add(this.btnCreateMCC);
-            this.Controls.Add(this.btnTCP_IPServer);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnDeleteS6F1);
@@ -171,7 +158,6 @@ namespace ES_Function
         private System.Windows.Forms.Button btnDeleteS6F1;
         private System.Windows.Forms.Button btnRS232;
         private System.Windows.Forms.Button btnReceiveRS232;
-        private System.Windows.Forms.Button btnTCP_IPServer;
         private System.Windows.Forms.Button btnTCP_IPClient;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;

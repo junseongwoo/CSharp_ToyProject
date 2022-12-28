@@ -36,11 +36,6 @@ namespace ES_Function
             frmReceiveRS232.Show();
         }
 
-        private void btnTCP_IP_Click(object sender, EventArgs e)
-        {
-            FormTCP_IP_Server frmTCP_IP = new FormTCP_IP_Server();
-            frmTCP_IP.Show();
-        }
         private void btnTCP_IPClient_Click(object sender, EventArgs e)
         {
             FormTCP_IP_Client frmTCP_IP_Client = new FormTCP_IP_Client();

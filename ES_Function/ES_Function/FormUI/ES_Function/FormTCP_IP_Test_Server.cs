@@ -72,6 +72,7 @@ namespace ES_Function
 
                         btnOpen.Text = "Close";
 
+                        // 오픈되면 바로 데이터 전송 되게 만듬
                         bwTestServer_Run();
                     }
                     else if (sock.Connected == true)
