@@ -207,9 +207,9 @@ namespace ESVision
              * - Panel Size를 계속 받아야 함 -> Paint를 써야하나?
              * - Panel Size를 계속 해서 받고 Open Image Size와 지속적으로 비교 -> 스크롤을 만들지 vs 안만들지 
              */
+
             bool Compare = false;
             int imgSize = img.Width * img.Height;
-
 
             return Compare;
         }

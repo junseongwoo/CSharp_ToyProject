@@ -177,6 +177,7 @@
     <Content Include="Resources\newDocument.png" />
     <Content Include="Resources\openFolder.png" />
     <Content Include="Resources\saveFile.png" />
+    <None Include="Resources\Up.png" />
     <None Include="Resources\zoom.png" />
   </ItemGroup>
   <ItemGroup>

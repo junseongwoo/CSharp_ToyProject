@@ -10,6 +10,12 @@ using System.Windows.Forms;
 
 namespace ESVision
 {
+    /*
+     * 
+     * 
+     * 추가 사항
+     * 블랍, 지오메트리, 컨투어, 패턴, 켈리퍼 
+     */
     public partial class TopView : Form
     {
         #region [이벤트 : Image 메뉴 클릭 시 뷰 오픈]
