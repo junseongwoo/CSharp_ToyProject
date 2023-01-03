@@ -206,6 +206,8 @@ namespace ESVision
              * Main Form 
              * - Panel Size를 계속 받아야 함 -> Paint를 써야하나?
              * - Panel Size를 계속 해서 받고 Open Image Size와 지속적으로 비교 -> 스크롤을 만들지 vs 안만들지 
+             * 
+             * - Panel Size 저장 하고 Image Size가 Panel Size를 넘는다면 최대로 만들어야함 
              */
 
             bool Compare = false;
