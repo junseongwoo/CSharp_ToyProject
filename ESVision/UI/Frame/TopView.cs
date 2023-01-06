@@ -96,7 +96,14 @@ namespace ESVision
 
         private void btn_DownZoomRatio_Click(object sender, EventArgs e)
         {
+            int downZoomRatio = 1 * (int)Math.Pow(2, downZoomRatioCnt);
+            toolStriptxtZoomRatio.Text = $"1:{downZoomRatio}";
+            if (downZoomRatio == 16)
+            {
+                return;
+            }
 
+            downZoomRatioCnt += 1;
         }
     }
 }
