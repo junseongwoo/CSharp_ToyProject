@@ -214,5 +214,16 @@ namespace ESVision
             return Compare;
         }
         #endregion
+
+        #region [멤버 함수 : Histogram Normalized] 
+        public void Hist()
+        {
+            /*
+             * for(i = 0 to L-1) // 초기화
+             * for(j = 0 to M-1) 
+             *  for(i = 0 to N-1) 
+             */
+        }
+        #endregion
     }
 }
