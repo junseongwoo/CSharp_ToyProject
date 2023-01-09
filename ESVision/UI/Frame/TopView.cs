@@ -29,7 +29,8 @@ namespace ESVision
         #endregion
 
         #region [필드]
-
+        int upZoomRatioCnt = 0;
+        int downZoomRatioCnt = 0;
         #endregion
 
         #region [생성자]
@@ -80,6 +81,29 @@ namespace ESVision
         private void toolStripBtnOpenImg_Click(object sender, EventArgs e)
         {
             OnEventImageMenuOpen?.Invoke(EIMAGE_MENU_LIST.FORM_OPEN_IMAGE);
+        }
+
+        private void btn_UpZoomRatio_Click(object sender, EventArgs e)
+        {
+            int upZoomRatio = 1 * (int)Math.Pow(2, upZoomRatioCnt);
+            toolStriptxtZoomRatio.Text = $"{upZoomRatio}:1";
+            if (upZoomRatio == 16)
+            {
+                return;
+            }
+            upZoomRatioCnt += 1;
+        }
+
+        private void btn_DownZoomRatio_Click(object sender, EventArgs e)
+        {
+            int downZoomRatio = 1 * (int)Math.Pow(2, downZoomRatioCnt);
+            toolStriptxtZoomRatio.Text = $"1:{downZoomRatio}";
+            if (downZoomRatio == 16)
+            {
+                return;
+            }
+
+            downZoomRatioCnt += 1;
         }
     }
 }

@@ -40,17 +40,17 @@ namespace ESVision
             this.imageSubtractionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thresholdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.toolStripSaveBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripNewOpenBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnOpenImg = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBtnZoom = new System.Windows.Forms.ToolStripButton();
+            this.toolStriptxtZoomRatio = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.button2 = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btn_UpZoomRatio = new System.Windows.Forms.Button();
+            this.btn_DownZoomRatio = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -130,7 +130,7 @@ namespace ESVision
             this.toolStripBtnOpenImg,
             this.toolStripSeparator1,
             this.toolStripBtnZoom,
-            this.toolStripTextBox1,
+            this.toolStriptxtZoomRatio,
             this.toolStripButton1,
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
@@ -138,40 +138,6 @@ namespace ESVision
             this.toolStrip1.Size = new System.Drawing.Size(1900, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.toolStripTextBox1.Margin = new System.Windows.Forms.Padding(4, 0, 1, 0);
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.ReadOnly = true;
-            this.toolStripTextBox1.Size = new System.Drawing.Size(45, 27);
-            this.toolStripTextBox1.Text = "1:1";
-            this.toolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "Up.png");
-            this.imageList1.Images.SetKeyName(1, "Down.png");
-            // 
-            // button1
-            // 
-            this.button1.ImageIndex = 1;
-            this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(174, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(22, 14);
-            this.button1.TabIndex = 2;
-            this.button1.TabStop = false;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // toolStripSaveBtn
             // 
@@ -204,6 +170,11 @@ namespace ESVision
             this.toolStripBtnOpenImg.Text = "Open Image";
             this.toolStripBtnOpenImg.Click += new System.EventHandler(this.toolStripBtnOpenImg_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
             // toolStripBtnZoom
             // 
             this.toolStripBtnZoom.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -213,6 +184,18 @@ namespace ESVision
             this.toolStripBtnZoom.Name = "toolStripBtnZoom";
             this.toolStripBtnZoom.Size = new System.Drawing.Size(24, 24);
             this.toolStripBtnZoom.Text = "Zoom";
+            // 
+            // toolStriptxtZoomRatio
+            // 
+            this.toolStriptxtZoomRatio.BackColor = System.Drawing.SystemColors.Control;
+            this.toolStriptxtZoomRatio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.toolStriptxtZoomRatio.Font = new System.Drawing.Font("맑은 고딕", 9F);
+            this.toolStriptxtZoomRatio.Margin = new System.Windows.Forms.Padding(4, 0, 1, 0);
+            this.toolStriptxtZoomRatio.Name = "toolStriptxtZoomRatio";
+            this.toolStriptxtZoomRatio.ReadOnly = true;
+            this.toolStriptxtZoomRatio.Size = new System.Drawing.Size(45, 27);
+            this.toolStriptxtZoomRatio.Text = "1:1";
+            this.toolStriptxtZoomRatio.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // toolStripButton1
             // 
@@ -234,16 +217,36 @@ namespace ESVision
             this.toolStripButton2.Text = "toolStripButton2";
             this.toolStripButton2.Visible = false;
             // 
-            // button2
+            // imageList1
             // 
-            this.button2.ImageIndex = 1;
-            this.button2.ImageList = this.imageList1;
-            this.button2.Location = new System.Drawing.Point(174, 37);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(22, 14);
-            this.button2.TabIndex = 3;
-            this.button2.TabStop = false;
-            this.button2.UseVisualStyleBackColor = true;
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "Up.png");
+            this.imageList1.Images.SetKeyName(1, "Down.png");
+            // 
+            // btn_UpZoomRatio
+            // 
+            this.btn_UpZoomRatio.ImageIndex = 0;
+            this.btn_UpZoomRatio.ImageList = this.imageList1;
+            this.btn_UpZoomRatio.Location = new System.Drawing.Point(174, 24);
+            this.btn_UpZoomRatio.Name = "btn_UpZoomRatio";
+            this.btn_UpZoomRatio.Size = new System.Drawing.Size(22, 15);
+            this.btn_UpZoomRatio.TabIndex = 2;
+            this.btn_UpZoomRatio.TabStop = false;
+            this.btn_UpZoomRatio.UseVisualStyleBackColor = true;
+            this.btn_UpZoomRatio.Click += new System.EventHandler(this.btn_UpZoomRatio_Click);
+            // 
+            // btn_DownZoomRatio
+            // 
+            this.btn_DownZoomRatio.ImageIndex = 1;
+            this.btn_DownZoomRatio.ImageList = this.imageList1;
+            this.btn_DownZoomRatio.Location = new System.Drawing.Point(174, 37);
+            this.btn_DownZoomRatio.Name = "btn_DownZoomRatio";
+            this.btn_DownZoomRatio.Size = new System.Drawing.Size(22, 14);
+            this.btn_DownZoomRatio.TabIndex = 3;
+            this.btn_DownZoomRatio.TabStop = false;
+            this.btn_DownZoomRatio.UseVisualStyleBackColor = true;
+            this.btn_DownZoomRatio.Click += new System.EventHandler(this.btn_DownZoomRatio_Click);
             // 
             // TopView
             // 
@@ -251,8 +254,8 @@ namespace ESVision
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1900, 51);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_DownZoomRatio);
+            this.Controls.Add(this.btn_UpZoomRatio);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -285,11 +288,11 @@ namespace ESVision
         private System.Windows.Forms.ToolStripMenuItem thresholdToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripBtnZoom;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripTextBox toolStriptxtZoomRatio;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_UpZoomRatio;
+        private System.Windows.Forms.Button btn_DownZoomRatio;
     }
 }
