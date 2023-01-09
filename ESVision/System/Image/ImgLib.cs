@@ -225,5 +225,12 @@ namespace ESVision
              */
         }
         #endregion
+
+        #region [멤버 함수 : Histogram Equalization]
+        public void EqualHist()
+        {
+
+        }
+        #endregion
     }
 }
