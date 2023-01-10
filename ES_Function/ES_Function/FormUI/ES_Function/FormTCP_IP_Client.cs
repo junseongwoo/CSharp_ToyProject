@@ -39,11 +39,7 @@ namespace ES_Function
         {
             pathLogFile = $"D:\\업무\\CIM\\Log\\SEM\\Log_20221109.log";
 
-            // Wifi
-            //txtIPAddress.Text = "192.168.0.155";
-
-            // LAN 선 
-            txtIPAddress.Text = "192.168.0.184";
+            txtIPAddress.Text = "127.0.0.1";
             txtPortNum.Text = "9000";
         }
 

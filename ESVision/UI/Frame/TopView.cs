@@ -63,8 +63,6 @@ namespace ESVision
         }
         #endregion
 
-
-
         #region [이벤트 함수 : Image Tools 메뉴 중 Threshold 클릭]
         private void thresholdToolStripMenuItem_Click(object sender, EventArgs e)
         {
