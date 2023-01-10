@@ -13,6 +13,7 @@ using System.Threading;
 
 namespace ES_Function
 {
+    
     public partial class FormTCP_IP_Test_Server : Form
     {
         #region [필드]
@@ -39,8 +40,11 @@ namespace ES_Function
         {
             pathLogFile = $"D:\\업무\\CIM\\Log\\SEM\\Log_20221109.log";
 
-            // Local 선 
-            txtIPAddress.Text = "127.0.0.1";
+            // Wifi
+            //txtIPAddress.Text = "192.168.0.155";
+
+            // LAN 선 
+            txtIPAddress.Text = "192.168.0.184";
             txtPortNum.Text = "9000";
         }
         /*
