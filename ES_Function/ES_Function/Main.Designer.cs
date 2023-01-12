@@ -38,6 +38,7 @@ namespace ES_Function
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCreateMCC = new System.Windows.Forms.Button();
             this.btnFunction = new System.Windows.Forms.Button();
+            this.btnESLib = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -133,11 +134,22 @@ namespace ES_Function
             this.btnFunction.UseVisualStyleBackColor = true;
             this.btnFunction.Click += new System.EventHandler(this.btnFunction_Click);
             // 
+            // btnESLib
+            // 
+            this.btnESLib.Location = new System.Drawing.Point(12, 158);
+            this.btnESLib.Name = "btnESLib";
+            this.btnESLib.Size = new System.Drawing.Size(94, 36);
+            this.btnESLib.TabIndex = 9;
+            this.btnESLib.Text = "ES Lib ";
+            this.btnESLib.UseVisualStyleBackColor = true;
+            this.btnESLib.Click += new System.EventHandler(this.btnESLib_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 363);
+            this.Controls.Add(this.btnESLib);
             this.Controls.Add(this.btnFunction);
             this.Controls.Add(this.btnCreateMCC);
             this.Controls.Add(this.groupBox2);
@@ -164,6 +176,7 @@ namespace ES_Function
         private System.Windows.Forms.Button btnCreateMCC;
         private System.Windows.Forms.Button btnTCP_IPTestServer;
         private System.Windows.Forms.Button btnFunction;
+        private System.Windows.Forms.Button btnESLib;
     }
 }
 

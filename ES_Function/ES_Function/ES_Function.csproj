@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EVisionLibEx">
+      <HintPath>..\packages\EVisionLibEx.3.22.308.754\lib\net48\EVisionLibEx.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=4.15.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.4.15.0\lib\net461\MathNet.Numerics.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,6 +84,12 @@
     </Compile>
     <Compile Include="FormUI\ES_Function\FormCreateMCC.Designer.cs">
       <DependentUpon>FormCreateMCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUI\ES_Function\FormESLib.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\ES_Function\FormESLib.Designer.cs">
+      <DependentUpon>FormESLib.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUI\ES_Function\FormTCP_IP_Test_Server.cs">
       <SubType>Form</SubType>
@@ -131,6 +146,9 @@
     <EmbeddedResource Include="FormUI\ES_Function\FormDeleteS6F1.resx">
       <DependentUpon>FormDeleteS6F1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\ES_Function\FormESLib.resx">
+      <DependentUpon>FormESLib.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\ES_Function\FormReceiveRS232.resx">
       <DependentUpon>FormReceiveRS232.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +173,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\dgvTest.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -169,6 +188,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="del.py" />
+    <Content Include="version.py" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
