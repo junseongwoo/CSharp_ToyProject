@@ -234,5 +234,9 @@ namespace ESVision
 
         }
         #endregion
+
+        #region [멤버 함수 : ROI 구현]
+        
+        #endregion
     }
 }
