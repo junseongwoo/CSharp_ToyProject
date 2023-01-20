@@ -14,6 +14,7 @@ namespace ESVision
     class ImgLib
     {
         #region [필드]
+        const int avgNum = 3;
         #endregion
 
         #region [생성자]
@@ -113,7 +114,7 @@ namespace ESVision
                     int g = argb.G;
                     int b = argb.B;
 
-                    int avg = (r + g + b) / 3;
+                    int avg = (r + g + b) / avgNum;
                     gray = Color.FromArgb(a, avg, avg, avg);
                     grayImg.SetPixel(x, y, gray);
                 }
@@ -137,7 +138,7 @@ namespace ESVision
                     Color baseColor = baseImg.GetPixel(x, y);
                     Color srcColor = srcImg.GetPixel(x, y);
 
-                    int subAvg = (Math.Abs(baseColor.R - srcColor.R) + Math.Abs(baseColor.G - srcColor.G) + Math.Abs(baseColor.B - srcColor.B)) / 3;
+                    int subAvg = (Math.Abs(baseColor.R - srcColor.R) + Math.Abs(baseColor.G - srcColor.G) + Math.Abs(baseColor.B - srcColor.B)) / avgNum;
                     Color resultColor = Color.FromArgb(255 , subAvg, subAvg, subAvg);
 
                     resultImg.SetPixel(x, y, resultColor);
