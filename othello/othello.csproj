@@ -87,6 +87,8 @@
   <ItemGroup>
     <Content Include="Resources\BlackStone.png" />
     <Content Include="Resources\WhiteStone.png" />
+    <Content Include="참고\2.png" />
+    <Content Include="참고\3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
