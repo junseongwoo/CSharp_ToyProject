@@ -244,6 +244,10 @@ namespace ESVision
 
         #endregion
 
+        #region [멤버 함수 : Marr-Hildreth Edge Detection]
+
+        #endregion
+
         #region [멤버 함수 : Canny Edge Detection]
         public void Canny()
         {
