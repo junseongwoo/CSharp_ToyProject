@@ -243,5 +243,14 @@ namespace ESVision
         #region [멤버 함수 : Background Subtraction]
 
         #endregion
+
+        #region [멤버 함수 : Canny Edge Detection]
+        public void Canny()
+        {
+            /*
+             * 
+             */
+        }
+        #endregion
     }
 }
