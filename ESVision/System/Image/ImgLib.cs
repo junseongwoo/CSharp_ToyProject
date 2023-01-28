@@ -256,5 +256,19 @@ namespace ESVision
              */
         }
         #endregion
+
+        #region [멤버 함수 : Dilate]
+        public void Dilate()
+        {
+
+        }
+        #endregion
+
+        #region [멤버 함수 : Erode]
+        public void Erode()
+        {
+
+        }
+        #endregion
     }
 }
