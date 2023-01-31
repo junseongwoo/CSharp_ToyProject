@@ -53,6 +53,9 @@ namespace ESVision
             this.btn_DownZoomRatio = new System.Windows.Forms.Button();
             this.resizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rotateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.flipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +70,7 @@ namespace ESVision
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1946, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(1946, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -107,9 +110,10 @@ namespace ESVision
             this.resizeToolStripMenuItem,
             this.rotateToolStripMenuItem,
             this.thresholdToolStripMenuItem,
-            this.imageSubtractionToolStripMenuItem});
+            this.imageSubtractionToolStripMenuItem,
+            this.flipToolStripMenuItem});
             this.imageToolsToolStripMenuItem.Name = "imageToolsToolStripMenuItem";
-            this.imageToolsToolStripMenuItem.Size = new System.Drawing.Size(129, 29);
+            this.imageToolsToolStripMenuItem.Size = new System.Drawing.Size(129, 30);
             this.imageToolsToolStripMenuItem.Text = "Image Tools";
             // 
             // imageSubtractionToolStripMenuItem
@@ -138,10 +142,10 @@ namespace ESVision
             this.toolStriptxtZoomRatio,
             this.toolStripButton1,
             this.toolStripButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 35);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 36);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1946, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1946, 38);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -268,6 +272,27 @@ namespace ESVision
             this.rotateToolStripMenuItem.Size = new System.Drawing.Size(271, 34);
             this.rotateToolStripMenuItem.Text = "Rotate";
             // 
+            // flipToolStripMenuItem
+            // 
+            this.flipToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.horliToolStripMenuItem,
+            this.verticalToolStripMenuItem});
+            this.flipToolStripMenuItem.Name = "flipToolStripMenuItem";
+            this.flipToolStripMenuItem.Size = new System.Drawing.Size(271, 34);
+            this.flipToolStripMenuItem.Text = "Flip";
+            // 
+            // horliToolStripMenuItem
+            // 
+            this.horliToolStripMenuItem.Name = "horliToolStripMenuItem";
+            this.horliToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.horliToolStripMenuItem.Text = "Horlizontal ";
+            // 
+            // verticalToolStripMenuItem
+            // 
+            this.verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
+            this.verticalToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.verticalToolStripMenuItem.Text = "Vertical";
+            // 
             // TopView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -316,5 +341,8 @@ namespace ESVision
         private System.Windows.Forms.Button btn_DownZoomRatio;
         private System.Windows.Forms.ToolStripMenuItem resizeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rotateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem flipToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem horliToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verticalToolStripMenuItem;
     }
 }
