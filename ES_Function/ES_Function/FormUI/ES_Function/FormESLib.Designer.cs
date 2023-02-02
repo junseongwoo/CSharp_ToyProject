@@ -1,5 +1,5 @@
 ﻿
-namespace ES_Function.FormUI.ES_Function
+namespace ES_Function.FormUI
 {
     partial class FormESLib
     {
@@ -30,33 +30,33 @@ namespace ES_Function.FormUI.ES_Function
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.imageViewer1 = new Engion.ImageViewerEx();
+            this.imageViewerEx1 = new Engion.ImageViewerEx();
             this.logViewer1 = new Engion.LogViewer(this.components);
             this.btnOpenImg = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // imageViewer1
+            // imageViewerEx1
             // 
-            this.imageViewer1.BackColor = System.Drawing.SystemColors.Control;
-            this.imageViewer1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imageViewer1.DisplayImageRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.imageViewer1.DrawShape = null;
-            this.imageViewer1.EnhanceImage = false;
-            this.imageViewer1.EnhanceLevel = 1D;
-            this.imageViewer1.EnhanceOffset = 0;
-            this.imageViewer1.EnhanceRefLevel = 100;
-            this.imageViewer1.EnhanceWhenMouseClick = true;
-            this.imageViewer1.Image = null;
-            this.imageViewer1.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.Default;
-            this.imageViewer1.Location = new System.Drawing.Point(12, 63);
-            this.imageViewer1.MouseMode = Engion.ImageViewerEx.MouseModes.Panning;
-            this.imageViewer1.Name = "imageViewer1";
-            this.imageViewer1.ScrollPosition = new System.Drawing.Point(0, 0);
-            this.imageViewer1.ShowDrawShape = false;
-            this.imageViewer1.Size = new System.Drawing.Size(921, 395);
-            this.imageViewer1.TabIndex = 0;
-            this.imageViewer1.UseFastDisplay = false;
-            this.imageViewer1.Zoom = 1D;
+            this.imageViewerEx1.BackColor = System.Drawing.SystemColors.Control;
+            this.imageViewerEx1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageViewerEx1.DisplayImageRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.imageViewerEx1.DrawShape = null;
+            this.imageViewerEx1.EnhanceImage = false;
+            this.imageViewerEx1.EnhanceLevel = 1D;
+            this.imageViewerEx1.EnhanceOffset = 0;
+            this.imageViewerEx1.EnhanceRefLevel = 100;
+            this.imageViewerEx1.EnhanceWhenMouseClick = true;
+            this.imageViewerEx1.Image = null;
+            this.imageViewerEx1.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.Default;
+            this.imageViewerEx1.Location = new System.Drawing.Point(12, 63);
+            this.imageViewerEx1.MouseMode = Engion.ImageViewerEx.MouseModes.Panning;
+            this.imageViewerEx1.Name = "imageViewerEx1";
+            this.imageViewerEx1.ScrollPosition = new System.Drawing.Point(0, 0);
+            this.imageViewerEx1.ShowDrawShape = false;
+            this.imageViewerEx1.Size = new System.Drawing.Size(921, 395);
+            this.imageViewerEx1.TabIndex = 0;
+            this.imageViewerEx1.UseFastDisplay = false;
+            this.imageViewerEx1.Zoom = 1D;
             // 
             // logViewer1
             // 
@@ -86,7 +86,7 @@ namespace ES_Function.FormUI.ES_Function
             this.ClientSize = new System.Drawing.Size(945, 572);
             this.Controls.Add(this.btnOpenImg);
             this.Controls.Add(this.logViewer1);
-            this.Controls.Add(this.imageViewer1);
+            this.Controls.Add(this.imageViewerEx1);
             this.Name = "FormESLib";
             this.Text = "FormESLib";
             this.Load += new System.EventHandler(this.FormESLib_Load);
@@ -96,7 +96,7 @@ namespace ES_Function.FormUI.ES_Function
 
         #endregion
 
-        private Engion.ImageViewerEx imageViewer1;
+        private Engion.ImageViewerEx imageViewerEx1;
         private Engion.LogViewer logViewer1;
         private System.Windows.Forms.Button btnOpenImg;
     }

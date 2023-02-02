@@ -62,7 +62,8 @@ namespace ES_Function
 
         private void btnESLib_Click(object sender, EventArgs e)
         {
-
+            FormESLib frmESLib = new FormESLib();
+            frmESLib.Show();
         }
     }
 }
