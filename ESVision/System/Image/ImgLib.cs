@@ -20,6 +20,10 @@ namespace ESVision
         #region [생성자]
         #endregion
 
+        #region [멤버 함수 : Test]
+
+        #endregion
+
         #region [멤버 함수 : Get Image Path]
         public SortedList<string, string> GetImagePath()
         {
@@ -268,6 +272,13 @@ namespace ESVision
         public void Erode()
         {
               
+        }
+        #endregion
+
+        #region [멤버 함수 : Flip, 0 : Horlizontal, 1 : Vertical]
+        public void Flip()
+        {
+
         }
         #endregion
     }

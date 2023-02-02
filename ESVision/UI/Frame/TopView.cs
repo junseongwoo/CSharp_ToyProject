@@ -92,6 +92,7 @@ namespace ESVision
             upZoomRatioCnt += 1;
         }
 
+        #region [이벤트 함수 : ]
         private void btn_DownZoomRatio_Click(object sender, EventArgs e)
         {
             int downZoomRatio = 1 * (int)Math.Pow(2, downZoomRatioCnt);
@@ -103,5 +104,23 @@ namespace ESVision
 
             downZoomRatioCnt += 1;
         }
+        #endregion
+
+        #region [이벤트 함수 : Holizontal Tool Menu Click]
+        private void HorlizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region [이벤트 함수 : Vertical Tool Menu Click]
+        private void verticalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+
+
     }
 }
