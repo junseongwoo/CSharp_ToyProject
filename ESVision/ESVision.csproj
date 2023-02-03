@@ -54,8 +54,20 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI\VisionUtil\formImageViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\VisionUtil\formImageViewer.Designer.cs">
+      <DependentUpon>formImageViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Define\InitializeUi.cs" />
     <Compile Include="IPVars.cs" />
+    <Compile Include="UI\UserContorl\ImageViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserContorl\ImageViewer.Designer.cs">
+      <DependentUpon>ImageViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\VisionUtil\Threshold\formThresholdResultImage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +135,9 @@
       <DependentUpon>TopView.cs</DependentUpon>
     </Compile>
     <Compile Include="Vars.cs" />
+    <EmbeddedResource Include="UI\UserContorl\ImageViewer.resx">
+      <DependentUpon>ImageViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\MainView\formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>
     </EmbeddedResource>
