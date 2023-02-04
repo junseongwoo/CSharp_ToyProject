@@ -29,12 +29,31 @@ namespace ESVision
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.pnlImageViewer = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
+            // 
+            // pnlImageViewer
+            // 
+            this.pnlImageViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlImageViewer.Location = new System.Drawing.Point(0, 0);
+            this.pnlImageViewer.Name = "pnlImageViewer";
+            this.pnlImageViewer.Size = new System.Drawing.Size(800, 450);
+            this.pnlImageViewer.TabIndex = 0;
+            // 
+            // formImageViewer
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pnlImageViewer);
+            this.Name = "formImageViewer";
             this.Text = "formImageViewer";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel pnlImageViewer;
     }
 }

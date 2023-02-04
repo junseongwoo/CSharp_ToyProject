@@ -157,6 +157,9 @@
     <EmbeddedResource Include="UI\Frame\TopView.resx">
       <DependentUpon>TopView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\VisionUtil\formImageViewer.resx">
+      <DependentUpon>formImageViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\VisionUtil\formNewImage.resx">
       <DependentUpon>formNewImage.cs</DependentUpon>
     </EmbeddedResource>
