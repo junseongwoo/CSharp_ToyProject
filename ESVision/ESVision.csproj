@@ -54,6 +54,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="System\FileSystem\FileLib.cs" />
     <Compile Include="UI\VisionUtil\formImageViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,8 +199,6 @@
     <None Include="Resources\Up.png" />
     <None Include="Resources\zoom.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="System\FileManager\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
