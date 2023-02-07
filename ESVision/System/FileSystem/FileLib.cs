@@ -26,9 +26,23 @@ namespace ESVision
         }
 
         // 지정된 파일 개수 이상의 파일 지우기 : 오래된 순으로 지움
-        public void DeleteFileLimit(string filePath, int limitNum)
+        public void DeleteFileLimit(string directoryPath, int limitNum)
         {
+            string[] filePath = Directory.GetFiles(directoryPath);
+            int numFileToDelete = filePath.Length - limitNum;
 
+            if (numFileToDelete > 0)
+            {
+                Array.Sort(filePath, (x, y) =>
+                {
+                    return new FileInfo(x).LastAccessTime.CompareTo(new FileInfo(y).LastAccessTime);
+                });
+
+                for (int i = 0; i < numFileToDelete; i++)
+                {
+                    File.Delete(filePath[i]);
+                }
+            }
         }
 
     }
