@@ -118,9 +118,14 @@ namespace ESVision
         {
 
         }
+
+
         #endregion
 
-
-
+        private void optionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formOption formOption = new formOption();
+            formOption.Show();
+        }
     }
 }

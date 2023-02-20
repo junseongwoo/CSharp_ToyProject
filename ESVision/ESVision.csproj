@@ -54,6 +54,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI\SubForm\formOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SubForm\formOption.Designer.cs">
+      <DependentUpon>formOption.cs</DependentUpon>
+    </Compile>
     <Compile Include="System\FileSystem\FileLib.cs" />
     <Compile Include="UI\VisionUtil\formImageViewer.cs">
       <SubType>Form</SubType>
@@ -136,6 +142,9 @@
       <DependentUpon>TopView.cs</DependentUpon>
     </Compile>
     <Compile Include="Vars.cs" />
+    <EmbeddedResource Include="UI\SubForm\formOption.resx">
+      <DependentUpon>formOption.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\UserContorl\ImageViewer.resx">
       <DependentUpon>ImageViewer.cs</DependentUpon>
     </EmbeddedResource>
