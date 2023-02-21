@@ -25,8 +25,8 @@ namespace ESVision
             }
         }
 
-        // 지정된 파일 개수 이상의 파일 지우기 : 오래된 순으로 지움
-        public void DeleteFileLimit(string directoryPath, int limitNum)
+        // 지정된 파일 개수 이상이 되면 오래된 순으로 지우기 
+        public void DeleteFileLimitNum(string directoryPath, int limitNum)
         {
             string[] filePath = Directory.GetFiles(directoryPath);
             int numFileToDelete = filePath.Length - limitNum;
@@ -45,5 +45,7 @@ namespace ESVision
             }
         }
 
+        // 지정된 용량 이상이 되면 오래된 순으로 지우기
+        
     }
 }
