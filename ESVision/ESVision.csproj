@@ -61,6 +61,18 @@
       <DependentUpon>formOption.cs</DependentUpon>
     </Compile>
     <Compile Include="System\FileSystem\FileLib.cs" />
+    <Compile Include="UI\SubFrame\FileOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SubFrame\FileOption.Designer.cs">
+      <DependentUpon>FileOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SubFrame\PathOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SubFrame\PathOption.Designer.cs">
+      <DependentUpon>PathOption.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\VisionUtil\formImageViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,24 +133,24 @@
     <Compile Include="UI\VisionUtil\Substraction\formSubResultImage.Designer.cs">
       <DependentUpon>formSubResultImage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\MainView\formMain.cs">
+    <Compile Include="UI\MainForm\formMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\MainView\formMain.Designer.cs">
+    <Compile Include="UI\MainForm\formMain.Designer.cs">
       <DependentUpon>formMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Frame\BottomView.cs">
+    <Compile Include="UI\MainFrame\BottomView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Frame\BottomView.Designer.cs">
+    <Compile Include="UI\MainFrame\BottomView.Designer.cs">
       <DependentUpon>BottomView.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Frame\TopView.cs">
+    <Compile Include="UI\MainFrame\TopView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Frame\TopView.Designer.cs">
+    <Compile Include="UI\MainFrame\TopView.Designer.cs">
       <DependentUpon>TopView.cs</DependentUpon>
     </Compile>
     <Compile Include="Vars.cs" />
@@ -148,7 +160,7 @@
     <EmbeddedResource Include="UI\UserContorl\ImageViewer.resx">
       <DependentUpon>ImageViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\MainView\formMain.resx">
+    <EmbeddedResource Include="UI\MainForm\formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -161,10 +173,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\Frame\BottomView.resx">
+    <EmbeddedResource Include="UI\MainFrame\BottomView.resx">
       <DependentUpon>BottomView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Frame\TopView.resx">
+    <EmbeddedResource Include="UI\MainFrame\TopView.resx">
       <DependentUpon>TopView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\VisionUtil\formImageViewer.resx">
