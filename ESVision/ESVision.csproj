@@ -54,6 +54,18 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI\Frame\Option\FileOptionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Frame\Option\FileOptionView.Designer.cs">
+      <DependentUpon>FileOptionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Frame\Option\PathOptionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Frame\Option\PathOptionView.Designer.cs">
+      <DependentUpon>PathOptionView.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\SubForm\formOption.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,16 +153,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\MainFrame\BottomView.cs">
+    <Compile Include="UI\Frame\Main\BottomView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\MainFrame\BottomView.Designer.cs">
+    <Compile Include="UI\Frame\Main\BottomView.Designer.cs">
       <DependentUpon>BottomView.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\MainFrame\TopView.cs">
+    <Compile Include="UI\Frame\Main\TopView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\MainFrame\TopView.Designer.cs">
+    <Compile Include="UI\Frame\Main\TopView.Designer.cs">
       <DependentUpon>TopView.cs</DependentUpon>
     </Compile>
     <Compile Include="Vars.cs" />
@@ -173,10 +185,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\MainFrame\BottomView.resx">
+    <EmbeddedResource Include="UI\Frame\Main\BottomView.resx">
       <DependentUpon>BottomView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\MainFrame\TopView.resx">
+    <EmbeddedResource Include="UI\Frame\Main\TopView.resx">
       <DependentUpon>TopView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\VisionUtil\formImageViewer.resx">

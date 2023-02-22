@@ -29,11 +29,11 @@ namespace ESVision
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("경로");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("파일");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("환경 설정", new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode5});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("파일");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("경로");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("환경 설정", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.pnlOption = new System.Windows.Forms.Panel();
             this.SuspendLayout();
@@ -43,15 +43,15 @@ namespace ESVision
             this.treeView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.treeView1.Location = new System.Drawing.Point(12, 109);
             this.treeView1.Name = "treeView1";
-            treeNode4.Name = "노드1";
-            treeNode4.Text = "경로";
-            treeNode5.Name = "노드0";
-            treeNode5.Text = "파일";
-            treeNode6.Checked = true;
-            treeNode6.Name = "노드0";
-            treeNode6.Text = "환경 설정";
+            treeNode1.Name = "노드0";
+            treeNode1.Text = "파일";
+            treeNode2.Name = "노드1";
+            treeNode2.Text = "경로";
+            treeNode3.Checked = true;
+            treeNode3.Name = "노드0";
+            treeNode3.Text = "환경 설정";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode6});
+            treeNode3});
             this.treeView1.Size = new System.Drawing.Size(283, 543);
             this.treeView1.TabIndex = 0;
             // 
