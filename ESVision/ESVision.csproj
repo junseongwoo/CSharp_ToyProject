@@ -73,18 +73,6 @@
       <DependentUpon>formOption.cs</DependentUpon>
     </Compile>
     <Compile Include="System\FileSystem\FileLib.cs" />
-    <Compile Include="UI\SubFrame\FileOption.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\SubFrame\FileOption.Designer.cs">
-      <DependentUpon>FileOption.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\SubFrame\PathOption.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\SubFrame\PathOption.Designer.cs">
-      <DependentUpon>PathOption.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\VisionUtil\formImageViewer.cs">
       <SubType>Form</SubType>
     </Compile>
