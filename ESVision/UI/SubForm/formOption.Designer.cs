@@ -34,41 +34,57 @@ namespace ESVision
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("환경 설정", new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2});
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.tvwOption = new System.Windows.Forms.TreeView();
             this.pnlOption = new System.Windows.Forms.Panel();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // treeView1
+            // tvwOption
             // 
-            this.treeView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.treeView1.Location = new System.Drawing.Point(12, 109);
-            this.treeView1.Name = "treeView1";
-            treeNode1.Name = "노드0";
+            this.tvwOption.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tvwOption.Location = new System.Drawing.Point(8, 96);
+            this.tvwOption.Margin = new System.Windows.Forms.Padding(2);
+            this.tvwOption.Name = "tvwOption";
+            treeNode1.Name = "nodeFile";
             treeNode1.Text = "파일";
-            treeNode2.Name = "노드1";
+            treeNode2.Name = "nodePath";
             treeNode2.Text = "경로";
             treeNode3.Checked = true;
             treeNode3.Name = "노드0";
             treeNode3.Text = "환경 설정";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            this.tvwOption.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode3});
-            this.treeView1.Size = new System.Drawing.Size(283, 543);
-            this.treeView1.TabIndex = 0;
+            this.tvwOption.Size = new System.Drawing.Size(199, 340);
+            this.tvwOption.TabIndex = 0;
+            this.tvwOption.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvwOption_AfterSelect);
+            this.tvwOption.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvwOption_NodeMouseClick);
             // 
             // pnlOption
             // 
-            this.pnlOption.Location = new System.Drawing.Point(301, 51);
+            this.pnlOption.Location = new System.Drawing.Point(211, 54);
+            this.pnlOption.Margin = new System.Windows.Forms.Padding(2);
             this.pnlOption.Name = "pnlOption";
-            this.pnlOption.Size = new System.Drawing.Size(715, 601);
+            this.pnlOption.Size = new System.Drawing.Size(498, 381);
             this.pnlOption.TabIndex = 1;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(612, 12);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(96, 37);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "저장";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // formOption
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 664);
+            this.ClientSize = new System.Drawing.Size(720, 443);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.pnlOption);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.tvwOption);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "formOption";
             this.Text = "Option";
             this.ResumeLayout(false);
@@ -77,7 +93,8 @@ namespace ESVision
 
         #endregion
 
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView tvwOption;
         private System.Windows.Forms.Panel pnlOption;
+        private System.Windows.Forms.Button btnSave;
     }
 }

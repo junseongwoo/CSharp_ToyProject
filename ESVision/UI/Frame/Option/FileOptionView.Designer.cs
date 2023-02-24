@@ -29,12 +29,32 @@ namespace ESVision
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.prgFileOption = new System.Windows.Forms.PropertyGrid();
+            this.SuspendLayout();
+            // 
+            // prgFileOption
+            // 
+            this.prgFileOption.Location = new System.Drawing.Point(12, 12);
+            this.prgFileOption.Name = "prgFileOption";
+            this.prgFileOption.Size = new System.Drawing.Size(426, 326);
+            this.prgFileOption.TabIndex = 0;
+            // 
+            // FileOptionView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(450, 350);
+            this.Controls.Add(this.prgFileOption);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FileOptionView";
             this.Text = "FileOptionView";
+            this.Load += new System.EventHandler(this.FileOptionView_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.PropertyGrid prgFileOption;
     }
 }

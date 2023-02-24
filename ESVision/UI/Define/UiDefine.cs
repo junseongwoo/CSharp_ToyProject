@@ -22,4 +22,12 @@ namespace ESVision
         FORM_THREASHOLOD_IMAGE
     }
     #endregion
+
+    #region [열거형 : Option View List]
+    public enum EOPTION_VIEW_LIST
+    {
+        FORM_FILE_OPTION,
+        FORM_PATH_OPTION
+    }
+    #endregion
 }

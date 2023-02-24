@@ -44,6 +44,10 @@ namespace ESVision
         public formSubResultImage formSubResultImageView = null;
 
         public formThreshold formThresholdView = null;
+
+        // Option View 
+        public FileOptionView fileOptionView = null;
+        public PathOptionView pathOptionView = null;
         #endregion
 
         #region [초기화]

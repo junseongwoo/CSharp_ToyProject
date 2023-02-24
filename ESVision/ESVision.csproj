@@ -54,6 +54,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="System\Option\FileOptionSetup.cs" />
     <Compile Include="UI\Frame\Option\FileOptionView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +155,12 @@
       <DependentUpon>TopView.cs</DependentUpon>
     </Compile>
     <Compile Include="Vars.cs" />
+    <EmbeddedResource Include="UI\Frame\Option\FileOptionView.resx">
+      <DependentUpon>FileOptionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Frame\Option\PathOptionView.resx">
+      <DependentUpon>PathOptionView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\SubForm\formOption.resx">
       <DependentUpon>formOption.cs</DependentUpon>
     </EmbeddedResource>
