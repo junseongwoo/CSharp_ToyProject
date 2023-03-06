@@ -12,10 +12,7 @@ namespace ESVision
 {
     public partial class formOption : Form
     {
-        #region [이벤트 : Option Tree View Node 클릭 시 Option View]
-        public delegate void OnEventOptionTreeNodeViewHandler(EOPTION_VIEW_LIST optionList);
-        public event OnEventOptionTreeNodeViewHandler OnEventOptionView;
-        #endregion
+
 
         public formOption()
         {
@@ -23,11 +20,28 @@ namespace ESVision
 
             Initialize();
         }
+        #region [필드]
+        InitializeUi UiFunction = new InitializeUi();
+
+        private Form formCurrent = null;
+        private FileOptionView fileOptionView = null;
+        private PathOptionView pathOptionView = null;
+        #endregion
+
+        #region [이벤트 : Option Tree View Node 클릭 시 Option View]
+        public delegate void OnEventOptionTreeNodeViewHandler(EOPTION_VIEW_LIST optionList);
+        public event OnEventOptionTreeNodeViewHandler OnEventOptionView;
+        #endregion
 
         #region [초기화]
         private void Initialize()
         {
-
+            fileOptionView = new FileOptionView();
+            pathOptionView = new PathOptionView();
+            formCurrent = fileOptionView;
+            UiFunction.CreatUiInsidePanel(formCurrent, pnlOption);
+            formCurrent.Show();
+            OnEventOptionView += OptionViewOpen;
         }
         #endregion
 
@@ -54,5 +68,39 @@ namespace ESVision
                     break;
             }
         }
+
+        public void OptionViewOpen(EOPTION_VIEW_LIST optionList)
+        {
+            formCurrent.Visible = false;
+
+            switch (optionList)
+            {
+                case EOPTION_VIEW_LIST.FORM_FILE_OPTION:
+                    {
+                        {
+                            if (fileOptionView.IsDisposed == true)
+                            {
+                                fileOptionView = new FileOptionView();
+                            }
+                            formCurrent = fileOptionView;
+                        }
+                    }
+                    break;
+                case EOPTION_VIEW_LIST.FORM_PATH_OPTION:
+                    {
+                        {
+                            if (pathOptionView.IsDisposed == true)
+                            {
+                                pathOptionView = new PathOptionView();
+                            }
+                            formCurrent = pathOptionView;
+                        }
+                    }
+                    break;
+            }
+
+            formCurrent.Show();
+        }
+
     }
 }

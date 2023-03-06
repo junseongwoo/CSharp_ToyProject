@@ -125,7 +125,8 @@ namespace ESVision
         private void optionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             formOption formOption = new formOption();
-            formOption.Show();
+            formOption.StartPosition = FormStartPosition.CenterParent;
+            formOption.ShowDialog();
         }
     }
 }

@@ -34,7 +34,7 @@ namespace ESVision
         }
         #endregion
 
-        #region [멤버 함수 : Ui Form 생성 후 Show]
+        #region [멤버 함수 : Ui Show]
         public void ShowUi(Form form)
         {
             form.TopLevel = true;
