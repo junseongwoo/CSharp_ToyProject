@@ -12,6 +12,9 @@ namespace ESVision
         [Category("Test")]
         public int Test2 { get; set; }
 
+        public int LogFilePath { get; set; }
+
+
         public PathOptionSetup()
         {
 

@@ -13,6 +13,12 @@ namespace ESVision
         [Category("Test")]
         public int Test1 { get; set; }
 
+        [Category("Test")]
+        public int Test2 { get; set; }
+
+        [Category("Test")]
+        public int Test3 { get; set; }
+
         public FileOptionSetup()
         {
 
