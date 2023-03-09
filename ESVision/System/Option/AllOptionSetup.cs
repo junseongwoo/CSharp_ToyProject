@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,5 +17,36 @@ namespace ESVision
     {
         public FileOptionSetup fileOptionSetup { get; set; }
         public PathOptionSetup pathOptionSetup { get; set; }
+
+        public AllOptionSetup()
+        {
+            LoadtoXML();
+            CheckFile();
+        }
+
+        public void CheckFile()
+        {
+            if (pathOptionSetup == null)
+            {
+                pathOptionSetup = new PathOptionSetup(false);
+            }
+
+            if (fileOptionSetup == null)
+            {
+                fileOptionSetup = new FileOptionSetup(false);
+            }
+        }
+
+        public void LoadtoXML()
+        {
+
+        }
+
+        public void SavetoXML()
+        {
+            fileOptionSetup.SavetoXML(Path.Combine(pathOptionSetup.setupFilePath, "fileOption.xml"));
+            pathOptionSetup.SavetoXML(Path.Combine(pathOptionSetup.setupFilePath, "pathOption.xml"));
+        }
     }
+
 }

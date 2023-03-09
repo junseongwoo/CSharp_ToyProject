@@ -26,6 +26,7 @@ namespace ESVision
         InitializeUi uiFunction = new InitializeUi();
 
         private Form formCurrent = null;
+        private AllOptionSetup allOptionSetup = null;
         private FileOptionView fileOptionView = null;
         private PathOptionView pathOptionView = null;
         #endregion
@@ -38,6 +39,7 @@ namespace ESVision
         #region [초기화]
         private void Initialize()
         {
+            allOptionSetup = new AllOptionSetup();
             fileOptionView = new FileOptionView();
             uiFunction.CreatUiInsidePanel(fileOptionView, pnlOption);
             pathOptionView = new PathOptionView();
@@ -106,5 +108,9 @@ namespace ESVision
             formCurrent.Show();
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            allOptionSetup.SavetoXML();
+        }
     }
 }

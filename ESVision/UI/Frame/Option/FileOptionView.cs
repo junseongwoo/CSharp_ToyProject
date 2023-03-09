@@ -12,7 +12,7 @@ namespace ESVision
 {
     public partial class FileOptionView : Form
     {
-        public FileOptionSetup FileOption { get; set; }
+        public FileOptionSetup fileOptionSetup { get; set; }
         public FileOptionView()
         {
             InitializeComponent();
@@ -20,7 +20,11 @@ namespace ESVision
 
         private void FileOptionView_Load(object sender, EventArgs e)
         {
-            prgFileOption.SelectedObject = FileOption;
+            if (fileOptionSetup == null)
+            {
+                fileOptionSetup = new FileOptionSetup(false);
+            }
+            prgFileOption.SelectedObject = fileOptionSetup;
         }
     }
 }

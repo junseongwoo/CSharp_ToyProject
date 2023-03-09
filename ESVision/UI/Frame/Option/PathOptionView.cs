@@ -12,10 +12,8 @@ namespace ESVision
 {
     public partial class PathOptionView : Form
     {
-        // 나중에 XML 파일로 불러오고 할 때는 이걸 사용하자 
-        // public PathOptionSetup pathOptionSetup {get; set;}
+        public PathOptionSetup pathOptionSetup {get; set;}
 
-        PathOptionSetup pathOptionSetup = new PathOptionSetup();
 
         public PathOptionView()
         {
@@ -26,6 +24,11 @@ namespace ESVision
 
         private void Initialize()
         {
+            // 파일이 없으면 new 로 새로 생성 
+            if (pathOptionSetup == null)
+            {
+                pathOptionSetup = new PathOptionSetup(false);
+            }
             prgPathOption.SelectedObject = pathOptionSetup;
         }
     }

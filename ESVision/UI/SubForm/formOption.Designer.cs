@@ -75,6 +75,7 @@ namespace ESVision
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "저장";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // formOption
             // 
