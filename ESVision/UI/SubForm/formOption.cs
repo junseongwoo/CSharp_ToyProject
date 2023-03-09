@@ -21,7 +21,9 @@ namespace ESVision
             Initialize();
         }
         #region [필드]
-        InitializeUi UiFunction = new InitializeUi();
+        public PathOptionSetup pathOptionSetup { get; set; }
+
+        InitializeUi uiFunction = new InitializeUi();
 
         private Form formCurrent = null;
         private FileOptionView fileOptionView = null;
@@ -37,9 +39,10 @@ namespace ESVision
         private void Initialize()
         {
             fileOptionView = new FileOptionView();
+            uiFunction.CreatUiInsidePanel(fileOptionView, pnlOption);
             pathOptionView = new PathOptionView();
+            uiFunction.CreatUiInsidePanel(pathOptionView, pnlOption);
             formCurrent = fileOptionView;
-            UiFunction.CreatUiInsidePanel(formCurrent, pnlOption);
             formCurrent.Show();
             OnEventOptionView += OptionViewOpen;
         }
@@ -99,6 +102,7 @@ namespace ESVision
                     break;
             }
 
+            formCurrent.Visible = true;
             formCurrent.Show();
         }
 

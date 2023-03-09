@@ -54,6 +54,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="System\Option\AllOptionSetup.cs" />
     <Compile Include="System\Option\PathOptionSetup.cs" />
     <Compile Include="System\Option\FileOptionSetup.cs" />
     <Compile Include="UI\Frame\Option\FileOptionView.cs">
