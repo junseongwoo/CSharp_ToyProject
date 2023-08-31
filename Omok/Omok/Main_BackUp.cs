@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Omok
 {
-    public partial class Main : Form
+    public partial class Main_Backup : Form
     {
         int margin = 40;
         int cellSize = 30;
@@ -23,15 +23,15 @@ namespace Omok
 
         enum STONE
         {
-          none, black, white
+            none, black, white
         };
         STONE[,] Board = new STONE[19, 19];
 
         bool flag = false; // false : 검은돌, true : 흰돌 
         bool imgFlag = true;
-        
 
-        public Main()
+
+        public Main_Backup()
         {
             InitializeComponent();
 
@@ -43,7 +43,7 @@ namespace Omok
 
             this.ClientSize = new Size(2 * margin + 18 * cellSize,
                 2 * margin + 18 * cellSize + mspMain.Height);
-            
+
         }
 
         private void DrawBoard()
@@ -61,8 +61,8 @@ namespace Omok
             }
 
             // 화점 그리기
-            for (int i = 3 ; i <= 15; i+=6)
-                for (int j = 3; j <= 15; j+=6)
+            for (int i = 3; i <= 15; i += 6)
+                for (int j = 3; j <= 15; j += 6)
                 {
                     g.FillRectangle(bBrush,
                         margin + cellSize * i - flowerPointSize / 2,
@@ -88,9 +88,9 @@ namespace Omok
                     {
                         if (imgFlag == flag)
                         {
-                            g.FillEllipse(wBrush, 
+                            g.FillEllipse(wBrush,
                                 margin + cellSize * x - stoneSize / 2,
-                                margin + cellSize * y - stoneSize / 2, 
+                                margin + cellSize * y - stoneSize / 2,
                                 stoneSize, stoneSize);
                         }
                         else
@@ -131,7 +131,7 @@ namespace Omok
         {
             imgFlag = true;
         }
-        
+
         private void pnlMain_MouseDown(object sender, MouseEventArgs e)
         {
             // e.X는 픽셀 단위, x는 바둑판 좌표 

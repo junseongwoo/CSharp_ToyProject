@@ -1,7 +1,7 @@
 ﻿
 namespace Omok
 {
-    partial class Main
+    partial class Main_Backup
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
