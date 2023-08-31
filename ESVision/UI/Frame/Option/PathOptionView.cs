@@ -14,7 +14,6 @@ namespace ESVision
     {
         public PathOptionSetup pathOptionSetup {get; set;}
 
-
         public PathOptionView()
         {
             InitializeComponent();
