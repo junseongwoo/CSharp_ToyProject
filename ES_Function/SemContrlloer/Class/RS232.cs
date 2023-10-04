@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
@@ -11,14 +12,17 @@ namespace SemContrlloer
     {
         private SerialPort Serial; // C# 에서 지원 하는 Serial 통신 클래스
         private bool isOpened; // 현재 Serial 통신이 연결 되어있는가 체크 하는 변수
+        private bool isCheckReadBuffer; // Serial 통신에서 수신 버퍼에 데이터가 있는지 체크하는 변수
+
         public RS232() // RS232 클래스 생성자 ( 클래스 생성할시 바로 호출됨 )
         {
             Serial = new SerialPort();
             isOpened = false;
+            isCheckReadBuffer = false;
         }
 
         #region 시리얼 통신 연결
-        public bool Open(string port, int baudrate)
+        public bool Open(SerialPort Serial, string port, int baudrate)
         {
             if (isOpened == true)
                 return isOpened;
@@ -37,6 +41,21 @@ namespace SemContrlloer
             Serial.Open(); // 위에 기입한 Serial의 데이터를 기반으로 연결 시도
             isOpened = Serial.IsOpen;
             return isOpened;
+        }
+        #endregion
+
+        #region [RS232 수신 버퍼 데이터 유무 확인]
+        public bool CheckReadBuffer()
+        {
+            if (Serial.BytesToRead > 0)
+            {
+                isCheckReadBuffer = true;
+            }
+            else
+            {
+                isCheckReadBuffer = false;
+            }
+            return isCheckReadBuffer;
         }
         #endregion
 
