@@ -23,18 +23,40 @@ namespace othello.Logic
         private readonly Image BlackStone = Properties.Resources.BlackStone;
         private readonly Image WhiteStone = Properties.Resources.WhiteStone;
 
+
         public GameBoard()
         {
             NumOfCell = 8;
             CellSize = 80;
         }
 
-        public void Init_GameBoard(int Cells, int CellSize)
+        // 게임 초기화 
+        // (3,3)검 (3,4)흰 (4,3)흰 (4,4)검
+        public void Init_GameBoard(PaintEventArgs e)
         {
-            this.NumOfCell = Cells;
-            this.CellSize = CellSize;
+            Graphics g = e.Graphics;
 
+            for (int row = 3; row < 5; row++)
+            {
+                for (int col = 3; col < 5; col++)
+                {
+                    int cellX = col * CellSize;
+                    int cellY = row * CellSize;
+                    if (row == col)
+                    {
+                        DrawImage(g, BlackStone, cellX, cellY);
+                    }
+                    else
+                    {
+                        DrawImage(g, WhiteStone, cellX, cellY);
+                    }
+                }
+            }
+        }
 
+        private void DrawImage(Graphics g, Image stoneImage, int x, int y)
+        {
+            g.DrawImage(stoneImage, x, y, CellSize, CellSize);
         }
 
         public void Create_GameBorad(object sender, PaintEventArgs e)

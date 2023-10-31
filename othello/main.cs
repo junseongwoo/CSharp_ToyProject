@@ -30,6 +30,7 @@ namespace othello
 
         private void frm_main_Load(object sender, EventArgs e)
         {
+
         }
 
         private void picBox_GameBoard_Paint(object sender, PaintEventArgs e)
