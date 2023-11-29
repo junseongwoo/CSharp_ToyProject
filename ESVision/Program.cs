@@ -14,6 +14,8 @@ namespace ESVision
         [STAThread]
         static void Main()
         {
+            Vars.imgLib = new ImgLib();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new formMain());

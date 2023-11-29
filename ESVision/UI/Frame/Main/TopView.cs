@@ -128,5 +128,12 @@ namespace ESVision
             formOption.StartPosition = FormStartPosition.CenterParent;
             formOption.ShowDialog();
         }
+
+        private void getHistogramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formHistogram formHistogram = new formHistogram();
+            formHistogram.StartPosition = FormStartPosition.CenterParent;
+            formHistogram.ShowDialog();
+        }
     }
 }

@@ -16,6 +16,7 @@ namespace ESVision
         public delegate void OnEventDragImageOpenHandler(EIMAGE_MENU_LIST menuList);
         public event OnEventDragImageOpenHandler OnEventDragImageOpen;
         #endregion
+
         #region [생성자]
         public formNewImage()
         {

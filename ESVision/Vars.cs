@@ -11,6 +11,7 @@ namespace ESVision
         
         public static SortedList<string, string> ImagePath { get; set; } = new SortedList<string, string>();
 
+        public static ImgLib imgLib;
         public static int openImgNum = 0;
         
     }

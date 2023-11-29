@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ESVision
 {
-    class ImgLib
+    public class ImgLib
     {
         #region [필드]
         const int avgNum = 3;
@@ -219,6 +219,28 @@ namespace ESVision
             int imgSize = img.Width * img.Height;
 
             return Compare;
+        }
+        #endregion
+
+        #region [멤버 함수 : Get Histogram]
+        public int[][] GetHist(Bitmap bmp)
+        {
+            int[] Red = new int[256];
+            int[] Green = new int[256];
+            int[] Blue = new int[256];
+
+            for (int i = 0; i < bmp.Width; i++)
+            {
+                for (int j = 0; j < bmp.Height; j++)
+                {
+                    Color pixelColor = bmp.GetPixel(i, j);
+                    Red[pixelColor.R]++;
+                    Green[pixelColor.G]++;
+                    Blue[pixelColor.B]++;
+                }
+            }
+
+            return new int[][] { Red, Green, Blue};
         }
         #endregion
 

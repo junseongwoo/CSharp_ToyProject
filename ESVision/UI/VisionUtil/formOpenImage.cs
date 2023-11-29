@@ -16,6 +16,7 @@ namespace ESVision
         ImgLib ILib = null;
         string openImgPath = string.Empty;
         #endregion
+
         #region [생성자]
         public formOpenImage(string imgPath)
         {

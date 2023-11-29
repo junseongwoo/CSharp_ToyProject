@@ -54,6 +54,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI\VisionUtil\formHistogram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\VisionUtil\formHistogram.Designer.cs">
+      <DependentUpon>formHistogram.cs</DependentUpon>
+    </Compile>
     <Compile Include="System\Option\AllOptionSetup.cs" />
     <Compile Include="System\Option\PathOptionSetup.cs" />
     <Compile Include="System\Option\FileOptionSetup.cs" />
@@ -157,6 +163,9 @@
       <DependentUpon>TopView.cs</DependentUpon>
     </Compile>
     <Compile Include="Vars.cs" />
+    <EmbeddedResource Include="UI\VisionUtil\formHistogram.resx">
+      <DependentUpon>formHistogram.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Frame\Option\FileOptionView.resx">
       <DependentUpon>FileOptionView.cs</DependentUpon>
     </EmbeddedResource>
