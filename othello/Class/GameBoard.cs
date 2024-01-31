@@ -11,7 +11,24 @@ namespace othello
      * 각 셀은 검은색, 흰색 또는 빈 셀일 수 있음
      * 게임 보드의 상태를 저장하고 업데이트하는 메커니즘 필요
      */
-    class GameBoard
+    public class GameBoard
     {
+        public const int boardSize = 8;
+        public const int cellSize = 50;
+
+        public bool[,] board;
+
+        public GameBoard() 
+        {
+            InitBoard();
+        }
+
+        private void InitBoard()
+        {
+            board = new bool[boardSize, boardSize];
+
+            board[3, 3] = board[4, 4] = true; // 흑돌
+            board[3, 4] = board[4, 3] = false; // 백돌
+        }
     }
 }

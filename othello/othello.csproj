@@ -51,6 +51,7 @@
     <Compile Include="Class\Players.cs" />
     <Compile Include="Class\Stone.cs" />
     <Compile Include="Class\GameBoard.cs" />
+    <Compile Include="GameLib.cs" />
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,7 +88,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Architecture\구조설계.txt" />
     <Content Include="Resources\BlackStone.png" />
     <Content Include="Resources\WhiteStone.png" />
   </ItemGroup>

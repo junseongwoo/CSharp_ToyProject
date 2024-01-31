@@ -18,11 +18,30 @@ namespace othello
 {
     public partial class frm_main : Form
     {
+        #region [필드]
+        GameLib GameLib = new GameLib();
+        #endregion
 
         public frm_main()
         {
             InitializeComponent();
+            InitClass();
         }
 
+        #region [초기화]
+        private void InitClass()
+        {
+            if (GameLib.InitGameBoard() == false)
+            {
+                MessageBox.Show("Game Board 초기화 실패!");
+            }
+        }
+
+        #endregion
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
