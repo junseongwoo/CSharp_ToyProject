@@ -43,5 +43,27 @@ namespace othello
         {
             Environment.Exit(0);
         }
+
+        private void picGameBoard_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+
+            for (int i = 0; i < GameLib.GameBoard.boardSize; i++)
+            {
+                for (int j = 0; j < GameLib.GameBoard.boardSize; j++)
+                {
+                    Brush brush = GameLib.GameBoard.board[i, j] ? Brushes.Black : Brushes.White;
+                    g.FillRectangle(brush, i * GameLib.GameBoard.cellSize, 
+                        j * GameLib.GameBoard.cellSize, GameLib.GameBoard.cellSize, GameLib.GameBoard.cellSize);
+                }
+            }
+
+            Pen pen = new Pen(Color.Black, 2);
+            for (int i = 0; i <= GameLib.GameBoard.boardSize; i++)
+            {
+                g.DrawLine(pen, i * GameLib.GameBoard.cellSize, 0, i * GameLib.GameBoard.cellSize, GameLib.GameBoard.boardSize * GameLib.GameBoard.cellSize);
+                g.DrawLine(pen, 0, i * GameLib.GameBoard.cellSize, GameLib.GameBoard.boardSize * GameLib.GameBoard.cellSize, i * GameLib.GameBoard.cellSize);
+            }
+        }
     }
 }

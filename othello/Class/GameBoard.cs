@@ -13,8 +13,8 @@ namespace othello
      */
     public class GameBoard
     {
-        public const int boardSize = 8;
-        public const int cellSize = 50;
+        public int boardSize = 8;
+        public int cellSize = 50;
 
         public bool[,] board;
 

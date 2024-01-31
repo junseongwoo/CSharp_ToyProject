@@ -62,6 +62,7 @@ namespace othello
             this.picGameBoard.Size = new System.Drawing.Size(697, 646);
             this.picGameBoard.TabIndex = 0;
             this.picGameBoard.TabStop = false;
+            this.picGameBoard.Paint += new System.Windows.Forms.PaintEventHandler(this.picGameBoard_Paint);
             // 
             // tableLayoutPanel1
             // 
