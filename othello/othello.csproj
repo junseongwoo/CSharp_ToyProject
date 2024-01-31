@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\GameControl.cs" />
+    <Compile Include="Class\GameLogic.cs" />
+    <Compile Include="Class\Players.cs" />
+    <Compile Include="Class\Stone.cs" />
+    <Compile Include="Class\GameBoard.cs" />
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,9 +85,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logic\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Architecture\구조설계.txt" />
     <Content Include="Resources\BlackStone.png" />
