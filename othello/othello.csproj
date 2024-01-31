@@ -46,9 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logic\Game.cs" />
-    <Compile Include="Logic\GameBoard.cs" />
-    <Compile Include="Logic\Player.cs" />
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,12 +80,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Folder Include="Logic\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Architecture\구조설계.txt" />
     <Content Include="Resources\BlackStone.png" />
     <Content Include="Resources\WhiteStone.png" />
-    <Content Include="참고\2.png" />
-    <Content Include="참고\3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

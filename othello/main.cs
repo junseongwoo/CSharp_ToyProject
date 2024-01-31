@@ -19,23 +19,11 @@ namespace othello
 {
     public partial class frm_main : Form
     {
-        GameBoard Board = new GameBoard();
-        Game Game = new Game();
-        Player Player = new Player();
 
         public frm_main()
         {
             InitializeComponent();
         }
 
-        private void frm_main_Load(object sender, EventArgs e)
-        {
-            Board.Init_GameBoard();
-        }
-
-        private void picBox_GameBoard_Paint(object sender, PaintEventArgs e)
-        {
-            Board.Create_GameBorad(sender, e);
-        }
     }
 }
