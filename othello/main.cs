@@ -47,22 +47,23 @@ namespace othello
         private void picGameBoard_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
+            int cellSize = Math.Min(picGameBoard.Width / GameLib.GameBoard.boardSize, picGameBoard.Height / GameLib.GameBoard.boardSize);
 
             for (int i = 0; i < GameLib.GameBoard.boardSize; i++)
             {
                 for (int j = 0; j < GameLib.GameBoard.boardSize; j++)
                 {
                     Brush brush = GameLib.GameBoard.board[i, j] ? Brushes.Black : Brushes.White;
-                    g.FillRectangle(brush, i * GameLib.GameBoard.cellSize, 
-                        j * GameLib.GameBoard.cellSize, GameLib.GameBoard.cellSize, GameLib.GameBoard.cellSize);
+                    g.FillRectangle(brush, i * cellSize, 
+                        j * cellSize, cellSize, cellSize);
                 }
             }
 
             Pen pen = new Pen(Color.Black, 2);
             for (int i = 0; i <= GameLib.GameBoard.boardSize; i++)
             {
-                g.DrawLine(pen, i * GameLib.GameBoard.cellSize, 0, i * GameLib.GameBoard.cellSize, GameLib.GameBoard.boardSize * GameLib.GameBoard.cellSize);
-                g.DrawLine(pen, 0, i * GameLib.GameBoard.cellSize, GameLib.GameBoard.boardSize * GameLib.GameBoard.cellSize, i * GameLib.GameBoard.cellSize);
+                g.DrawLine(pen, i * cellSize, 0, i * cellSize, GameLib.GameBoard.boardSize * cellSize);
+                g.DrawLine(pen, 0, i * cellSize, GameLib.GameBoard.boardSize * cellSize, i * cellSize);
             }
         }
     }

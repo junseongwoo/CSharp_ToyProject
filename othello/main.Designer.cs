@@ -42,8 +42,8 @@ namespace othello
             // tlpMain
             // 
             this.tlpMain.ColumnCount = 2;
-            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 650F));
+            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpMain.Controls.Add(this.picGameBoard, 0, 0);
             this.tlpMain.Controls.Add(this.tableLayoutPanel1, 1, 0);
             this.tlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -51,7 +51,7 @@ namespace othello
             this.tlpMain.Name = "tlpMain";
             this.tlpMain.RowCount = 1;
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMain.Size = new System.Drawing.Size(879, 652);
+            this.tlpMain.Size = new System.Drawing.Size(800, 650);
             this.tlpMain.TabIndex = 0;
             // 
             // picGameBoard
@@ -59,7 +59,7 @@ namespace othello
             this.picGameBoard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picGameBoard.Location = new System.Drawing.Point(3, 3);
             this.picGameBoard.Name = "picGameBoard";
-            this.picGameBoard.Size = new System.Drawing.Size(697, 646);
+            this.picGameBoard.Size = new System.Drawing.Size(644, 644);
             this.picGameBoard.TabIndex = 0;
             this.picGameBoard.TabStop = false;
             this.picGameBoard.Paint += new System.Windows.Forms.PaintEventHandler(this.picGameBoard_Paint);
@@ -71,7 +71,7 @@ namespace othello
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnExit, 0, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(706, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(653, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -81,7 +81,7 @@ namespace othello
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.42105F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.37152F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(170, 646);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(144, 644);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // label1
@@ -96,9 +96,9 @@ namespace othello
             // btnExit
             // 
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnExit.Location = new System.Drawing.Point(3, 581);
+            this.btnExit.Location = new System.Drawing.Point(3, 576);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(164, 62);
+            this.btnExit.Size = new System.Drawing.Size(138, 65);
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@ namespace othello
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 652);
+            this.ClientSize = new System.Drawing.Size(800, 650);
             this.Controls.Add(this.tlpMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_main";
